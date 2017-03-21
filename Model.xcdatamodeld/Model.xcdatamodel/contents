@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryIcon" optional="YES" attributeType="Binary" valueTransformerName="" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="foods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="categories" inverseEntity="Food" syncable="YES"/>
+    </entity>
+    <entity name="Favorites" representedClassName="Favorites" syncable="YES" codeGenerationType="class">
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Food" representedClassName="Food" parentEntity="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="foods" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Recent" representedClassName="Recent" syncable="YES" codeGenerationType="class">
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-263" positionY="-34" width="128" height="88"/>
+        <element name="Food" positionX="-29" positionY="-45" width="128" height="105"/>
+        <element name="Recent" positionX="-144" positionY="-9" width="128" height="75"/>
+        <element name="Favorites" positionX="-144" positionY="-9" width="128" height="75"/>
+    </elements>
+</model>
