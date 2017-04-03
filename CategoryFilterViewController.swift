@@ -52,7 +52,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
 
     func loadCategories() {
         
-        let fetchRequest:NSFetchRequest<Category> = Food.fetchRequest()
+        let fetchRequest:NSFetchRequest<Category> = Category.fetchRequest()
         let categorySort = NSSortDescriptor(key: "categoryName", ascending: true)
         fetchRequest.sortDescriptors = [categorySort]
         

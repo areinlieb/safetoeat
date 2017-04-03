@@ -18,16 +18,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-    
+        
     //--------------------------------------
     // MARK: - UIApplicationDelegate
     //--------------------------------------
-
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
         print("Core data is stored here: \(getDocumentsDirectory())")
-        
+                
         //customize navigation bar
         UINavigationBar.appearance().barTintColor = UIColor(red: 248.0/255.0, green: 191.0/255.0, blue: 222.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]

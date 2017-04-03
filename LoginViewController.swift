@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-extension UITextField {
+/*extension UITextField {
     func setBottomBorder() {
         self.borderStyle = .none
         self.layer.backgroundColor = UIColor(red: 248/255, green: 191/255, blue: 222/255, alpha: 1).cgColor
@@ -20,6 +20,7 @@ extension UITextField {
         self.layer.shadowRadius = 0.0
     }
 }
+ */
 
 class LoginViewController: UIViewController {
 
@@ -38,8 +39,8 @@ class LoginViewController: UIViewController {
             
         }
         
-        usernameField.setBottomBorder()
-        passwordField.setBottomBorder()
+ //       usernameField.setBottomBorder()
+   //     passwordField.setBottomBorder()
         
         // Do any additional setup after loading the view.
     }

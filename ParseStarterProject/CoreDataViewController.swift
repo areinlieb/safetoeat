@@ -19,6 +19,7 @@ class CoreDataViewController: UIViewController {
     
     var foodCategoryTypes = [String]()
     var foodCategoryImages = [UIImage]()
+
     
     func animate() {
         
@@ -27,29 +28,49 @@ class CoreDataViewController: UIViewController {
         
         if counter == 9 {
 
-            if PFUser.current() != nil {
+            let fetchRequest:NSFetchRequest<User> = User.fetchRequest()
+            
+            //checks if email has been entered
+            do {
                 
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
-                    self.present(viewController, animated: true, completion: nil)
-                })
-            } else {
+                let results = try DatabaseController.getContext().fetch(fetchRequest)
                 
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
-                    self.present(viewController, animated: true, completion: nil)
+                if results.count > 0 {
                     
-                })
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                        self.present(viewController, animated: true, completion: nil)
+                    })
+                    
+                } else {
+                    
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Welcome")
+                        self.present(viewController, animated: true, completion: nil)
+                    })
+                }
+            } catch {
+                print("Couldn't fetch results")
             }
-        }
+       }
+        
     }
-    
+ 
     override func viewDidLoad() {
  
         super.viewDidLoad()
+
+/*
+        deleteCoreDataFood()
+        deleteCoreDataCategories()
+        deleteCoreDataFavorites()
+        deleteCoreDataSearches()
+        deleteCoreDataRecent()
+        deleteCoreDataEmail()
+ */
         
-//        deleteCoreData()
-//        deleteCoreDataFavorites()
+        deleteCoreDataFood()
+
 
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(CoreDataViewController.animate), userInfo: nil, repeats: true)
         animate()
@@ -57,9 +78,9 @@ class CoreDataViewController: UIViewController {
         //load data from parse into core data
         loadCategories()
         loadFood()
-
+        
     }
- 
+    
     func loadCategories() {
         
         let foodCategoryQuery = PFQuery(className: "FoodCategory")
@@ -208,6 +229,14 @@ class CoreDataViewController: UIViewController {
                                 
                                 //ADD OTHER FOOD FIELDS TO CORE DATA HERE
                                 
+                                if let safety = object["safetyDescription"] as? NSObject {
+                                    newFood.safetyDescription = safety
+                                }
+
+                                if let safeResult = object["isSafe"] as? String {
+                                    newFood.isSafe = safeResult
+                                }
+                                
                                 DatabaseController.saveContext()
                                 
                             }
@@ -221,7 +250,7 @@ class CoreDataViewController: UIViewController {
 
     }
     
-    func deleteCoreData() {
+    func deleteCoreDataFood() {
         
         let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
         
@@ -248,7 +277,42 @@ class CoreDataViewController: UIViewController {
                     print("result are \(result)")
                 }
             } else {
-                print("Core data is empty")
+                print("Food: Core data is empty")
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+    }
+    
+    func deleteCoreDataCategories() {
+        
+        let fetchRequest:NSFetchRequest<Category> = Category.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Category] {
+                    DatabaseController.getContext().delete(result)
+                }
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+        //checks if core data is empty
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Category] {
+                    print("result are \(result)")
+                }
+            } else {
+                print("Category: Core data is empty")
             }
         } catch {
             print("Couldn't fetch results")
@@ -283,7 +347,112 @@ class CoreDataViewController: UIViewController {
                     print("result are \(result)")
                 }
             } else {
-                print("Core data is empty")
+                print("Favorites: core data is empty")
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+    }
+    
+    func deleteCoreDataSearches() {
+        
+        let fetchRequest:NSFetchRequest<Searches> = Searches.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Searches] {
+                    DatabaseController.getContext().delete(result)
+                }
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+        //checks if core data is empty
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Searches] {
+                    print("result are \(result)")
+                }
+            } else {
+                print("Searches: core data is empty")
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+    }
+
+    func deleteCoreDataRecent() {
+        
+        let fetchRequest:NSFetchRequest<Recent> = Recent.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Recent] {
+                    DatabaseController.getContext().delete(result)
+                }
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+        //checks if core data is empty
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Recent] {
+                    print("result are \(result)")
+                }
+            } else {
+                print("Recent: core data is empty")
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+    }
+    
+    func deleteCoreDataEmail() {
+        
+        let fetchRequest:NSFetchRequest<User> = User.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [User] {
+                    DatabaseController.getContext().delete(result)
+                }
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+        //checks if core data is empty
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [User] {
+                    print("result are \(result)")
+                }
+            } else {
+                print("User Email: core data is empty")
             }
         } catch {
             print("Couldn't fetch results")

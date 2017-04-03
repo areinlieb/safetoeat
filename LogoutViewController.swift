@@ -15,14 +15,14 @@ class LogoutViewController: UIViewController {
       
         super.viewDidLoad()
         
-        let alert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Change email", message: "Are you sure you want to change your email?", preferredStyle: UIAlertControllerStyle.alert)
             
         alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { (action: UIAlertAction!) in
             
             PFUser.logOut()
           
             DispatchQueue.main.async(execute: { () -> Void in
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Welcome")
                 self.present(viewController, animated: true, completion: nil)
             })
 

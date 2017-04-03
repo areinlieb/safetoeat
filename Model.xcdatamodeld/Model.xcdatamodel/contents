@@ -3,26 +3,35 @@
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
         <attribute name="categoryIcon" optional="YES" attributeType="Binary" valueTransformerName="" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="foods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="categories" inverseEntity="Food" syncable="YES"/>
     </entity>
     <entity name="Favorites" representedClassName="Favorites" syncable="YES" codeGenerationType="class">
         <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="Food" representedClassName="Food" parentEntity="Category" syncable="YES" codeGenerationType="class">
+    <entity name="Food" representedClassName="Food" syncable="YES" codeGenerationType="class">
         <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="foodCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="foods" inverseEntity="Category" syncable="YES"/>
+        <attribute name="isSafe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="safetyDescription" optional="YES" attributeType="Transformable" syncable="YES"/>
     </entity>
     <entity name="Recent" representedClassName="Recent" syncable="YES" codeGenerationType="class">
         <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="Searches" representedClassName="Searches" syncable="YES" codeGenerationType="class">
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Category" positionX="-263" positionY="-34" width="128" height="88"/>
-        <element name="Food" positionX="-29" positionY="-45" width="128" height="105"/>
-        <element name="Recent" positionX="-144" positionY="-9" width="128" height="75"/>
-        <element name="Favorites" positionX="-144" positionY="-9" width="128" height="75"/>
+        <element name="Category" positionX="-488" positionY="-45" width="128" height="75"/>
+        <element name="Favorites" positionX="-135" positionY="-39" width="128" height="75"/>
+        <element name="Food" positionX="-315" positionY="-45" width="128" height="120"/>
+        <element name="Recent" positionX="-137" positionY="54" width="128" height="75"/>
+        <element name="Searches" positionX="-137" positionY="-135" width="128" height="75"/>
+        <element name="User" positionX="-315" positionY="-27" width="128" height="58"/>
     </elements>
 </model>

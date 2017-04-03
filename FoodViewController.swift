@@ -25,11 +25,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func unwindToFoodCancel(segue: UIStoryboardSegue) {
-        print("Category on Cancel is \(category)")
+        //print("Category on Cancel is \(category)")
     }
     
     @IBAction func unwindToFoodWithFilter(segue: UIStoryboardSegue) {
-        print("Category on Filter is \(category)")
+        //print("Category on Filter is \(category)")
         segmentedControl.selectedSegmentIndex = 0 //default to All when coming from Category filter
     }
     
@@ -42,7 +42,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             loadFilteredList()
         }
         
-        //retrieve Recent list
         loadRecentList()
 
         tableView.reloadData()
@@ -53,8 +52,28 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         super.viewDidLoad()
         
+        loadFoodList()
+        loadRecentList()
+        
+       // print(foodList)
+        
+    //    self.edgesForExtendedLayout = UIRectEdge.all
+      //  self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, (self.tabBarController?.tabBar.frame.height)!, 0.0)
+        
+//        self.edgesForExtendedLayout = []
+  //      self.tabBarController?.tabBar.isTranslucent = false
+       // self.tabBarController?.tabBar.isTranslucent = false
+        
+        
+        
+        tableView.reloadData()
+        
+    }
+    
+    func loadFoodList() {
+        
         let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
-
+        
         let foodSort = NSSortDescriptor(key: "foodName", ascending: true)
         fetchRequest.sortDescriptors = [foodSort]
         
@@ -63,7 +82,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             let results = try DatabaseController.getContext().fetch(fetchRequest)
             
             if results.count > 0 {
-        
+                
                 foodList.removeAll()
                 
                 for result in results as [Food] {
@@ -77,12 +96,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch {
             print("Error: \(error)")
         }
-        
-        //retrieve Recent list
-        loadRecentList()
-        
-        tableView.reloadData()
-        
     }
     
     func loadFilteredList() {
