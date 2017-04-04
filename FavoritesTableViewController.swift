@@ -57,8 +57,6 @@ class FavoritesTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-
         backgroundView.contentMode = .scaleAspectFit
         backgroundView.frame.size.width = 100
         backgroundView.frame.size.height = 100
@@ -183,9 +181,11 @@ class FavoritesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if favorites.count > 0 {
+            self.navigationItem.rightBarButtonItem = self.editButtonItem
             setBackgroundImage(show: false)
             return favorites.count
         } else {
+            self.navigationItem.rightBarButtonItem = nil
             setBackgroundImage(show: true)
             return 0
         }

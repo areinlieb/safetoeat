@@ -45,7 +45,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadRecentList()
 
         tableView.reloadData()
-
+        
     }
     
     override func viewDidLoad() {
@@ -54,19 +54,27 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         loadFoodList()
         loadRecentList()
-        
-       // print(foodList)
-        
-    //    self.edgesForExtendedLayout = UIRectEdge.all
-      //  self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, (self.tabBarController?.tabBar.frame.height)!, 0.0)
-        
-//        self.edgesForExtendedLayout = []
-  //      self.tabBarController?.tabBar.isTranslucent = false
-       // self.tabBarController?.tabBar.isTranslucent = false
-        
-        
-        
+    
         tableView.reloadData()
+        
+    }
+    
+    func setClearButton(isRecent: Bool) {
+        
+        if isRecent {
+        
+            let button = UIButton.init(type: .custom)
+            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34 )
+            let clearButton = UIBarButtonItem(customView: button)
+    
+            button.setImage(UIImage(named: "delete.png"), for: UIControlState.normal)
+            button.addTarget(self, action: #selector(FoodViewController.deleteRecent), for: UIControlEvents.touchUpInside)
+        
+            self.navigationItem.rightBarButtonItem = clearButton
+            
+        } else {
+            self.navigationItem.rightBarButtonItem = nil
+        }
         
     }
     
@@ -89,7 +97,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if let foodItem = result.foodName {
                         self.foodList.append(foodItem)
                     }  else {
-                        print("Couldn't add foodItem \(result.foodName)")
+                        print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
                 }
             }
@@ -117,7 +125,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if let foodItem = result.foodName {
                         self.foodListFiltered.append(foodItem)
                     }  else {
-                        print("Couldn't add foodItem \(result.foodName)")
+                        print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
                 }
             }
@@ -153,25 +161,37 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func deleteRecent() {
+        
+        let alert = UIAlertController(title: "Clear Recent", message: "Are you sure you want to clear recent items?", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Clear", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let fetchRequest:NSFetchRequest<Recent> = Recent.fetchRequest()
+            
+            do {
                 
-        let fetchRequest:NSFetchRequest<Recent> = Recent.fetchRequest()
-        
-        do {
-            
-            let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
-            if results.count > 0 {
-                for result in results as [Recent] {
-                    DatabaseController.getContext().delete(result)
+                let results = try DatabaseController.getContext().fetch(fetchRequest)
+                
+                if results.count > 0 {
+                    for result in results as [Recent] {
+                        DatabaseController.getContext().delete(result)
+                    }
                 }
+            } catch {
+                print("Couldn't fetch results")
             }
-        } catch {
-            print("Couldn't fetch results")
-        }
+            
+            self.recentFoodList.removeAll()
+            self.navigationItem.rightBarButtonItem = nil
+            self.tableView.reloadData()
+            
+        }))
         
-        recentFoodList.removeAll()
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
         
-        self.tableView.reloadData()
+        present(alert, animated: true, completion: nil)
 
     }
     
@@ -243,7 +263,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FoodTableViewCell
-        
+                
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             if category == "All" {
@@ -251,9 +271,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 cell.foodLabel.text = self.foodListFiltered[indexPath.row]
             }
+            setClearButton(isRecent: false)
             break
         case 1:
             cell.foodLabel.text = self.recentFoodList[indexPath.row]
+            setClearButton(isRecent: true)
             break
         default:
             break
@@ -262,8 +284,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
         
     }
-    
-    internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+ 
+/*    internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
         /* if self.footerView != nil {
          return self.footerView!.bounds.height
@@ -309,6 +331,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         return footerView
         
     }
+ 
+ */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

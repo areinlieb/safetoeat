@@ -43,7 +43,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 400
 
@@ -58,8 +58,6 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             setFavoriteButton(isFavorite: false)
         }
         
-        print (food)
-        print ("Is safe: \(safeEat)")
         addToRecent(recentFood: food) //adds food item to to recent searches
         
     }
@@ -115,14 +113,12 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                                 
                                 if safe == "safe" {
                                     babyIcon.image = UIImage(named: "baby happy.png")
-                                } else if safe == "safe if" {
-                                    babyIcon.image = UIImage(named: "baby question.png")
                                 } else if safe == "not safe" {
-                                    babyIcon.image = UIImage(named: "baby upset.png")
+                                    babyIcon.image = UIImage(named: "baby red upset.png")
+                                } else {
+                                    babyIcon.image = UIImage(named: "baby yellow question.png")
                                 }
-                        
-                            }
-                        
+                            }                        
                         }
                     }
                 }

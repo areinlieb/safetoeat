@@ -28,21 +28,13 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         
         if segue.identifier == "goToFoodDetail" {
             
-            print("in prepare")
-            
             let DestViewController : FoodDetailViewController = segue.destination as! FoodDetailViewController
             
             if searchController.isActive && searchController.searchBar.text != "" {
                 DestViewController.food = foodListFiltered[(tableView.indexPathForSelectedRow?.row)!]
-                print ("food list filtered segue")
-                
             } else {
                 DestViewController.food = recentSearches[(tableView.indexPathForSelectedRow?.row)!]
-                print ("recent searches segue")
             }
-
-            //self.navigationItem.title = "Food"
-            
         }
     }
     
@@ -128,10 +120,27 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         user?.username = savedEmail
         user?.email = savedEmail
         user?.saveEventually()
-        print(savedEmail)
         
     }
     
+    func setClearButton(searchResults: Bool) {
+        
+        if searchResults {
+            
+            let button = UIButton.init(type: .custom)
+            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34 )
+            let clearButton = UIBarButtonItem(customView: button)
+            
+            button.setImage(UIImage(named: "delete.png"), for: UIControlState.normal)
+            button.addTarget(self, action: #selector(SearchViewController.deleteSearches), for: UIControlEvents.touchUpInside)
+            
+            self.navigationItem.rightBarButtonItem = clearButton
+            
+        } else {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+        
+    }
     
     func setBackgroundImage(show: Bool) {
         
@@ -151,7 +160,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             
             self.tableView.separatorStyle = .singleLine
             self.tableView.backgroundColor = UIColor.white
-
             
         }
         
@@ -176,7 +184,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                     if let foodItem = result.foodName {
                         self.foodList.append(foodItem)
                     }  else {
-                        print("Couldn't add foodItem \(result.foodName)")
+                        print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
                 }
             }
@@ -243,6 +251,43 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
 
     }
     
+    func deleteSearches() {
+        
+        let alert = UIAlertController(title: "Clear Searches", message: "Are you sure you want to clear recent searches?", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Clear", style: .default, handler: { (action: UIAlertAction!) in
+            
+            self.setBackgroundImage(show: true)
+            let fetchRequest:NSFetchRequest<Searches> = Searches.fetchRequest()
+            
+            do {
+                
+                let results = try DatabaseController.getContext().fetch(fetchRequest)
+                
+                if results.count > 0 {
+                    for result in results as [Searches] {
+                        DatabaseController.getContext().delete(result)
+                    }
+                }
+            } catch {
+                print("Couldn't fetch results")
+            }
+            
+            self.recentSearches.removeAll()
+            self.navigationItem.rightBarButtonItem = nil
+            
+            self.tableView.reloadData()
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -254,6 +299,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             return self.foodListFiltered.count
         } else if recentSearches.count > 0 {
             setBackgroundImage(show: false)
+            
             return self.recentSearches.count
         } else {
             setBackgroundImage(show: true)
@@ -267,12 +313,15 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
         
         if searchController.isActive && searchController.searchBar.text != "" {
+            setClearButton(searchResults: false)
             setBackgroundImage(show: false)
             cell.textLabel?.text = self.foodListFiltered[indexPath.row]
         } else if recentSearches.count > 0 {
+            setClearButton(searchResults: true)
             setBackgroundImage(show: false)
             cell.textLabel?.text = self.recentSearches[indexPath.row]
         } else if recentSearches.count == 0 {
+            setClearButton(searchResults: false)
             setBackgroundImage(show: true)
         }
         
@@ -323,70 +372,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         
         
         
-    }
-    
-    internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        
-        if recentSearches.count > 0 && foodListFiltered.count == 0 {
-            return (50.0)
-        } else {
-            return (0.0)
-        }
-        
-    }
-    
-    internal func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 10, height: 30))
-        
-        button.setTitle("clear recent searches", for: UIControlState.normal)
-        button.setTitleColor(UIColor.gray, for: .normal)
-        button.addTarget(self, action: #selector(deleteSearches), for: UIControlEvents.touchUpInside)
-        
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 5 , height: 50))
-        footerView.addSubview(button)
-        
-        return footerView
-        
-    }
-    
-    func deleteSearches() {
-    
-        recentSearches.removeAll()
-        
-        setBackgroundImage(show: true)
-        let fetchRequest:NSFetchRequest<Searches> = Searches.fetchRequest()
-        
-        do {
-            
-            let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
-            if results.count > 0 {
-                for result in results as [Searches] {
-                    DatabaseController.getContext().delete(result)
-                }
-            }
-        } catch {
-            print("Couldn't fetch results")
-        }
-        
-        //checks if core data is empty
-        do {
-            
-            let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
-            if results.count > 0 {
-                for result in results as [Searches] {
-                    print("result are \(result)")
-                }
-            } else {
-                print("Searches: core data is empty")
-            }
-        } catch {
-            print("Couldn't fetch results")
-        }
-        
-        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

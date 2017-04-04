@@ -42,7 +42,7 @@ class DatabaseController {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error._userInfo)") // fatalError("Unresolved error \(error), \(error.userInfo)") is now fatalError("Unresolved error \(error), \(error._userInfo)")
+                fatalError("Unresolved error \(error), \(String(describing: error._userInfo))") // fatalError("Unresolved error \(error), \(error.userInfo)") is now fatalError("Unresolved error \(error), \(error._userInfo)")
             }
         })
         return container

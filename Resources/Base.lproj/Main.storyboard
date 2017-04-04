@@ -643,7 +643,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before consuming," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-mA-bUL">
-                                <rect key="frame" x="0.0" y="189" width="414" height="26"/>
+                                <rect key="frame" x="0.0" y="145" width="414" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="h8s-yh-zh4"/>
                                 </constraints>
@@ -652,7 +652,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-OD-Fii">
-                                <rect key="frame" x="0.0" y="252" width="414" height="484"/>
+                                <rect key="frame" x="0.0" y="208" width="414" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="BP4-Ob-qPt" customClass="FoodDetailTableViewCell" customModule="SafeToEat" customModuleProvider="target">
@@ -689,13 +689,13 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wrj-Mz-Lqp" userLabel="baby image">
-                                <rect key="frame" x="70" y="72" width="274" height="109"/>
+                                <rect key="frame" x="70" y="28" width="274" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="109" id="ukk-P4-kpG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please consider the following:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8P-dZ-bod">
-                                <rect key="frame" x="0.0" y="212" width="414" height="17"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.78496092559999997" green="0.20096358659999999" blue="0.20114567880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -730,7 +730,7 @@
         <!--Food-->
         <scene sceneID="1Fw-I2-luS">
             <objects>
-                <viewController storyboardIdentifier="Food" title="Food" automaticallyAdjustsScrollViewInsets="NO" id="nXX-CE-gvt" customClass="FoodViewController" customModule="SafeToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Food" title="Food" id="nXX-CE-gvt" customClass="FoodViewController" customModule="SafeToEat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZzS-E4-0ys"/>
                         <viewControllerLayoutGuide type="bottom" id="kzg-nO-aCh"/>
@@ -739,6 +739,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="agz-gN-cLJ">
+                                <rect key="frame" x="87" y="72" width="241" height="29"/>
+                                <segments>
+                                    <segment title="All" width="120"/>
+                                    <segment title="Recent" width="120"/>
+                                </segments>
+                                <color key="tintColor" red="0.9772071242" green="0.74547237160000002" blue="0.87243568900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChange:" destination="nXX-CE-gvt" eventType="valueChanged" id="f7I-D1-hsq"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wUV-YK-KUC">
                                 <rect key="frame" x="0.0" y="109" width="414" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -752,7 +763,7 @@
                                         <rect key="frame" x="0.0" y="29" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9bU-Gq-KqC" id="QYY-aO-O14">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-pQ-chp">
@@ -779,26 +790,15 @@
                                     <outlet property="delegate" destination="nXX-CE-gvt" id="KwG-EQ-gdd"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="agz-gN-cLJ">
-                                <rect key="frame" x="86.666666666666686" y="72" width="241" height="29"/>
-                                <segments>
-                                    <segment title="All" width="120"/>
-                                    <segment title="Recent" width="120"/>
-                                </segments>
-                                <color key="tintColor" red="0.9772071242" green="0.74547237160000002" blue="0.87243568900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="segmentedControlChange:" destination="nXX-CE-gvt" eventType="valueChanged" id="f7I-D1-hsq"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="agz-gN-cLJ" firstAttribute="top" secondItem="ZzS-E4-0ys" secondAttribute="bottom" constant="8" symbolic="YES" id="FTd-Ja-Tvd"/>
-                            <constraint firstItem="wUV-YK-KUC" firstAttribute="leading" secondItem="0Rz-fB-Oa4" secondAttribute="leading" id="YRU-B2-hXP"/>
-                            <constraint firstAttribute="trailing" secondItem="wUV-YK-KUC" secondAttribute="trailing" id="ejn-nf-kdY"/>
-                            <constraint firstAttribute="bottom" secondItem="wUV-YK-KUC" secondAttribute="bottom" id="f4j-Yy-Nn5"/>
-                            <constraint firstItem="wUV-YK-KUC" firstAttribute="top" secondItem="agz-gN-cLJ" secondAttribute="bottom" constant="9" id="kpM-BO-0ZS"/>
-                            <constraint firstItem="agz-gN-cLJ" firstAttribute="centerX" secondItem="wUV-YK-KUC" secondAttribute="centerX" id="s8p-Ka-gQ4"/>
+                            <constraint firstAttribute="trailing" secondItem="wUV-YK-KUC" secondAttribute="trailing" id="NVq-Yb-SnG"/>
+                            <constraint firstItem="wUV-YK-KUC" firstAttribute="leading" secondItem="0Rz-fB-Oa4" secondAttribute="leading" id="XMS-vv-GJy"/>
+                            <constraint firstItem="wUV-YK-KUC" firstAttribute="centerX" secondItem="agz-gN-cLJ" secondAttribute="centerX" id="da2-iW-J3Q"/>
+                            <constraint firstItem="wUV-YK-KUC" firstAttribute="top" secondItem="agz-gN-cLJ" secondAttribute="bottom" constant="9" id="hZp-S6-8O2"/>
+                            <constraint firstAttribute="bottom" secondItem="wUV-YK-KUC" secondAttribute="bottom" id="kHh-mN-Xcf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food" id="TV2-uP-bdW">
@@ -1017,7 +1017,7 @@
         <image name="logout.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fJQ-ff-ybb"/>
+        <segue reference="uCg-Uf-4RJ"/>
         <segue reference="j6e-y8-ELe"/>
     </inferredMetricsTieBreakers>
 </document>

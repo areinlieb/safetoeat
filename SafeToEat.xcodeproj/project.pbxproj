@@ -17,6 +17,7 @@
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		D3EB37521E75FA59009894E8 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */; };
+		FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FA06B75E1E940CBB00CA3D7F /* delete.png */; };
 		FA0888FE1E8C458A00ECBA12 /* search food.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0888FD1E8C458A00ECBA12 /* search food.png */; };
 		FA0889061E8C706400ECBA12 /* favorites background.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0889051E8C706400ECBA12 /* favorites background.png */; };
 		FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0A6D441E8D76E100AB5B1D /* star background gray.png */; };
@@ -64,6 +65,8 @@
 		FA92E7B81E6CE99A0069271D /* category icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA92E7B71E6CE99A0069271D /* category icon.png */; };
 		FA92E7BC1E6DE29E0069271D /* default category icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA92E7BB1E6DE29E0069271D /* default category icon.png */; };
 		FA94A2EE1E6F68C0002643B3 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = FA94A2ED1E6F68C0002643B3 /* logout.png */; };
+		FA97933E1E930FD0004FDE34 /* baby red upset.png in Resources */ = {isa = PBXBuildFile; fileRef = FA97933D1E930FD0004FDE34 /* baby red upset.png */; };
+		FA9793401E931119004FDE34 /* baby yellow question.png in Resources */ = {isa = PBXBuildFile; fileRef = FA97933F1E931119004FDE34 /* baby yellow question.png */; };
 		FA9B4C8F1E77B7BC00EEA05D /* search food icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */; };
 		FA9D06971E771ABD00E76026 /* ExtendedNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06961E771ABD00E76026 /* ExtendedNavBarView.swift */; };
 		FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06A21E773F1100E76026 /* SectionsData.swift */; };
@@ -94,7 +97,6 @@
 		FAF8BE991E81F13D00D5BED8 /* addToFavorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */; };
 		FAF8BE9A1E81F13D00D5BED8 /* removeFromFavorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */; };
 		FAF8BE9C1E81F81400D5BED8 /* heartAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE9B1E81F81400D5BED8 /* heartAnimation.gif */; };
-		FAF8BE9E1E81F8E600D5BED8 /* gifAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8BE9D1E81F8E600D5BED8 /* gifAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,7 @@
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		EF9A8B47185E7FD9C72DC6D4 /* Pods_SafeToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA06B75E1E940CBB00CA3D7F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		FA0888FD1E8C458A00ECBA12 /* search food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search food.png"; sourceTree = "<group>"; };
 		FA0889051E8C706400ECBA12 /* favorites background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorites background.png"; sourceTree = "<group>"; };
 		FA0A6D441E8D76E100AB5B1D /* star background gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background gray.png"; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 		FA92E7B71E6CE99A0069271D /* category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category icon.png"; sourceTree = "<group>"; };
 		FA92E7BB1E6DE29E0069271D /* default category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default category icon.png"; sourceTree = "<group>"; };
 		FA94A2ED1E6F68C0002643B3 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		FA97933D1E930FD0004FDE34 /* baby red upset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby red upset.png"; sourceTree = "<group>"; };
+		FA97933F1E931119004FDE34 /* baby yellow question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby yellow question.png"; sourceTree = "<group>"; };
 		FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search food icon.png"; sourceTree = "<group>"; };
 		FA9D06961E771ABD00E76026 /* ExtendedNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedNavBarView.swift; sourceTree = "<group>"; };
 		FA9D06A21E773F1100E76026 /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
@@ -192,7 +197,6 @@
 		FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addToFavorites.png; sourceTree = "<group>"; };
 		FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = removeFromFavorites.png; sourceTree = "<group>"; };
 		FAF8BE9B1E81F81400D5BED8 /* heartAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heartAnimation.gif; sourceTree = "<group>"; };
-		FAF8BE9D1E81F8E600D5BED8 /* gifAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gifAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,7 +235,6 @@
 				FA9D06AA1E77478100E76026 /* Food */,
 				FACED41D1E8A2EF8007AAEEB /* Food Detail */,
 				FA9D06A81E77475A00E76026 /* More */,
-				FAF8BE9D1E81F8E600D5BED8 /* gifAnimation.swift */,
 				FA5A5A191E6F329400941C50 /* Launch Screen */,
 				FAB5F0721E721BD70017FE01 /* Login */,
 				FA9D06AB1E7747A600E76026 /* Search */,
@@ -293,6 +296,7 @@
 		FA5A5A161E6F314000941C50 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */,
 				FA5A5A041E6F313B00941C50 /* app icon with bubble.png */,
 				FA5A5A051E6F313B00941C50 /* app icon with bubble cheese.png */,
 				FA5A5A061E6F313B00941C50 /* app icon with bubble eggplant.png */,
@@ -334,6 +338,7 @@
 		FA92E7BD1E6E18500069271D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FA06B75E1E940CBB00CA3D7F /* delete.png */,
 				FA7B0FFD1E830CB100378663 /* LegalSample.rtf */,
 				FA86EB851E85B05A00B66A91 /* login.png */,
 				FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */,
@@ -342,7 +347,6 @@
 				FA0A6D441E8D76E100AB5B1D /* star background gray.png */,
 				FA94A2ED1E6F68C0002643B3 /* logout.png */,
 				FADE73CC1E7A258200EB7B4D /* app icon.jpg */,
-				FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */,
 				FA6255311E86192600194140 /* app icon with bubble sushi small.png */,
 				FA92E7B71E6CE99A0069271D /* category icon.png */,
 				FA92E7BB1E6DE29E0069271D /* default category icon.png */,
@@ -355,7 +359,9 @@
 				FA427DCD1E8AEDE500B46256 /* baby alert.png */,
 				FA9FFC581E92AFC60034686F /* baby happy.png */,
 				FA9FFC591E92AFC60034686F /* baby upset.png */,
+				FA97933D1E930FD0004FDE34 /* baby red upset.png */,
 				FA9FFC5C1E92B13C0034686F /* baby question.png */,
+				FA97933F1E931119004FDE34 /* baby yellow question.png */,
 				FAAF601F1E8B2D5A00F7E7E7 /* pacifier.png */,
 				FA7B10111E83303A00378663 /* More Images */,
 				FADE73BB1E79C82000EB7B4D /* Animation */,
@@ -532,9 +538,11 @@
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 				FACED41B1E8A24F8007AAEEB /* Yellow Light.png in Resources */,
 				FAAF60201E8B2D5A00F7E7E7 /* pacifier.png in Resources */,
+				FA9793401E931119004FDE34 /* baby yellow question.png in Resources */,
 				FA7B0FFE1E830CB100378663 /* LegalSample.rtf in Resources */,
 				FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */,
 				FA5A5A031E6F2F5700941C50 /* Launch Screen.storyboard in Resources */,
+				FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */,
 				FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */,
 				FACED41C1E8A24F8007AAEEB /* Red Light.png in Resources */,
 				FADE73C51E79C82000EB7B4D /* frame_2.png in Resources */,
@@ -551,6 +559,7 @@
 				FADE73C71E79C82000EB7B4D /* frame_4.png in Resources */,
 				FA5A5A121E6F313B00941C50 /* app icon with bubble spinach.png in Resources */,
 				FA9B4C8F1E77B7BC00EEA05D /* search food icon.png in Resources */,
+				FA97933E1E930FD0004FDE34 /* baby red upset.png in Resources */,
 				FAF8BE9A1E81F13D00D5BED8 /* removeFromFavorites.png in Resources */,
 				FA9FFC5D1E92B13C0034686F /* baby question.png in Resources */,
 				FA0889061E8C706400ECBA12 /* favorites background.png in Resources */,
@@ -581,7 +590,6 @@
 				FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */,
 				FA5A5A1F1E6F41D600941C50 /* SignUpViewController.swift in Sources */,
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
-				FAF8BE9E1E81F8E600D5BED8 /* gifAnimation.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
 				FA5BACD31E80761E0075DCFF /* ParseDataViewController.swift in Sources */,
 				FA5A5A231E6F4A0600941C50 /* ResetPasswordViewController.swift in Sources */,

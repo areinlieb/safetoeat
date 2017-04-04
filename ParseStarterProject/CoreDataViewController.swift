@@ -59,7 +59,6 @@ class CoreDataViewController: UIViewController {
     override func viewDidLoad() {
  
         super.viewDidLoad()
-
 /*
         deleteCoreDataFood()
         deleteCoreDataCategories()
@@ -67,11 +66,7 @@ class CoreDataViewController: UIViewController {
         deleteCoreDataSearches()
         deleteCoreDataRecent()
         deleteCoreDataEmail()
- */
-        
-        deleteCoreDataFood()
-
-
+*/
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(CoreDataViewController.animate), userInfo: nil, repeats: true)
         animate()
         
@@ -192,7 +187,7 @@ class CoreDataViewController: UIViewController {
                                                         
                                                         if foodUpdatedDate != dateUpdated {
                                                             DatabaseController.getContext().delete(result)
-                                                            print("Deleted: \(result.value(forKey: "foodName"))")
+                                                            print("Deleted: \(String(describing: result.value(forKey: "foodName")))")
                                                             recordFound = false
                                                         }
                                                     }
@@ -222,7 +217,7 @@ class CoreDataViewController: UIViewController {
                                     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                     let dateUpdated = dateFormatter.string(from: updatedAt)
                                     newFood.dateUpdated = dateUpdated
-//                                    print("\(foodItem): was updated at \(newFood.dateUpdated)")
+                                    print("\(foodItem): was updated at \(String(describing: newFood.dateUpdated))")
                                 } else {
                                     print("\(foodItem): no update date")
                                 }
