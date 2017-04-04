@@ -101,15 +101,35 @@ class WelcomeViewController: UIViewController {
             
                 // Sign up the user asynchronously
                 newUser.signUpInBackground(block: { (success, error) -> Void in
-                
-                    // Stop the spinner
-                    spinner.stopAnimating()
+                    
                     if ((error) != nil) {
                     
-                        let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
-                        self.present(alert, animated: true){}
+                        if error!.localizedDescription == "Account already exists for this username." {
+                            
+                            // Send a request to login
+                            PFUser.logInWithUsername(inBackground: newUser.email!, password: newUser.password!, block: { (user, error) -> Void in
+                                
+                                if ((user) != nil) {
+                                    
+                                    DispatchQueue.main.async(execute: {
+                                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                                        self.present(viewController, animated: true, completion: nil)
+                                    })
+                                    
+                                } else {
+                                    
+                                    let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                                    self.present(alert, animated: true){}
+                                    
+                                }
+                            })
+                        } else {
                     
+                            let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                            self.present(alert, animated: true)
+                        }                    
                     } else {
                     
                         DispatchQueue.main.async(execute: { () -> Void in
@@ -118,6 +138,9 @@ class WelcomeViewController: UIViewController {
                         })
                     }
                 })
+                
+                // Stop the spinner
+                spinner.stopAnimating()
             }
         }
     }

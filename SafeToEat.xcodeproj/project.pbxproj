@@ -35,9 +35,6 @@
 		FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0A1E6F313B00941C50 /* app icon with bubble steak.png */; };
 		FA5A5A141E6F313B00941C50 /* app icon with bubble sushi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0B1E6F313B00941C50 /* app icon with bubble sushi.png */; };
 		FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0C1E6F313B00941C50 /* app icon with bubble wine.png */; };
-		FA5A5A1D1E6F3BCB00941C50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A5A1C1E6F3BCB00941C50 /* LoginViewController.swift */; };
-		FA5A5A1F1E6F41D600941C50 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A5A1E1E6F41D600941C50 /* SignUpViewController.swift */; };
-		FA5A5A231E6F4A0600941C50 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A5A221E6F4A0600941C50 /* ResetPasswordViewController.swift */; };
 		FA5BACD31E80761E0075DCFF /* ParseDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */; };
 		FA6255321E86192600194140 /* app icon with bubble sushi small.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6255311E86192600194140 /* app icon with bubble sushi small.png */; };
 		FA7B0FFE1E830CB100378663 /* LegalSample.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA7B0FFD1E830CB100378663 /* LegalSample.rtf */; };
@@ -60,7 +57,6 @@
 		FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD6FE1E70861F00E7CB97 /* FoodViewController.swift */; };
 		FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7001E70D0EB00E7CB97 /* CategoryFilterViewController.swift */; };
 		FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7021E70D10800E7CB97 /* CategoryFilterTableViewCell.swift */; };
-		FA8CD7071E71C6C500E7CB97 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7061E71C6C500E7CB97 /* LogoutViewController.swift */; };
 		FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7091E72114600E7CB97 /* FoodDetailViewController.swift */; };
 		FA92E7B81E6CE99A0069271D /* category icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA92E7B71E6CE99A0069271D /* category icon.png */; };
 		FA92E7BC1E6DE29E0069271D /* default category icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA92E7BB1E6DE29E0069271D /* default category icon.png */; };
@@ -136,9 +132,6 @@
 		FA5A5A0A1E6F313B00941C50 /* app icon with bubble steak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble steak.png"; sourceTree = "<group>"; };
 		FA5A5A0B1E6F313B00941C50 /* app icon with bubble sushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble sushi.png"; sourceTree = "<group>"; };
 		FA5A5A0C1E6F313B00941C50 /* app icon with bubble wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble wine.png"; sourceTree = "<group>"; };
-		FA5A5A1C1E6F3BCB00941C50 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FA5A5A1E1E6F41D600941C50 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		FA5A5A221E6F4A0600941C50 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDataViewController.swift; sourceTree = "<group>"; };
 		FA6255311E86192600194140 /* app icon with bubble sushi small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble sushi small.png"; sourceTree = "<group>"; };
 		FA7B0FFD1E830CB100378663 /* LegalSample.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = LegalSample.rtf; sourceTree = "<group>"; };
@@ -163,7 +156,6 @@
 		FA8CD6FE1E70861F00E7CB97 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		FA8CD7001E70D0EB00E7CB97 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
 		FA8CD7021E70D10800E7CB97 /* CategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
-		FA8CD7061E71C6C500E7CB97 /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		FA8CD7091E72114600E7CB97 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		FA92E7B71E6CE99A0069271D /* category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category icon.png"; sourceTree = "<group>"; };
 		FA92E7BB1E6DE29E0069271D /* default category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default category icon.png"; sourceTree = "<group>"; };
@@ -426,10 +418,6 @@
 			children = (
 				FA86EB871E85B45B00B66A91 /* WelcomeViewController.swift */,
 				FA86EB891E85BFDB00B66A91 /* LegalWelcomeViewController.swift */,
-				FA5A5A1C1E6F3BCB00941C50 /* LoginViewController.swift */,
-				FA8CD7061E71C6C500E7CB97 /* LogoutViewController.swift */,
-				FA5A5A1E1E6F41D600941C50 /* SignUpViewController.swift */,
-				FA5A5A221E6F4A0600941C50 /* ResetPasswordViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -593,24 +581,20 @@
 				FA8CD6FD1E7085EB00E7CB97 /* FoodTableViewCell.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */,
-				FA5A5A1D1E6F3BCB00941C50 /* LoginViewController.swift in Sources */,
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
 				FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */,
 				FA7B10171E83380200378663 /* iRate.m in Sources */,
 				FA9D06971E771ABD00E76026 /* ExtendedNavBarView.swift in Sources */,
 				FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */,
 				FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */,
-				FA5A5A1F1E6F41D600941C50 /* SignUpViewController.swift in Sources */,
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
 				FA5BACD31E80761E0075DCFF /* ParseDataViewController.swift in Sources */,
-				FA5A5A231E6F4A0600941C50 /* ResetPasswordViewController.swift in Sources */,
 				FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
 				FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */,
 				FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */,
-				FA8CD7071E71C6C500E7CB97 /* LogoutViewController.swift in Sources */,
 				FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */,
 				FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */,
 				FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */,
