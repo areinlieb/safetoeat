@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cpz-aq-uvA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cpz-aq-uvA">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,11 +23,11 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1WK-KW-2Te" id="qUS-SO-yY8">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqB-NY-XP3" userLabel="Food">
-                                            <rect key="frame" x="15" y="0.0" width="364" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="364" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -643,7 +643,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before consuming," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-mA-bUL">
-                                <rect key="frame" x="0.0" y="145" width="414" height="26"/>
+                                <rect key="frame" x="0.0" y="200" width="414" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="h8s-yh-zh4"/>
                                 </constraints>
@@ -652,7 +652,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-OD-Fii">
-                                <rect key="frame" x="0.0" y="208" width="414" height="528"/>
+                                <rect key="frame" x="0.0" y="252" width="414" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="BP4-Ob-qPt" customClass="FoodDetailTableViewCell" customModule="SafeToEat" customModuleProvider="target">
@@ -689,13 +689,13 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wrj-Mz-Lqp" userLabel="baby image">
-                                <rect key="frame" x="70" y="28" width="274" height="109"/>
+                                <rect key="frame" x="70" y="72" width="274" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="ukk-P4-kpG"/>
+                                    <constraint firstAttribute="height" constant="129" id="ukk-P4-kpG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please consider the following:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8P-dZ-bod">
-                                <rect key="frame" x="0.0" y="168" width="414" height="17"/>
+                                <rect key="frame" x="0.0" y="223" width="414" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.78496092559999997" green="0.20096358659999999" blue="0.20114567880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -705,17 +705,17 @@
                         <constraints>
                             <constraint firstItem="eb6-mA-bUL" firstAttribute="trailing" secondItem="Bqh-OD-Fii" secondAttribute="trailing" id="1Vr-Ki-3sM"/>
                             <constraint firstItem="eb6-mA-bUL" firstAttribute="leading" secondItem="Bqh-OD-Fii" secondAttribute="leading" id="4HY-9t-GGC"/>
-                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="top" secondItem="j8P-dZ-bod" secondAttribute="bottom" constant="23" id="4JH-uF-LIt"/>
+                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="top" secondItem="j8P-dZ-bod" secondAttribute="bottom" constant="12" id="4JH-uF-LIt"/>
                             <constraint firstItem="eb6-mA-bUL" firstAttribute="leading" secondItem="eAZ-I3-dE3" secondAttribute="leading" id="7cH-6N-ZUc"/>
                             <constraint firstItem="Bqh-OD-Fii" firstAttribute="centerX" secondItem="wrj-Mz-Lqp" secondAttribute="centerX" id="QVQ-S9-o40"/>
                             <constraint firstItem="eb6-mA-bUL" firstAttribute="leading" secondItem="j8P-dZ-bod" secondAttribute="leading" id="YGV-Mm-gFd"/>
-                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="top" secondItem="eb6-mA-bUL" secondAttribute="bottom" constant="37" id="gFT-yG-rYA"/>
+                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="top" secondItem="eb6-mA-bUL" secondAttribute="bottom" constant="26" id="gFT-yG-rYA"/>
                             <constraint firstAttribute="bottom" secondItem="Bqh-OD-Fii" secondAttribute="bottom" id="l4V-y2-cBa"/>
                             <constraint firstItem="wrj-Mz-Lqp" firstAttribute="leading" secondItem="eAZ-I3-dE3" secondAttribute="leadingMargin" constant="50" id="lGg-kl-ptr"/>
                             <constraint firstItem="wrj-Mz-Lqp" firstAttribute="top" secondItem="qQs-E8-ReO" secondAttribute="bottom" constant="8" symbolic="YES" id="pGE-QF-fS2"/>
                             <constraint firstItem="eb6-mA-bUL" firstAttribute="trailing" secondItem="j8P-dZ-bod" secondAttribute="trailing" id="rMP-G9-yjg"/>
                             <constraint firstItem="wrj-Mz-Lqp" firstAttribute="centerX" secondItem="eAZ-I3-dE3" secondAttribute="centerX" id="u5g-Md-Ifq"/>
-                            <constraint firstItem="eb6-mA-bUL" firstAttribute="top" secondItem="wrj-Mz-Lqp" secondAttribute="bottom" constant="8" symbolic="YES" id="wIt-MZ-BOg"/>
+                            <constraint firstItem="eb6-mA-bUL" firstAttribute="top" secondItem="wrj-Mz-Lqp" secondAttribute="bottom" constant="-1" id="wIt-MZ-BOg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -763,7 +763,7 @@
                                         <rect key="frame" x="0.0" y="29" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9bU-Gq-KqC" id="QYY-aO-O14">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-pQ-chp">

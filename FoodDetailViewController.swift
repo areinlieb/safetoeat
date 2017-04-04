@@ -112,11 +112,11 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                                 self.safeEat = safe
                                 
                                 if safe == "safe" {
-                                    babyIcon.image = UIImage(named: "baby happy.png")
+                                    babyIcon.image = UIImage(named: "baby happy with text.png")
                                 } else if safe == "not safe" {
-                                    babyIcon.image = UIImage(named: "baby red upset.png")
+                                    babyIcon.image = UIImage(named: "baby upset with text.png")
                                 } else {
-                                    babyIcon.image = UIImage(named: "baby yellow question.png")
+                                    babyIcon.image = UIImage(named: "baby question with text.png")
                                 }
                             }                        
                         }

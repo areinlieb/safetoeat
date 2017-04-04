@@ -128,7 +128,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         if searchResults {
             
             let button = UIButton.init(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34 )
+            button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             let clearButton = UIBarButtonItem(customView: button)
             
             button.setImage(UIImage(named: "delete.png"), for: UIControlState.normal)
