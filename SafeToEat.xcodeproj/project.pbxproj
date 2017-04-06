@@ -33,6 +33,7 @@
 		FA5A5A141E6F313B00941C50 /* app icon with bubble sushi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0B1E6F313B00941C50 /* app icon with bubble sushi.png */; };
 		FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0C1E6F313B00941C50 /* app icon with bubble wine.png */; };
 		FA5BACD31E80761E0075DCFF /* ParseDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */; };
+		FA5F05C21E96D1AC00A64406 /* LegalText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F05C11E96D1AC00A64406 /* LegalText.rtf */; };
 		FA6255321E86192600194140 /* app icon with bubble sushi small.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6255311E86192600194140 /* app icon with bubble sushi small.png */; };
 		FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B0FFF1E830DBC00378663 /* LegalViewController.swift */; };
 		FA7B10071E83299C00378663 /* more-feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7B10011E83299C00378663 /* more-feedback.png */; };
@@ -52,7 +53,6 @@
 		FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7001E70D0EB00E7CB97 /* CategoryFilterViewController.swift */; };
 		FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7021E70D10800E7CB97 /* CategoryFilterTableViewCell.swift */; };
 		FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CD7091E72114600E7CB97 /* FoodDetailViewController.swift */; };
-		FA9205E21E9699F200DDB1D7 /* LegalText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA9205E11E9699F200DDB1D7 /* LegalText.rtf */; };
 		FA92E7B81E6CE99A0069271D /* category icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA92E7B71E6CE99A0069271D /* category icon.png */; };
 		FA92E7BC1E6DE29E0069271D /* default category icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA92E7BB1E6DE29E0069271D /* default category icon.png */; };
 		FA9B4C8F1E77B7BC00EEA05D /* search food icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */; };
@@ -114,6 +114,7 @@
 		FA5A5A0B1E6F313B00941C50 /* app icon with bubble sushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble sushi.png"; sourceTree = "<group>"; };
 		FA5A5A0C1E6F313B00941C50 /* app icon with bubble wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble wine.png"; sourceTree = "<group>"; };
 		FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDataViewController.swift; sourceTree = "<group>"; };
+		FA5F05C11E96D1AC00A64406 /* LegalText.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = LegalText.rtf; sourceTree = "<group>"; };
 		FA6255311E86192600194140 /* app icon with bubble sushi small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble sushi small.png"; sourceTree = "<group>"; };
 		FA7B0FFF1E830DBC00378663 /* LegalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		FA7B10011E83299C00378663 /* more-feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-feedback.png"; sourceTree = "<group>"; };
@@ -135,7 +136,6 @@
 		FA8CD7001E70D0EB00E7CB97 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
 		FA8CD7021E70D10800E7CB97 /* CategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
 		FA8CD7091E72114600E7CB97 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
-		FA9205E11E9699F200DDB1D7 /* LegalText.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = LegalText.rtf; sourceTree = "<group>"; };
 		FA92E7B71E6CE99A0069271D /* category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category icon.png"; sourceTree = "<group>"; };
 		FA92E7BB1E6DE29E0069271D /* default category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default category icon.png"; sourceTree = "<group>"; };
 		FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search food icon.png"; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				FA06B75E1E940CBB00CA3D7F /* delete.png */,
-				FA9205E11E9699F200DDB1D7 /* LegalText.rtf */,
+				FA5F05C11E96D1AC00A64406 /* LegalText.rtf */,
 				FA86EB851E85B05A00B66A91 /* login.png */,
 				FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */,
 				FA0A6D441E8D76E100AB5B1D /* star background gray.png */,
@@ -478,6 +478,7 @@
 				FADE73C91E79C82000EB7B4D /* frame_6.png in Resources */,
 				FA7B10091E83299C00378663 /* more-logout.png in Resources */,
 				FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */,
+				FA5F05C21E96D1AC00A64406 /* LegalText.rtf in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 				FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */,
@@ -489,7 +490,6 @@
 				FADE73C51E79C82000EB7B4D /* frame_2.png in Resources */,
 				FA7BAA371E843A2D001D9355 /* more-inviteFriends.png in Resources */,
 				FA86EB861E85B05A00B66A91 /* login.png in Resources */,
-				FA9205E21E9699F200DDB1D7 /* LegalText.rtf in Resources */,
 				FA92E7B81E6CE99A0069271D /* category icon.png in Resources */,
 				FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */,
 				FADE73CA1E79C82000EB7B4D /* frame_7.png in Resources */,
