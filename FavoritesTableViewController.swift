@@ -53,9 +53,6 @@ class FavoritesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
         backgroundView.contentMode = .scaleAspectFit
         backgroundView.frame.size.width = 100

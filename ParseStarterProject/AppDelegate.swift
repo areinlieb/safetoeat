@@ -39,13 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()
-/*
-        let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
-            ParseMutableClientConfiguration.applicationId = "b4ecc253b8b0f59f418ed4902d91994e8198b36a"
-            ParseMutableClientConfiguration.clientKey = "638ff6791c998ca70ee3c2b0fbec6fb271a0478b"
-            ParseMutableClientConfiguration.server = "http://ec2-54-212-237-163.us-west-2.compute.amazonaws.com/parse"
-        })
-*/
+
         let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
             ParseMutableClientConfiguration.applicationId = "4a7266dc32b2cf20645b2d63cbfab30602a84406"
             ParseMutableClientConfiguration.clientKey = "d1c748ebe7a404ecde451461bc324564bd603c22"

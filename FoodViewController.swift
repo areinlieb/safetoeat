@@ -25,11 +25,9 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func unwindToFoodCancel(segue: UIStoryboardSegue) {
-        //print("Category on Cancel is \(category)")
     }
     
     @IBAction func unwindToFoodWithFilter(segue: UIStoryboardSegue) {
-        //print("Category on Filter is \(category)")
         segmentedControl.selectedSegmentIndex = 0 //default to All when coming from Category filter
     }
     

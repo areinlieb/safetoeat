@@ -14,8 +14,6 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     @IBOutlet var babyIcon: UIImageView!
     
-    //@IBOutlet var favoriteButton: UIButton!
-    
     var food = String()
     var favorites = [String()]
     var descriptionDict = [String: Array<Any>]()

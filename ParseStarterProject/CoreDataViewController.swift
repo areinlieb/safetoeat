@@ -140,7 +140,7 @@ class CoreDataViewController: UIViewController {
                     }
                 }
             } else {
-                print("Could not retrieve food list") //CHANGE THIS TO DISPLAY AN ALERT
+                print("Could not retrieve food list")
             }
         })
     }
@@ -239,7 +239,7 @@ class CoreDataViewController: UIViewController {
                     }
                 }
             } else {
-                print("Could not retrieve food list") //CHANGE THIS TO DISPLAY AN ALERT?
+                print("Could not retrieve food list")
             }
         }
 

@@ -26,7 +26,6 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     }
     
     @IBAction func unwindToMore(segue: UIStoryboardSegue) {
-        //print("Category on Cancel is \(category)")
     }
     
     @IBAction func unwindToWelcome(segue: UIStoryboardSegue) {

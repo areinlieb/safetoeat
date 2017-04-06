@@ -22,12 +22,10 @@ class MoreTableViewCell: UITableViewCell {
             
             self.imageView?.contentMode = .scaleAspectFit
             self.imageView?.clipsToBounds = true
-            //self.imageView?.frame = CGRectMake((imageViewFrame?.origin.x)!,(imageViewFrame?.origin.y)! + 1,40,40)
             self.imageView?.frame = CGRect(x: (imageViewFrame?.origin.x)!, y: (imageViewFrame?.height)! / 2 - 17, width: 35, height: 35)
             
         }
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
