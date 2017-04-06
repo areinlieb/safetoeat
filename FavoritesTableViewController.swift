@@ -81,8 +81,6 @@ class FavoritesTableViewController: UITableViewController {
         //retrieve favorites list
         loadFavoriteList()
         
-        tableView.tableFooterView = UIView()
-
         tableView.reloadData()
         
     }
@@ -198,6 +196,18 @@ class FavoritesTableViewController: UITableViewController {
         cell.foodLabel.text = self.favorites[indexPath.row]
      
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return (tabBarController?.tabBar.frame.height)!
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 5 , height: (tabBarController?.tabBar.frame.height)!))
+        
+        return footerView
+        
     }
     
     override func didReceiveMemoryWarning() {

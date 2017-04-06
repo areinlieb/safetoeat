@@ -80,17 +80,42 @@ class WelcomeViewController: UIViewController {
                 existingUser?.username = newEmail.email
                 existingUser?.email = newEmail.email
                 existingUser?.password = "password"
-                do {
-                    try existingUser?.save()
-                } catch {
-                    print("couldn't save email")
-                }
-                
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
-                    self.present(viewController, animated: true, completion: nil)
+
+                existingUser?.saveInBackground(block: { (success, error) in
+
+                    if success {
+                    
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                            self.present(viewController, animated: true, completion: nil)
+                        })
+                    } else if error!.localizedDescription == "Account already exists for this username." {
+                        
+                        // Send a request to login
+                        PFUser.logInWithUsername(inBackground: (existingUser?.username!)!, password: (existingUser?.password!)!, block: { (user, error) -> Void in
+                            
+                            if ((user) != nil) {
+                                
+                                DispatchQueue.main.async(execute: {
+                                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                                    self.present(viewController, animated: true, completion: nil)
+                                })
+                                
+                            } else {
+                                
+                                let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                                self.present(alert, animated: true){}
+                                
+                            }
+                        })
+                    } else {
+                        let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                        self.present(alert, animated: true){}
+                    }
+
                 })
-                
             } else {
                 
                 let newUser = PFUser()

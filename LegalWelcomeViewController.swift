@@ -17,7 +17,7 @@ class LegalWelcomeViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = false
         
-        let rtfPath = Bundle.main.url(forResource: "LegalSample", withExtension: "rtf")!
+        let rtfPath = Bundle.main.url(forResource: "LegalText", withExtension: "rtf")!
         var d : NSDictionary? = nil
         let attributedStringWithRtf = try! NSAttributedString(
             url: rtfPath,

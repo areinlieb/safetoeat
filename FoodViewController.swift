@@ -285,54 +285,17 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
  
-/*    internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        
-        /* if self.footerView != nil {
-         return self.footerView!.bounds.height
-         }
-         
-         return footerHeight*/
-        
-        return (50.0)
+    internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return (tabBarController?.tabBar.frame.height)!
     }
  
     internal func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 5 , height: 50))
-
-        switch (segmentedControl.selectedSegmentIndex) {
-            case 0:
-                break
-            case 1:
-                
-                let button = UIButton(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 10, height: 30))
-        
-                button.setTitleColor(UIColor.gray, for: .normal)
-
-                if recentFoodList.count > 0 {
-             
-                    button.setTitle("Clear recent", for: UIControlState.normal)
-                    button.addTarget(self, action: #selector(deleteRecent), for: UIControlEvents.touchUpInside)
-    
-                } else {
-            
-                    button.setTitle("No recent items", for: UIControlState.normal)
-                    button.isEnabled = false
-            
-                }
-
-                footerView.addSubview(button)
-                break
-            
-            default:
-                break
-        }
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 5 , height: (tabBarController?.tabBar.frame.height)!))
         
         return footerView
         
     }
- 
- */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

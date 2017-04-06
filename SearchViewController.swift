@@ -370,7 +370,17 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             print("Couldn't fetch results")
         }
         
+    }
+    
+    internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return (tabBarController?.tabBar.frame.height)!
+    }
+    
+    internal func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width - 5 , height: (tabBarController?.tabBar.frame.height)!))
+        
+        return footerView
         
     }
     
