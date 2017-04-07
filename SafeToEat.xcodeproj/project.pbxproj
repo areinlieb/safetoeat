@@ -32,7 +32,6 @@
 		FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0A1E6F313B00941C50 /* app icon with bubble steak.png */; };
 		FA5A5A141E6F313B00941C50 /* app icon with bubble sushi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0B1E6F313B00941C50 /* app icon with bubble sushi.png */; };
 		FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5A5A0C1E6F313B00941C50 /* app icon with bubble wine.png */; };
-		FA5BACD31E80761E0075DCFF /* ParseDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */; };
 		FA5F05C21E96D1AC00A64406 /* LegalText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F05C11E96D1AC00A64406 /* LegalText.rtf */; };
 		FA6255321E86192600194140 /* app icon with bubble sushi small.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6255311E86192600194140 /* app icon with bubble sushi small.png */; };
 		FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B0FFF1E830DBC00378663 /* LegalViewController.swift */; };
@@ -113,7 +112,6 @@
 		FA5A5A0A1E6F313B00941C50 /* app icon with bubble steak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble steak.png"; sourceTree = "<group>"; };
 		FA5A5A0B1E6F313B00941C50 /* app icon with bubble sushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble sushi.png"; sourceTree = "<group>"; };
 		FA5A5A0C1E6F313B00941C50 /* app icon with bubble wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble wine.png"; sourceTree = "<group>"; };
-		FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDataViewController.swift; sourceTree = "<group>"; };
 		FA5F05C11E96D1AC00A64406 /* LegalText.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = LegalText.rtf; sourceTree = "<group>"; };
 		FA6255311E86192600194140 /* app icon with bubble sushi small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble sushi small.png"; sourceTree = "<group>"; };
 		FA7B0FFF1E830DBC00378663 /* LegalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				814C3AC61B69877600E307BB /* Main.storyboard */,
-				FA5BACD21E80761E0075DCFF /* ParseDataViewController.swift */,
 				FADE93151E78B593007254B0 /* CoreDataViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */,
@@ -525,7 +522,6 @@
 				FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */,
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
-				FA5BACD31E80761E0075DCFF /* ParseDataViewController.swift in Sources */,
 				FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
