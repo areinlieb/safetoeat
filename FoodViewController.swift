@@ -102,6 +102,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch {
             print("Error: \(error)")
         }
+        print (foodList)
     }
     
     func loadFilteredList() {

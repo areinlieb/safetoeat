@@ -102,6 +102,7 @@
 		FA35E7A31E663DEE007C094E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeToEat.entitlements; sourceTree = SOURCE_ROOT; };
 		FA5A5A021E6F2F5700941C50 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FA5A5A041E6F313B00941C50 /* app icon with bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble.png"; sourceTree = "<group>"; };
 		FA5A5A051E6F313B00941C50 /* app icon with bubble cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon with bubble cheese.png"; sourceTree = "<group>"; };
@@ -222,6 +223,7 @@
 		81BA81471A49DA1800E65899 /* SafeToEat */ = {
 			isa = PBXGroup;
 			children = (
+				FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				FADE93151E78B593007254B0 /* CoreDataViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
@@ -430,6 +432,11 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = ALEL3ANBM5;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -642,6 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SafeToEat.entitlements;
 				DEVELOPMENT_TEAM = ALEL3ANBM5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,6 +672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SafeToEat.entitlements;
 				DEVELOPMENT_TEAM = ALEL3ANBM5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

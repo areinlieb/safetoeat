@@ -60,14 +60,14 @@ class CoreDataViewController: UIViewController {
  
         super.viewDidLoad()
 
-/*
+
         deleteCoreDataFood()
         deleteCoreDataCategories()
         deleteCoreDataFavorites()
         deleteCoreDataSearches()
         deleteCoreDataRecent()
         deleteCoreDataEmail()
-*/
+
         
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(CoreDataViewController.animate), userInfo: nil, repeats: true)
         animate()
