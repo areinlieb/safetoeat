@@ -42,7 +42,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
         //load category list
         loadCategories()
         
@@ -98,6 +98,8 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
         
         if foodCategoryTypes[indexPath.row] == selectedCategory {
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.none
         }
         
         return cell
