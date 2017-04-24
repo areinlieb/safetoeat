@@ -25,6 +25,7 @@
 		FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA35E7A21E663DEE007C094E /* Model.xcdatamodeld */; };
 		FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */; };
 		FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF81E7760E200EF2413 /* SearchViewController.swift */; };
+		FA467CE01EAE6A4400F03AAD /* star background.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CDF1EAE6A4400F03AAD /* star background.png */; };
 		FA4EC2971EABF18C00B59F34 /* traffic light green.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2941EABF18C00B59F34 /* traffic light green.png */; };
 		FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2951EABF18C00B59F34 /* traffic light red.png */; };
 		FA4EC2991EABF18C00B59F34 /* traffic light yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */; };
@@ -115,6 +116,7 @@
 		FA35E7A31E663DEE007C094E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA467CDF1EAE6A4400F03AAD /* star background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background.png"; sourceTree = "<group>"; };
 		FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeToEat.entitlements; sourceTree = SOURCE_ROOT; };
 		FA4EC2941EABF18C00B59F34 /* traffic light green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light green.png"; sourceTree = "<group>"; };
 		FA4EC2951EABF18C00B59F34 /* traffic light red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light red.png"; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */,
 				FAA06AB31EAC05C00083BF52 /* star background blue.png */,
 				FA0A6D441E8D76E100AB5B1D /* star background gray.png */,
+				FA467CDF1EAE6A4400F03AAD /* star background.png */,
 				FADE73CC1E7A258200EB7B4D /* app icon.jpg */,
 				FA6255311E86192600194140 /* app icon with bubble sushi small.png */,
 				FA92E7B71E6CE99A0069271D /* category icon.png */,
@@ -540,6 +543,7 @@
 				FA4EC29B1EABF44100B59F34 /* smile green.png in Resources */,
 				FA5A5A121E6F313B00941C50 /* app icon with bubble spinach.png in Resources */,
 				FA9B4C8F1E77B7BC00EEA05D /* search food icon.png in Resources */,
+				FA467CE01EAE6A4400F03AAD /* star background.png in Resources */,
 				FAF8BE9A1E81F13D00D5BED8 /* removeFromFavorites.png in Resources */,
 				FA7BAA361E843A2D001D9355 /* more-requestAdd.png in Resources */,
 				FA7B100C1E83299C00378663 /* more-rate.png in Resources */,

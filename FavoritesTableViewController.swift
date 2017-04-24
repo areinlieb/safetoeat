@@ -18,7 +18,7 @@ class FavoritesTableViewController: UITableViewController {
     var selectedFavorite = ""
     var deleteFavoritesIndexPath: IndexPath? = nil
     
-    var backgroundView = UIImageView(image: UIImage(named: "star background blue.png"))
+    var backgroundView = UIImageView(image: UIImage(named: "star background.png"))
     var backgroundText = UILabel()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
