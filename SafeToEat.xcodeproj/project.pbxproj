@@ -26,6 +26,8 @@
 		FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */; };
 		FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF81E7760E200EF2413 /* SearchViewController.swift */; };
 		FA467CE01EAE6A4400F03AAD /* star background.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CDF1EAE6A4400F03AAD /* star background.png */; };
+		FA467CE21EAE6DEA00F03AAD /* women outline.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CE11EAE6DEA00F03AAD /* women outline.png */; };
+		FA467CE41EAE93B500F03AAD /* continue button.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CE31EAE93B500F03AAD /* continue button.png */; };
 		FA4EC2971EABF18C00B59F34 /* traffic light green.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2941EABF18C00B59F34 /* traffic light green.png */; };
 		FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2951EABF18C00B59F34 /* traffic light red.png */; };
 		FA4EC2991EABF18C00B59F34 /* traffic light yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */; };
@@ -117,6 +119,8 @@
 		FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FA467CDF1EAE6A4400F03AAD /* star background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background.png"; sourceTree = "<group>"; };
+		FA467CE11EAE6DEA00F03AAD /* women outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "women outline.png"; sourceTree = "<group>"; };
+		FA467CE31EAE93B500F03AAD /* continue button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue button.png"; sourceTree = "<group>"; };
 		FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeToEat.entitlements; sourceTree = SOURCE_ROOT; };
 		FA4EC2941EABF18C00B59F34 /* traffic light green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light green.png"; sourceTree = "<group>"; };
 		FA4EC2951EABF18C00B59F34 /* traffic light red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light red.png"; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 				FA4EC29A1EABF44100B59F34 /* smile green.png */,
 				FA4EC29C1EABF80A00B59F34 /* question yellow.png */,
 				FA4EC29E1EABF82E00B59F34 /* frown red.png */,
+				FA467CE11EAE6DEA00F03AAD /* women outline.png */,
+				FA467CE31EAE93B500F03AAD /* continue button.png */,
 				FA7B10111E83303A00378663 /* More Images */,
 				FADE73BB1E79C82000EB7B4D /* Animation */,
 			);
@@ -530,6 +536,7 @@
 				FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */,
 				FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */,
 				FADE73C51E79C82000EB7B4D /* frame_2.png in Resources */,
+				FA467CE41EAE93B500F03AAD /* continue button.png in Resources */,
 				FA7BAA371E843A2D001D9355 /* more-inviteFriends.png in Resources */,
 				FA86EB861E85B05A00B66A91 /* login.png in Resources */,
 				FA92E7B81E6CE99A0069271D /* category icon.png in Resources */,
@@ -542,6 +549,7 @@
 				FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */,
 				FA4EC29B1EABF44100B59F34 /* smile green.png in Resources */,
 				FA5A5A121E6F313B00941C50 /* app icon with bubble spinach.png in Resources */,
+				FA467CE21EAE6DEA00F03AAD /* women outline.png in Resources */,
 				FA9B4C8F1E77B7BC00EEA05D /* search food icon.png in Resources */,
 				FA467CE01EAE6A4400F03AAD /* star background.png in Resources */,
 				FAF8BE9A1E81F13D00D5BED8 /* removeFromFavorites.png in Resources */,
