@@ -121,7 +121,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["areinlieb@gmail.com"])
+            mail.setToRecipients(["support@safetoeatfood.com"])
             mail.setSubject("SafeToEat: Feedback")
             mail.setMessageBody("<p>We'd love to hear from you. Please tell us how we can make SafeToEat better for everyone!</p>", isHTML: true)
             
@@ -136,7 +136,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["areinlieb@gmail.com"])
+            mail.setToRecipients(["support@safetoeatfood.com"])
             mail.setSubject("SafeToEat: Food Request")
             mail.setMessageBody("<p>We're sorry you couldn't find what you were looking for. Please tell us the food you'd like us to add.</p>", isHTML: true)
             
