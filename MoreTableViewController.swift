@@ -1,5 +1,5 @@
 //
-//  MoreTableViewController.swift
+//  MsecoreTableViewController.swift
 //  SafeToEat
 //
 //  Created by Alex Reinlieb on 3/13/17.
@@ -15,8 +15,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         
     var sections: [Section] = SectionsData().getSectionsFromData()
     
-    let appStoreAppID = "447188370"  //CHANGE LATER FOR YOUR APP
-    
+    let appStoreAppID = "1224454708"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +71,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
 
     func appRating() {
         
-        let alert = UIAlertController(title: "Rate SafetoEat", message:"If you liked our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Rate SafetoEat", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true, completion: nil) }))
@@ -185,19 +184,26 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
                 inviteFriends(sender: self.tableView)
                 break
             case (1,0):
-                sendEmailRequestFood()
-                break
-            case (1,1):
-                sendEmailFeedback()
-                break
-            case (1,2):
-                guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "Legal") as? LegalViewController else {
+                guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "Glossary") as? GlossaryViewController else {
                     print("Could not instantiate view controller with identifier of type SecondViewController")
                     return
                 }
                 self.navigationController?.pushViewController(vc, animated:true)
                 break
             case (2,0):
+                sendEmailRequestFood()
+                break
+            case (2,1):
+                sendEmailFeedback()
+                break
+            case (2,2):
+                guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "Legal") as? LegalViewController else {
+                    print("Could not instantiate view controller with identifier of type SecondViewController")
+                    return
+                }
+                self.navigationController?.pushViewController(vc, animated:true)
+                break
+            case (3,0):
                 logout()
                 break
             default: break

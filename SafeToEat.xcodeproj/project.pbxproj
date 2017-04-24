@@ -19,6 +19,9 @@
 		D3EB37521E75FA59009894E8 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */; };
 		FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FA06B75E1E940CBB00CA3D7F /* delete.png */; };
 		FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0A6D441E8D76E100AB5B1D /* star background gray.png */; };
+		FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */ = {isa = PBXBuildFile; fileRef = FA115E711EADB24F00E7A251 /* more-glossary.png */; };
+		FA115E741EADB49C00E7A251 /* Glossary.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA115E731EADB49C00E7A251 /* Glossary.rtf */; };
+		FA115E761EADB4AE00E7A251 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */; };
 		FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA35E7A21E663DEE007C094E /* Model.xcdatamodeld */; };
 		FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */; };
 		FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF81E7760E200EF2413 /* SearchViewController.swift */; };
@@ -106,6 +109,9 @@
 		EF9A8B47185E7FD9C72DC6D4 /* Pods_SafeToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA06B75E1E940CBB00CA3D7F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		FA0A6D441E8D76E100AB5B1D /* star background gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background gray.png"; sourceTree = "<group>"; };
+		FA115E711EADB24F00E7A251 /* more-glossary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-glossary.png"; sourceTree = "<group>"; };
+		FA115E731EADB49C00E7A251 /* Glossary.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Glossary.rtf; sourceTree = "<group>"; };
+		FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		FA35E7A31E663DEE007C094E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7B10011E83299C00378663 /* more-feedback.png */,
+				FA115E711EADB24F00E7A251 /* more-glossary.png */,
 				FA7B10031E83299C00378663 /* more-logout.png */,
 				FA7B10051E83299C00378663 /* more-legal.png */,
 				FA7B10061E83299C00378663 /* more-rate.png */,
@@ -317,6 +324,7 @@
 			children = (
 				FA06B75E1E940CBB00CA3D7F /* delete.png */,
 				FA5F05C11E96D1AC00A64406 /* LegalText.rtf */,
+				FA115E731EADB49C00E7A251 /* Glossary.rtf */,
 				FA86EB851E85B05A00B66A91 /* login.png */,
 				FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */,
 				FAA06AB31EAC05C00083BF52 /* star background blue.png */,
@@ -351,6 +359,7 @@
 				FA9D06A21E773F1100E76026 /* SectionsData.swift */,
 				FA9D06A41E773F1100E76026 /* MoreSections.swift */,
 				FA7B0FFF1E830DBC00378663 /* LegalViewController.swift */,
+				FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -508,11 +517,13 @@
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 				FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */,
+				FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */,
 				FAE01C571E94393800F15CF8 /* baby happy with text.png in Resources */,
 				FAE01C5A1E943B2500F15CF8 /* baby question with text.png in Resources */,
 				FA4EC29D1EABF80A00B59F34 /* question yellow.png in Resources */,
 				FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */,
 				FA5A5A031E6F2F5700941C50 /* Launch Screen.storyboard in Resources */,
+				FA115E741EADB49C00E7A251 /* Glossary.rtf in Resources */,
 				FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */,
 				FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */,
 				FADE73C51E79C82000EB7B4D /* frame_2.png in Resources */,
@@ -562,6 +573,7 @@
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
 				FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */,
 				FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */,
+				FA115E761EADB4AE00E7A251 /* GlossaryViewController.swift in Sources */,
 				FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */,
 				FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */,
 				FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */,

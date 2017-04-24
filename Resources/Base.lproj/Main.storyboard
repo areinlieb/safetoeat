@@ -77,7 +77,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4G-nA-dMs" id="ejg-iQ-EQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-ic-ZTd" userLabel="Food Label">
@@ -670,6 +670,44 @@
             </objects>
             <point key="canvasLocation" x="1100" y="-114"/>
         </scene>
+        <!--Glossary-->
+        <scene sceneID="L9W-dp-gET">
+            <objects>
+                <viewController storyboardIdentifier="Glossary" title="Glossary" id="1mA-jK-64T" customClass="GlossaryViewController" customModule="SafeToEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nca-LG-egq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kpb-Yn-aMU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oO4-8O-FvH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" restorationIdentifier="Legal" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="svk-gY-VyC">
+                                <rect key="frame" x="8" y="0.0" width="398" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="svk-gY-VyC" firstAttribute="top" secondItem="oO4-8O-FvH" secondAttribute="top" id="B6x-es-xiC"/>
+                            <constraint firstItem="svk-gY-VyC" firstAttribute="leading" secondItem="oO4-8O-FvH" secondAttribute="leadingMargin" constant="-12" id="DrX-Ck-Dut"/>
+                            <constraint firstItem="svk-gY-VyC" firstAttribute="bottom" secondItem="Kpb-Yn-aMU" secondAttribute="top" id="RVV-xB-bnp"/>
+                            <constraint firstItem="svk-gY-VyC" firstAttribute="centerX" secondItem="oO4-8O-FvH" secondAttribute="centerX" id="ddL-DN-KWD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="glossaryText" destination="svk-gY-VyC" id="yH5-53-0hk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxr-Nb-maP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075.36231884058" y="-428.804347826087"/>
+        </scene>
         <!--Legal-->
         <scene sceneID="YBX-bg-20N">
             <objects>
@@ -727,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kr-uh-KKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="-115"/>
+            <point key="canvasLocation" x="2075" y="258"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bT7-4v-00I">
