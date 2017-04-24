@@ -26,17 +26,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqB-NY-XP3" userLabel="Food">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqB-NY-XP3" userLabel="Food Label">
                                             <rect key="frame" x="15" y="0.0" width="364" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile green.png" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-bz-fNQ" userLabel="Safety Icon">
+                                            <rect key="frame" x="347" y="11" width="26" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="26" id="5WM-6s-DQ1"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lvf-bz-fNQ" secondAttribute="bottom" constant="-0.3333333333333357" id="UIf-9V-6Z2"/>
+                                        <constraint firstItem="lvf-bz-fNQ" firstAttribute="trailing" secondItem="qUS-SO-yY8" secondAttribute="trailingMargin" id="olk-6x-NLP"/>
+                                        <constraint firstItem="lvf-bz-fNQ" firstAttribute="top" secondItem="qUS-SO-yY8" secondAttribute="topMargin" constant="3" id="vmi-BY-4CV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="foodLabel" destination="iqB-NY-XP3" id="HH9-lh-oZo"/>
+                                    <outlet property="safetyIcon" destination="lvf-bz-fNQ" id="LVC-kP-x9S"/>
                                     <segue destination="6Aa-4R-cFp" kind="show" identifier="goToFoodDetail" id="uCg-Uf-4RJ"/>
                                 </connections>
                             </tableViewCell>
@@ -50,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOQ-me-Hp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="1487"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="1486.9565217391305"/>
         </scene>
         <!--Search-->
         <scene sceneID="xqB-Ay-C7t">
@@ -65,20 +77,35 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4G-nA-dMs" id="ejg-iQ-EQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to4-qB-QvG" userLabel="Food">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-ic-ZTd" userLabel="Food Label">
+                                            <rect key="frame" x="8" y="0.0" width="332" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-X2-b0Q" userLabel="Safety Icon">
+                                            <rect key="frame" x="356" y="10" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="gta-CT-9Fa"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7gi-X2-b0Q" firstAttribute="leading" secondItem="YLm-ic-ZTd" secondAttribute="trailing" constant="16" id="4SP-Ic-sbM"/>
+                                        <constraint firstAttribute="trailing" secondItem="7gi-X2-b0Q" secondAttribute="trailing" id="GSp-Wf-y1o"/>
+                                        <constraint firstItem="YLm-ic-ZTd" firstAttribute="top" secondItem="ejg-iQ-EQF" secondAttribute="top" id="UwZ-YH-JSd"/>
+                                        <constraint firstItem="7gi-X2-b0Q" firstAttribute="centerY" secondItem="YLm-ic-ZTd" secondAttribute="centerY" id="Xhs-mu-K8x"/>
+                                        <constraint firstItem="YLm-ic-ZTd" firstAttribute="leading" secondItem="ejg-iQ-EQF" secondAttribute="leadingMargin" id="d3m-Vm-zRv"/>
+                                        <constraint firstItem="7gi-X2-b0Q" firstAttribute="top" secondItem="ejg-iQ-EQF" secondAttribute="topMargin" constant="2" id="l68-Ob-V4x"/>
+                                        <constraint firstItem="YLm-ic-ZTd" firstAttribute="centerY" secondItem="ejg-iQ-EQF" secondAttribute="centerY" id="or7-mt-DtJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="foodLabel" destination="to4-qB-QvG" id="hUn-h4-K7m"/>
+                                    <outlet property="foodLabel" destination="YLm-ic-ZTd" id="Dzm-7x-574"/>
+                                    <outlet property="safetyIcon" destination="7gi-X2-b0Q" id="Hom-wT-JlS"/>
                                     <segue destination="6Aa-4R-cFp" kind="show" identifier="goToFoodDetail" id="Xfy-3u-E3y"/>
                                 </connections>
                             </tableViewCell>
@@ -96,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5d-4s-aLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098.4000000000001" y="667.91604197901052"/>
+            <point key="canvasLocation" x="1097.1014492753625" y="666.84782608695662"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cOq-pf-nRh">
@@ -531,15 +558,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zE1-oG-H8d" userLabel="Safety Icon">
+                                                    <rect key="frame" x="356" y="10" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="55s-gE-a0w"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="zE1-oG-H8d" secondAttribute="trailing" id="4Qa-aC-pgJ"/>
+                                                <constraint firstItem="zE1-oG-H8d" firstAttribute="bottom" secondItem="D0P-pQ-chp" secondAttribute="bottom" id="8gW-YW-eQv"/>
                                                 <constraint firstItem="D0P-pQ-chp" firstAttribute="top" secondItem="QYY-aO-O14" secondAttribute="top" id="BdT-Ly-TqF"/>
+                                                <constraint firstItem="zE1-oG-H8d" firstAttribute="centerY" secondItem="QYY-aO-O14" secondAttribute="centerY" id="RLs-5o-0MF"/>
                                                 <constraint firstItem="D0P-pQ-chp" firstAttribute="leading" secondItem="QYY-aO-O14" secondAttribute="leadingMargin" id="oKT-Q8-t4L"/>
                                                 <constraint firstItem="D0P-pQ-chp" firstAttribute="bottom" secondItem="QYY-aO-O14" secondAttribute="bottomMargin" id="tz7-wa-Zcw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="foodLabel" destination="D0P-pQ-chp" id="cZ5-x5-4ga"/>
+                                            <outlet property="safetyIcon" destination="zE1-oG-H8d" id="TC2-om-NVB"/>
                                             <segue destination="6Aa-4R-cFp" kind="show" identifier="goToFoodDetail" id="fJQ-ff-ybb"/>
                                         </connections>
                                     </tableViewCell>
@@ -574,7 +611,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVj-Un-YuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="2258"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="2257.3369565217395"/>
         </scene>
         <!--More-->
         <scene sceneID="42O-Eh-fcm">
@@ -773,8 +810,9 @@
         <image name="app icon with bubble cheese.png" width="626" height="626"/>
         <image name="category icon.png" width="30" height="30"/>
         <image name="login.png" width="64" height="64"/>
+        <image name="smile green.png" width="128" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xfy-3u-E3y"/>
+        <segue reference="fJQ-ff-ybb"/>
     </inferredMetricsTieBreakers>
 </document>

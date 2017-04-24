@@ -15,6 +15,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     var foodList = [String()]
     var foodListFiltered = [String()]
     var recentFoodList = [String()]
+    var safety = [String: String]()
 
     @IBOutlet var tableView: UITableView!
     
@@ -90,10 +91,18 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             if results.count > 0 {
                 
                 foodList.removeAll()
+                safety.removeAll()
                 
                 for result in results as [Food] {
                     if let foodItem = result.foodName {
                         self.foodList.append(foodItem)
+                        
+                        if let safe = result.isSafe {
+                            self.safety[foodItem] = safe
+                        } else {
+                            print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                        }
+                        
                     }  else {
                         print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
@@ -102,7 +111,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch {
             print("Error: \(error)")
         }
-        print (foodList)
     }
     
     func loadFilteredList() {
@@ -262,18 +270,48 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FoodTableViewCell
-                
+        
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             if category == "All" {
                 cell.foodLabel.text = self.foodList[indexPath.row]
+      
+                let safetyResult = safety[self.foodList[indexPath.row]]
+
+                if safetyResult == "safe" {
+                    cell.safetyIcon.image = UIImage(named: "smile green.png")
+                } else if safetyResult == "not safe" {
+                    cell.safetyIcon.image = UIImage(named: "frown red.png")
+                } else {
+                    cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                }
             } else {
                 cell.foodLabel.text = self.foodListFiltered[indexPath.row]
+
+                let safetyResult = safety[self.foodListFiltered[indexPath.row]]
+                
+                if safetyResult == "safe" {
+                    cell.safetyIcon.image = UIImage(named: "smile green.png")
+                } else if safetyResult == "not safe" {
+                    cell.safetyIcon.image = UIImage(named: "frown red.png")
+                } else {
+                    cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                }
             }
             setClearButton(isRecent: false)
             break
         case 1:
             cell.foodLabel.text = self.recentFoodList[indexPath.row]
+
+            let safetyResult = safety[self.recentFoodList[indexPath.row]]
+            
+            if safetyResult == "safe" {
+                cell.safetyIcon.image = UIImage(named: "smile green.png")
+            } else if safetyResult == "not safe" {
+                cell.safetyIcon.image = UIImage(named: "frown red.png")
+            } else {
+                cell.safetyIcon.image = UIImage(named: "question yellow.png")
+            }
             setClearButton(isRecent: true)
             break
         default:

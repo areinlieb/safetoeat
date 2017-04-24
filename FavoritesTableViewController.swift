@@ -11,11 +11,14 @@ import CoreData
 
 class FavoritesTableViewController: UITableViewController {
 
+    var foodList = [String()]
     var favorites = [String()]
+    var safety = [String: String]()
+
     var selectedFavorite = ""
     var deleteFavoritesIndexPath: IndexPath? = nil
     
-    var backgroundView = UIImageView(image: UIImage(named: "star background gray.png"))
+    var backgroundView = UIImageView(image: UIImage(named: "star background blue.png"))
     var backgroundText = UILabel()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,6 +55,7 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         backgroundView.contentMode = .scaleAspectFit
@@ -75,6 +79,9 @@ class FavoritesTableViewController: UITableViewController {
         
         self.tableView.sendSubview(toBack: backgroundText)
 
+        //retrive food list
+        loadFoodList()
+        
         //retrieve favorites list
         loadFavoriteList()
         
@@ -82,9 +89,47 @@ class FavoritesTableViewController: UITableViewController {
         
     }
     
+    func loadFoodList() {
+        
+        let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
+        
+        let foodSort = NSSortDescriptor(key: "foodName", ascending: true)
+        fetchRequest.sortDescriptors = [foodSort]
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                
+                foodList.removeAll()
+                safety.removeAll()
+                
+                for result in results as [Food] {
+                    if let foodItem = result.foodName {
+                        self.foodList.append(foodItem)
+                        
+                        if let safe = result.isSafe {
+                            self.safety[foodItem] = safe
+                        } else {
+                            print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                        }
+                        
+                    }  else {
+                        print("Couldn't add foodItem \(String(describing: result.foodName))")
+                    }
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        
+    }
+    
     func loadFavoriteList() {
   
         favorites.removeAll()
+        safety.removeAll()
 
         let fetchRequest:NSFetchRequest<Favorites> = Favorites.fetchRequest()
         let foodSortFavorites = NSSortDescriptor(key: "foodName", ascending: true)
@@ -191,7 +236,17 @@ class FavoritesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FavoritesTableViewCell
      
         cell.foodLabel.text = self.favorites[indexPath.row]
-     
+        
+        let safetyResult = safety[self.foodList[indexPath.row]]
+        
+        if safetyResult == "safe" {
+            cell.safetyIcon.image = UIImage(named: "smile green.png")
+        } else if safetyResult == "not safe" {
+            cell.safetyIcon.image = UIImage(named: "frown red.png")
+        } else {
+            cell.safetyIcon.image = UIImage(named: "question yellow.png")
+        }
+        
         return cell
     }
 

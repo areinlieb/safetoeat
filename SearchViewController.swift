@@ -17,6 +17,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
     var foodList = [String()]
     var foodListFiltered = [String]()
     var recentSearches = [String]()
+    var safety = [String: String]()
     
     var searchController: UISearchController!
     var resultsController = UITableViewController()
@@ -179,10 +180,18 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             if results.count > 0 {
                 
                 foodList.removeAll()
+                safety.removeAll()
                 
                 for result in results as [Food] {
                     if let foodItem = result.foodName {
                         self.foodList.append(foodItem)
+
+                        if let safe = result.isSafe {
+                            self.safety[foodItem] = safe
+                        } else {
+                            print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                        }
+
                     }  else {
                         print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
@@ -315,11 +324,35 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         if searchController.isActive && searchController.searchBar.text != "" {
             setClearButton(searchResults: false)
             setBackgroundImage(show: false)
-            cell.textLabel?.text = self.foodListFiltered[indexPath.row]
+            
+            cell.foodLabel.text = self.foodListFiltered[indexPath.row]
+            
+            let safetyResult = safety[self.foodListFiltered[indexPath.row]]
+            
+            if safetyResult == "safe" {
+                cell.safetyIcon.image = UIImage(named: "smile green.png")
+            } else if safetyResult == "not safe" {
+                cell.safetyIcon.image = UIImage(named: "frown red.png")
+            } else {
+                cell.safetyIcon.image = UIImage(named: "question yellow.png")
+            }
+
         } else if recentSearches.count > 0 {
             setClearButton(searchResults: true)
             setBackgroundImage(show: false)
-            cell.textLabel?.text = self.recentSearches[indexPath.row]
+            
+            cell.foodLabel.text = self.recentSearches[indexPath.row]
+
+            let safetyResult = safety[self.recentSearches[indexPath.row]]
+            
+            if safetyResult == "safe" {
+                cell.safetyIcon.image = UIImage(named: "smile green.png")
+            } else if safetyResult == "not safe" {
+                cell.safetyIcon.image = UIImage(named: "frown red.png")
+            } else {
+                cell.safetyIcon.image = UIImage(named: "question yellow.png")
+            }
+            
         } else if recentSearches.count == 0 {
             setClearButton(searchResults: false)
             setBackgroundImage(show: true)

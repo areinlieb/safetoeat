@@ -11,6 +11,7 @@ import UIKit
 class FavoritesTableViewCell: UITableViewCell {
     
     @IBOutlet var foodLabel: UILabel!
+    @IBOutlet var safetyIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

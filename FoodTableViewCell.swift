@@ -11,6 +11,7 @@ import UIKit
 class FoodTableViewCell: UITableViewCell {
 
     @IBOutlet var foodLabel: UILabel!
+    @IBOutlet var safetyIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +20,6 @@ class FoodTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

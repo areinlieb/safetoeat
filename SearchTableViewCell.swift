@@ -11,7 +11,8 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet var foodLabel: UILabel!
-
+    @IBOutlet var safetyIcon: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
