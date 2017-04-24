@@ -79,16 +79,13 @@ class FavoritesTableViewController: UITableViewController {
         
         self.tableView.sendSubview(toBack: backgroundText)
 
-        //retrive food list
-        loadFoodList()
-        
         //retrieve favorites list
         loadFavoriteList()
         
         tableView.reloadData()
         
     }
-    
+ /*
     func loadFoodList() {
         
         let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
@@ -125,6 +122,7 @@ class FavoritesTableViewController: UITableViewController {
         }
         
     }
+ */
     
     func loadFavoriteList() {
   
@@ -144,6 +142,13 @@ class FavoritesTableViewController: UITableViewController {
                 for result in results as [Favorites] {
                     if let foodItem = result.foodName {
                         self.favorites.append(foodItem)
+                        
+                        if let safe = result.isSafe {
+                            self.safety[foodItem] = safe
+                        } else {
+                            print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                        }
+
                     }
                 }
             }
@@ -237,7 +242,7 @@ class FavoritesTableViewController: UITableViewController {
      
         cell.foodLabel.text = self.favorites[indexPath.row]
         
-        let safetyResult = safety[self.foodList[indexPath.row]]
+        let safetyResult = safety[self.favorites[indexPath.row]]
         
         if safetyResult == "safe" {
             cell.safetyIcon.image = UIImage(named: "smile green.png")
@@ -246,6 +251,8 @@ class FavoritesTableViewController: UITableViewController {
         } else {
             cell.safetyIcon.image = UIImage(named: "question yellow.png")
         }
+        
+        cell.safetyIcon.layer.zPosition = 1
         
         return cell
     }

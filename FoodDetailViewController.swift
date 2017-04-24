@@ -213,6 +213,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             
                 let newFood = NSEntityDescription.insertNewObject(forEntityName: "Favorites", into: DatabaseController.getContext()) as! Favorites
                 newFood.foodName = food
+                newFood.isSafe = safeEat
                 newFood.timeAdded = NSDate()
 
                 DatabaseController.saveContext()

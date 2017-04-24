@@ -33,7 +33,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile green.png" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-bz-fNQ" userLabel="Safety Icon">
+                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-bz-fNQ" userLabel="Safety Icon">
                                             <rect key="frame" x="347" y="11" width="26" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="26" id="5WM-6s-DQ1"/>
@@ -848,9 +848,8 @@
         <image name="app icon with bubble cheese.png" width="626" height="626"/>
         <image name="category icon.png" width="30" height="30"/>
         <image name="login.png" width="64" height="64"/>
-        <image name="smile green.png" width="128" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fJQ-ff-ybb"/>
+        <segue reference="uCg-Uf-4RJ"/>
     </inferredMetricsTieBreakers>
 </document>
