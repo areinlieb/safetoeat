@@ -15,7 +15,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         
     var sections: [Section] = SectionsData().getSectionsFromData()
     
-    let appStoreAppID = "1224454708"
+    let appStoreAppID = "1229895485"
     
     override func viewDidLoad() {
         super.viewDidLoad()
