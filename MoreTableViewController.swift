@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Parse
 import MessageUI
+import StoreKit
 
 class MoreTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
         
@@ -78,7 +79,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
 
         alert.addAction(UIAlertAction(title: "Rate it now", style: .default, handler: { (action: UIAlertAction!) in
             
-            if let url = URL(string: "itms-apps://itunes.apple.com/app/id" + self.appStoreAppID), UIApplication.shared.canOpenURL(url) {
+            if let url = URL(string: "itms-apps://itunes.apple.com/app/id" + self.appStoreAppID + "?action=write-review"), UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
@@ -178,7 +179,12 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         switch (indexPath.section, indexPath.row) {
             
             case (0,0):
-                appRating()
+                
+                if #available(iOS 10.3, *) {
+                    SKStoreReviewController.requestReview()
+                } else {
+                    appRating()
+                }
                 break
             case (0,1):
                 inviteFriends(sender: self.tableView)

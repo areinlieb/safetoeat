@@ -150,7 +150,7 @@ class CoreDataViewController: UIViewController {
     func loadFood() {
         
         let foodQuery = PFQuery(className: "FoodData")
-        foodQuery.limit = 500
+        foodQuery.limit = 1000
         foodQuery.findObjectsInBackground { (objects, error) in
             
             if error == nil {
