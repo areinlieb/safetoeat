@@ -66,6 +66,9 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
             alert.dismiss(animated: true, completion: nil)
         }))
         
+        //added for iPad crash
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: 1.0, height: 1.0)
         present(alert, animated: true, completion: nil)
         
     }
