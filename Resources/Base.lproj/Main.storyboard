@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cpz-aq-uvA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cpz-aq-uvA">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -357,42 +357,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCe-s7-a2b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCe-s7-a2b">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="xOx-mB-7HS" customClass="CategoryFilterTableViewCell" customModule="SafeToEat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="136" id="xOx-mB-7HS" customClass="CategoryFilterTableViewCell" customModule="SafeToEat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xOx-mB-7HS" id="e9d-5U-iGZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qj9-BB-pdo" userLabel="Category Icon">
-                                                    <rect key="frame" x="8" y="18" width="40" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="HtN-RA-b5o"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-o2-GEI">
-                                                    <rect key="frame" x="56" y="11" width="288" height="53"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-o2-GEI">
+                                                    <rect key="frame" x="0.0" y="11" width="414" height="114"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lkg-o2-GEI" secondAttribute="trailing" constant="62" id="2cH-2a-HxQ"/>
-                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="leading" secondItem="qj9-BB-pdo" secondAttribute="trailing" constant="8" symbolic="YES" id="7rC-I8-pxU"/>
-                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="centerY" secondItem="qj9-BB-pdo" secondAttribute="centerY" id="JDY-X3-zoC"/>
-                                                <constraint firstItem="qj9-BB-pdo" firstAttribute="leading" secondItem="e9d-5U-iGZ" secondAttribute="leadingMargin" id="TM6-C8-mSX"/>
-                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="centerY" secondItem="e9d-5U-iGZ" secondAttribute="centerY" id="b5A-My-VbA"/>
-                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="top" secondItem="e9d-5U-iGZ" secondAttribute="topMargin" constant="3" id="f4a-Yb-a4d"/>
-                                                <constraint firstItem="qj9-BB-pdo" firstAttribute="top" secondItem="e9d-5U-iGZ" secondAttribute="topMargin" constant="10" id="wIX-QZ-EVj"/>
+                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="leading" secondItem="e9d-5U-iGZ" secondAttribute="leading" id="1wU-1R-2jS"/>
+                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="top" secondItem="e9d-5U-iGZ" secondAttribute="topMargin" constant="3" id="Uen-bW-Kvp"/>
+                                                <constraint firstItem="lkg-o2-GEI" firstAttribute="centerY" secondItem="e9d-5U-iGZ" secondAttribute="centerY" id="cuk-wl-Swk"/>
+                                                <constraint firstAttribute="trailing" secondItem="lkg-o2-GEI" secondAttribute="trailing" id="tyA-sG-y4B"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="categoryIcon" destination="qj9-BB-pdo" id="byE-tq-Jnz"/>
                                             <outlet property="categoryLabel" destination="lkg-o2-GEI" id="yBK-k6-bts"/>
                                             <segue destination="FZc-9Z-0QU" kind="unwind" unwindAction="unwindToFoodWithFilterWithSegue:" id="5Rz-jW-7YZ"/>
                                         </connections>
@@ -434,7 +427,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFT-Dd-kiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FZc-9Z-0QU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1098.5507246376812" y="3165.489130434783"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="3098.6413043478265"/>
         </scene>
         <!--Food Detail-->
         <scene sceneID="2Yg-0L-8EG">

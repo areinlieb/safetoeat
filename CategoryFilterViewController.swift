@@ -73,6 +73,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
                         if let categoryIcon = result.categoryIcon {
                             foodCategoryImages.append(UIImage(data: categoryIcon as Data)!)
                         }
+
                     }
                 }
             } catch {
@@ -93,15 +94,20 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryFilterTableViewCell
         
-        cell.categoryIcon.image = foodCategoryImages[indexPath.row]
+        //cell.categoryIcon.image = foodCategoryImages[indexPath.row]
         cell.categoryLabel.text = foodCategoryTypes[indexPath.row]
         
-        if foodCategoryTypes[indexPath.row] == selectedCategory {
-            cell.accessoryType = UITableViewCellAccessoryType.checkmark
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryType.none
-        }
+        cell.backgroundView = UIImageView(image: foodCategoryImages[indexPath.row])
+        cell.backgroundView?.alpha = 0.5
+        cell.backgroundView?.contentMode = .scaleAspectFill
         
+        if foodCategoryTypes[indexPath.row] == selectedCategory {
+            cell.categoryLabel.font = UIFont.boldSystemFont(ofSize: 30)
+//            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        } else {
+//            cell.accessoryType = UITableViewCellAccessoryType.none
+        }
+
         return cell
         
     }

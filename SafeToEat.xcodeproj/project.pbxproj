@@ -22,6 +22,7 @@
 		FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */ = {isa = PBXBuildFile; fileRef = FA115E711EADB24F00E7A251 /* more-glossary.png */; };
 		FA115E741EADB49C00E7A251 /* Glossary.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA115E731EADB49C00E7A251 /* Glossary.rtf */; };
 		FA115E761EADB4AE00E7A251 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */; };
+		FA1DDED31EDB89D300066A20 /* dairy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA1DDED21EDB89D300066A20 /* dairy.jpg */; };
 		FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA35E7A21E663DEE007C094E /* Model.xcdatamodeld */; };
 		FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */; };
 		FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF81E7760E200EF2413 /* SearchViewController.swift */; };
@@ -115,6 +116,7 @@
 		FA115E711EADB24F00E7A251 /* more-glossary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-glossary.png"; sourceTree = "<group>"; };
 		FA115E731EADB49C00E7A251 /* Glossary.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Glossary.rtf; sourceTree = "<group>"; };
 		FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
+		FA1DDED21EDB89D300066A20 /* dairy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dairy.jpg; sourceTree = "<group>"; };
 		FA35E7A31E663DEE007C094E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 		FA92E7BD1E6E18500069271D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FA1DDED21EDB89D300066A20 /* dairy.jpg */,
 				FA06B75E1E940CBB00CA3D7F /* delete.png */,
 				FA5F05C11E96D1AC00A64406 /* LegalText.rtf */,
 				FA115E731EADB49C00E7A251 /* Glossary.rtf */,
@@ -543,6 +546,7 @@
 				FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */,
 				FADE73CA1E79C82000EB7B4D /* frame_7.png in Resources */,
 				FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */,
+				FA1DDED31EDB89D300066A20 /* dairy.jpg in Resources */,
 				FA7B10161E83380200378663 /* iRate.bundle in Resources */,
 				FADE73C71E79C82000EB7B4D /* frame_4.png in Resources */,
 				FA4EC29F1EABF82E00B59F34 /* frown red.png in Resources */,

@@ -68,7 +68,7 @@ class CoreDataViewController: UIViewController {
         deleteCoreDataRecent()
         deleteCoreDataEmail()
 */
-        
+
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(CoreDataViewController.animate), userInfo: nil, repeats: true)
         animate()
         
@@ -91,7 +91,7 @@ class CoreDataViewController: UIViewController {
                         
                         if let category = object["foodCategory"] as? String {
                             
-                            if let imageFile = object["foodCategoryIcons"] as? PFFile {
+                            if let imageFile = object["foodCategoryBackground"] as? PFFile {
                                 
                                 imageFile.getDataInBackground(block: { (data, error) in
                                     
