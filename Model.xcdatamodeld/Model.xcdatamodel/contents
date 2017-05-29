@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
         <attribute name="categoryIcon" optional="YES" attributeType="Binary" valueTransformerName="" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Favorites" representedClassName="Favorites" syncable="YES" codeGenerationType="class">
+        <attribute name="foodCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isSafe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="safetyDescription" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="Food" representedClassName="Food" syncable="YES" codeGenerationType="class">
@@ -29,7 +31,7 @@
     </entity>
     <elements>
         <element name="Category" positionX="-488" positionY="-45" width="128" height="75"/>
-        <element name="Favorites" positionX="-135" positionY="-39" width="128" height="90"/>
+        <element name="Favorites" positionX="-135" positionY="-39" width="128" height="120"/>
         <element name="Food" positionX="-315" positionY="-45" width="128" height="120"/>
         <element name="Recent" positionX="-137" positionY="54" width="128" height="75"/>
         <element name="Searches" positionX="-137" positionY="-135" width="128" height="75"/>

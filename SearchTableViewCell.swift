@@ -12,6 +12,8 @@ class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet var foodLabel: UILabel!
     @IBOutlet var safetyIcon: UIImageView!
+    @IBOutlet var safetyDescription: UILabel!
+    @IBOutlet var categoryIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

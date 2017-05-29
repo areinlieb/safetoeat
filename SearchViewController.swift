@@ -18,7 +18,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
     var foodListFiltered = [String]()
     var recentSearches = [String]()
     var safety = [String: String]()
-    
+    var safetyDescription = [String: String]()
+
     var searchController: UISearchController!
     var resultsController = UITableViewController()
     
@@ -181,7 +182,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                 
                 foodList.removeAll()
                 safety.removeAll()
-                
+                safetyDescription.removeAll()
+
                 for result in results as [Food] {
                     if let foodItem = result.foodName {
                         self.foodList.append(foodItem)
@@ -190,6 +192,12 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                             self.safety[foodItem] = safe
                         } else {
                             print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                        }
+
+                        if let foodDescription = result.safetyDescription as? NSArray {
+                            self.safetyDescription[foodItem] = foodDescription[0] as? String
+                        } else {
+                            print("Couldn't get safety description for foodItem \(String(describing: result.foodName))")
                         }
 
                     }  else {
@@ -296,6 +304,55 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         present(alert, animated: true, completion: nil)
         
     }
+
+    func getCategory (food: String) -> UIImage {
+        
+        var category = ""
+        var categoryIcon = UIImage()
+        
+        let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Food] {
+                    if let foodItem = result.foodName {
+                        if food == foodItem {
+                            category = result.foodCategory!
+                        }
+                    }
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        
+        switch category {
+        case "Dairy":
+            categoryIcon = UIImage(named: "dairy.png")!
+        case "Fruit":
+            categoryIcon = UIImage(named: "fruit.png")!
+        case "Grains":
+            categoryIcon = UIImage(named: "grains.png")!
+        case "Meat":
+            categoryIcon = UIImage(named: "meat.png")!
+        case "Nuts, Seeds, & Legumes":
+            categoryIcon = UIImage(named: "nuts.png")!
+        case "Other":
+            categoryIcon = UIImage(named: "Other.png")!
+        case "Seafood":
+            categoryIcon = UIImage(named: "seafood.png")!
+        case "Veggies":
+            categoryIcon = UIImage(named: "vegetable.png")!
+        default:
+            break
+        }
+        
+        return categoryIcon
+        
+    }    
     
     internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -327,6 +384,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             
             cell.foodLabel.text = self.foodListFiltered[indexPath.row]
             
+            let description = safetyDescription[self.foodListFiltered[indexPath.row]]
+            cell.safetyDescription.text = description
+
+            cell.categoryIcon.image = getCategory(food: self.foodListFiltered[indexPath.row])
+
             let safetyResult = safety[self.foodListFiltered[indexPath.row]]
             
             if safetyResult == "safe" {
@@ -342,6 +404,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             setBackgroundImage(show: false)
             
             cell.foodLabel.text = self.recentSearches[indexPath.row]
+
+            let description = safetyDescription[self.recentSearches[indexPath.row]]
+            cell.safetyDescription.text = description
+            
+            cell.categoryIcon.image = getCategory(food: self.recentSearches[indexPath.row])
 
             let safetyResult = safety[self.recentSearches[indexPath.row]]
             

@@ -19,6 +19,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     var descriptionDict = [String: Array<Any>]()
     var safetyDescription = [String()]
     var safeEat = String()
+    var category = String()
 
     override func viewDidAppear(_ animated: Bool) {
         
@@ -116,7 +117,9 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                                 } else {
                                     babyIcon.image = UIImage(named: "traffic light yellow.png")
                                 }
-                            }                        
+                            }
+                            
+                            category = result.foodCategory!
                         }
                     }
                 }
@@ -214,6 +217,8 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 let newFood = NSEntityDescription.insertNewObject(forEntityName: "Favorites", into: DatabaseController.getContext()) as! Favorites
                 newFood.foodName = food
                 newFood.isSafe = safeEat
+                newFood.safetyDescription = safetyDescription as NSObject
+                newFood.foodCategory = category
                 newFood.timeAdded = NSDate()
 
                 DatabaseController.saveContext()
@@ -243,7 +248,6 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                         DatabaseController.getContext().delete(result)
                         setFavoriteButton(isFavorite: false)
 
-                        
                     }
                 }
             }

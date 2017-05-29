@@ -14,6 +14,7 @@ class FavoritesTableViewController: UITableViewController {
     var foodList = [String()]
     var favorites = [String()]
     var safety = [String: String]()
+    var safetyDescription = [String: String]()
 
     var selectedFavorite = ""
     var deleteFavoritesIndexPath: IndexPath? = nil
@@ -128,6 +129,8 @@ class FavoritesTableViewController: UITableViewController {
   
         favorites.removeAll()
         safety.removeAll()
+        safetyDescription.removeAll()
+
 
         let fetchRequest:NSFetchRequest<Favorites> = Favorites.fetchRequest()
         let foodSortFavorites = NSSortDescriptor(key: "foodName", ascending: true)
@@ -147,6 +150,12 @@ class FavoritesTableViewController: UITableViewController {
                             self.safety[foodItem] = safe
                         } else {
                             print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                        }
+
+                        if let foodDescription = result.safetyDescription as? NSArray {
+                            self.safetyDescription[foodItem] = foodDescription[0] as? String
+                        } else {
+                            print("Couldn't get safety description for foodItem \(String(describing: result.foodName))")
                         }
 
                     }
@@ -178,6 +187,55 @@ class FavoritesTableViewController: UITableViewController {
             self.tableView.backgroundColor = UIColor.white
             
         }
+        
+    }
+    
+    func getCategory (food: String) -> UIImage {
+        
+        var category = ""
+        var categoryIcon = UIImage()
+        
+        let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Food] {
+                    if let foodItem = result.foodName {
+                        if food == foodItem {
+                            category = result.foodCategory!
+                        }
+                    }
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        
+        switch category {
+        case "Dairy":
+            categoryIcon = UIImage(named: "dairy.png")!
+        case "Fruit":
+            categoryIcon = UIImage(named: "fruit.png")!
+        case "Grains":
+            categoryIcon = UIImage(named: "grains.png")!
+        case "Meat":
+            categoryIcon = UIImage(named: "meat.png")!
+        case "Nuts, Seeds, & Legumes":
+            categoryIcon = UIImage(named: "nuts.png")!
+        case "Other":
+            categoryIcon = UIImage(named: "Other.png")!
+        case "Seafood":
+            categoryIcon = UIImage(named: "seafood.png")!
+        case "Veggies":
+            categoryIcon = UIImage(named: "vegetable.png")!
+        default:
+            break
+        }
+        
+        return categoryIcon
         
     }
 
@@ -242,6 +300,11 @@ class FavoritesTableViewController: UITableViewController {
      
         cell.foodLabel.text = self.favorites[indexPath.row]
         
+        let description = safetyDescription[self.favorites[indexPath.row]]
+        cell.safetyDescription.text = description
+
+        cell.categoryIcon.image = getCategory(food: self.favorites[indexPath.row])
+
         let safetyResult = safety[self.favorites[indexPath.row]]
         
         if safetyResult == "safe" {
