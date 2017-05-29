@@ -392,11 +392,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             let safetyResult = safety[self.foodListFiltered[indexPath.row]]
             
             if safetyResult == "safe" {
-                cell.safetyIcon.image = UIImage(named: "smile green.png")
+                cell.safetyIcon.image = UIImage(named: "smile.png")
             } else if safetyResult == "not safe" {
-                cell.safetyIcon.image = UIImage(named: "frown red.png")
+                cell.safetyIcon.image = UIImage(named: "frown.png")
             } else {
-                cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                cell.safetyIcon.image = UIImage(named: "question.png")
             }
 
         } else if recentSearches.count > 0 {
@@ -413,11 +413,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             let safetyResult = safety[self.recentSearches[indexPath.row]]
             
             if safetyResult == "safe" {
-                cell.safetyIcon.image = UIImage(named: "smile green.png")
+                cell.safetyIcon.image = UIImage(named: "smile.png")
             } else if safetyResult == "not safe" {
-                cell.safetyIcon.image = UIImage(named: "frown red.png")
+                cell.safetyIcon.image = UIImage(named: "frown.png")
             } else {
-                cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                cell.safetyIcon.image = UIImage(named: "question.png")
             }
             
         } else if recentSearches.count == 0 {

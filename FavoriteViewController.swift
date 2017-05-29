@@ -329,11 +329,11 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         let safetyResult = safety[self.favorites[indexPath.row]]
         
         if safetyResult == "safe" {
-            cell.safetyIcon.image = UIImage(named: "smile green.png")
+            cell.safetyIcon.image = UIImage(named: "smile.png")
         } else if safetyResult == "not safe" {
-            cell.safetyIcon.image = UIImage(named: "frown red.png")
+            cell.safetyIcon.image = UIImage(named: "frown.png")
         } else {
-            cell.safetyIcon.image = UIImage(named: "question yellow.png")
+            cell.safetyIcon.image = UIImage(named: "question.png")
         }
         
         cell.safetyIcon.layer.zPosition = 1

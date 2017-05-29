@@ -30,13 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         //PINK COLOR UIColor(red: 248.0/255.0, green: 191.0/255.0, blue: 222.0/255.0, alpha: 1.0)
         
         //customize navigation bar
-        UINavigationBar.appearance().barTintColor = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
+        //Gray UINavigationBar.appearance().barTintColor = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 121.0/255.0, green: 203.0/255.0, blue: 238.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.black
         
         //customize segmented control
-        UISegmentedControl.appearance().tintColor = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
-        UISegmentedControl.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.black], for: UIControlState.selected)        
+        UISegmentedControl.appearance().tintColor = UIColor(red: 121.0/255.0, green: 203.0/255.0, blue: 238.0/255.0, alpha: 1.0)
+        UISegmentedControl.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: UIControlState.selected)
         
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.

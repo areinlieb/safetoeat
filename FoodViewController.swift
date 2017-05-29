@@ -341,11 +341,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let safetyResult = safety[self.foodList[indexPath.row]]
 
                 if safetyResult == "safe" {
-                    cell.safetyIcon.image = UIImage(named: "smile green.png")
+                    cell.safetyIcon.image = UIImage(named: "smile.png")
                 } else if safetyResult == "not safe" {
-                    cell.safetyIcon.image = UIImage(named: "frown red.png")
+                    cell.safetyIcon.image = UIImage(named: "frown.png")
                 } else {
-                    cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                    cell.safetyIcon.image = UIImage(named: "question.png")
                 }
             } else {
                 cell.foodLabel.text = self.foodListFiltered[indexPath.row]
@@ -358,11 +358,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let safetyResult = safety[self.foodListFiltered[indexPath.row]]
                 
                 if safetyResult == "safe" {
-                    cell.safetyIcon.image = UIImage(named: "smile green.png")
+                    cell.safetyIcon.image = UIImage(named: "smile.png")
                 } else if safetyResult == "not safe" {
-                    cell.safetyIcon.image = UIImage(named: "frown red.png")
+                    cell.safetyIcon.image = UIImage(named: "frown.png")
                 } else {
-                    cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                    cell.safetyIcon.image = UIImage(named: "question.png")
                 }
             }
             setClearButton(isRecent: false)
@@ -378,11 +378,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             let safetyResult = safety[self.recentFoodList[indexPath.row]]
             
             if safetyResult == "safe" {
-                cell.safetyIcon.image = UIImage(named: "smile green.png")
+                cell.safetyIcon.image = UIImage(named: "smile.png")
             } else if safetyResult == "not safe" {
-                cell.safetyIcon.image = UIImage(named: "frown red.png")
+                cell.safetyIcon.image = UIImage(named: "frown.png")
             } else {
-                cell.safetyIcon.image = UIImage(named: "question yellow.png")
+                cell.safetyIcon.image = UIImage(named: "question.png")
             }
             setClearButton(isRecent: true)
             break

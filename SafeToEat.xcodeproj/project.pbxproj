@@ -84,6 +84,9 @@
 		FAB5F0761E7235E90017FE01 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */; };
 		FAC8AC3E1EDCD20000DED29A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */; };
 		FAC8AC401EDCD21500DED29A /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */; };
+		FAC8AC441EDCE19400DED29A /* frown.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC411EDCE19400DED29A /* frown.png */; };
+		FAC8AC451EDCE19400DED29A /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC421EDCE19400DED29A /* smile.png */; };
+		FAC8AC461EDCE19400DED29A /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC431EDCE19400DED29A /* question.png */; };
 		FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */; };
 		FADE73C41E79C82000EB7B4D /* frame_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73BC1E79C82000EB7B4D /* frame_1.png */; };
 		FADE73C51E79C82000EB7B4D /* frame_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73BD1E79C82000EB7B4D /* frame_2.png */; };
@@ -191,6 +194,9 @@
 		FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		FAC8AC411EDCE19400DED29A /* frown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frown.png; sourceTree = "<group>"; };
+		FAC8AC421EDCE19400DED29A /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
+		FAC8AC431EDCE19400DED29A /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
 		FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDetailTableViewCell.swift; path = ParseStarterProject/FoodDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FADE73BC1E79C82000EB7B4D /* frame_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_1.png; sourceTree = "<group>"; };
 		FADE73BD1E79C82000EB7B4D /* frame_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_2.png; sourceTree = "<group>"; };
@@ -383,6 +389,9 @@
 				FA4EC29A1EABF44100B59F34 /* smile green.png */,
 				FA4EC29C1EABF80A00B59F34 /* question yellow.png */,
 				FA4EC29E1EABF82E00B59F34 /* frown red.png */,
+				FAC8AC411EDCE19400DED29A /* frown.png */,
+				FAC8AC421EDCE19400DED29A /* smile.png */,
+				FAC8AC431EDCE19400DED29A /* question.png */,
 				FA467CE11EAE6DEA00F03AAD /* women outline.png */,
 				FA467CE31EAE93B500F03AAD /* continue button.png */,
 				FA7B10111E83303A00378663 /* More Images */,
@@ -554,10 +563,12 @@
 				FA92E7BC1E6DE29E0069271D /* default category icon.png in Resources */,
 				FA7B10071E83299C00378663 /* more-feedback.png in Resources */,
 				FA5A5A141E6F313B00941C50 /* app icon with bubble sushi.png in Resources */,
+				FAC8AC461EDCE19400DED29A /* question.png in Resources */,
 				FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */,
 				FADE73C81E79C82000EB7B4D /* frame_5.png in Resources */,
 				FA1DDEF31EDC9F0200066A20 /* seafood.png in Resources */,
 				FA5A5A0E1E6F313B00941C50 /* app icon with bubble cheese.png in Resources */,
+				FAC8AC441EDCE19400DED29A /* frown.png in Resources */,
 				FA5A5A111E6F313B00941C50 /* app icon with bubble nut.png in Resources */,
 				FA7B100B1E83299C00378663 /* more-legal.png in Resources */,
 				FADE73C61E79C82000EB7B4D /* frame_3.png in Resources */,
@@ -570,6 +581,7 @@
 				FA1DDEEE1EDC9F0200066A20 /* fruit.png in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
+				FAC8AC451EDCE19400DED29A /* smile.png in Resources */,
 				FA1DDEF01EDC9F0200066A20 /* meat.png in Resources */,
 				FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */,
 				FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */,
