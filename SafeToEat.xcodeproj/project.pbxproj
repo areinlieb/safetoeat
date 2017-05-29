@@ -82,6 +82,8 @@
 		FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06A41E773F1100E76026 /* MoreSections.swift */; };
 		FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA06AB31EAC05C00083BF52 /* star background blue.png */; };
 		FAB5F0761E7235E90017FE01 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */; };
+		FAC8AC3E1EDCD20000DED29A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */; };
+		FAC8AC401EDCD21500DED29A /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */; };
 		FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */; };
 		FADE73C41E79C82000EB7B4D /* frame_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73BC1E79C82000EB7B4D /* frame_1.png */; };
 		FADE73C51E79C82000EB7B4D /* frame_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73BD1E79C82000EB7B4D /* frame_2.png */; };
@@ -187,6 +189,8 @@
 		FA9D06A41E773F1100E76026 /* MoreSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSections.swift; sourceTree = "<group>"; };
 		FAA06AB31EAC05C00083BF52 /* star background blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background blue.png"; sourceTree = "<group>"; };
 		FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDetailTableViewCell.swift; path = ParseStarterProject/FoodDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FADE73BC1E79C82000EB7B4D /* frame_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_1.png; sourceTree = "<group>"; };
 		FADE73BD1E79C82000EB7B4D /* frame_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_2.png; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
+				FAC8AC3C1EDCD1EC00DED29A /* Favorite */,
 				FA9D06A91E77476500E76026 /* Favorites */,
 				FA9D06AA1E77478100E76026 /* Food */,
 				FACED41D1E8A2EF8007AAEEB /* Food Detail */,
@@ -439,6 +444,15 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		FAC8AC3C1EDCD1EC00DED29A /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */,
+				FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
 		FACED41D1E8A2EF8007AAEEB /* Food Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +624,7 @@
 				FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */,
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
 				FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */,
+				FAC8AC401EDCD21500DED29A /* FavoriteTableViewCell.swift in Sources */,
 				FA7B10171E83380200378663 /* iRate.m in Sources */,
 				FA9D06971E771ABD00E76026 /* ExtendedNavBarView.swift in Sources */,
 				FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */,
@@ -617,6 +632,7 @@
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
 				FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */,
+				FAC8AC3E1EDCD20000DED29A /* FavoriteViewController.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
 				FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */,
