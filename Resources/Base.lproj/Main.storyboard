@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cpz-aq-uvA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cpz-aq-uvA">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,9 +129,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app icon with bubble cheese.png" translatesAutoresizingMaskIntoConstraints="NO" id="KAz-Ad-tHf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="KAz-Ad-tHf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="0.9772071242" green="0.74547237160000002" blue="0.87243568900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.55029952526092529" green="0.84694081544876099" blue="0.83726614713668823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -368,6 +368,7 @@
                                 <items>
                                     <navigationItem title="Categories" id="wtZ-fw-b3x">
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="ruJ-FP-FkO">
+                                            <color key="tintColor" red="0.23529411759999999" green="0.26274509800000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <segue destination="FZc-9Z-0QU" kind="unwind" unwindAction="unwindToFoodCancelWithSegue:" id="9Ob-oR-50F"/>
                                             </connections>
@@ -511,7 +512,7 @@
                                     <segment title="All" width="120"/>
                                     <segment title="Recent" width="120"/>
                                 </segments>
-                                <color key="tintColor" red="0.9772071242" green="0.74547237160000002" blue="0.87243568900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.5490196078431373" green="0.84705882352941175" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmentedControlChange:" destination="nXX-CE-gvt" eventType="valueChanged" id="f7I-D1-hsq"/>
                                 </connections>
@@ -604,6 +605,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Food" id="TV2-uP-bdW">
                         <barButtonItem key="leftBarButtonItem" title="Categories" id="Ddx-9Z-KIw">
+                            <color key="tintColor" red="0.23529411759999999" green="0.26274509800000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Kxy-kq-pjH" kind="presentation" identifier="goToCategoryFilter" id="OIg-bG-IF5"/>
                             </connections>
@@ -932,12 +934,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app icon with bubble cheese.png" width="626" height="626"/>
         <image name="category icon.png" width="30" height="30"/>
         <image name="continue button.png" width="140" height="42"/>
+        <image name="frame_3.png" width="626" height="626"/>
         <image name="women outline.png" width="354" height="590"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Alf-U1-OSq"/>
+        <segue reference="fJQ-ff-ybb"/>
     </inferredMetricsTieBreakers>
 </document>

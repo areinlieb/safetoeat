@@ -51,12 +51,26 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         
         super.viewDidLoad()
+/*
+//Inserts bar button image
+        let button = UIButton.init(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let filterButton = UIBarButtonItem(customView: button)
         
+        button.setImage(UIImage(named: "filter.png"), for: UIControlState.normal)
+        button.addTarget(self, action: #selector(categoryFilterButton), for: UIControlEvents.touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = filterButton
+*/
         loadFoodList()
         loadRecentList()
     
         tableView.reloadData()
         
+    }
+    
+    func categoryFilterButton() {
+        self.performSegue(withIdentifier: "goToCategoryFilter", sender: self)
     }
     
     func setClearButton(isRecent: Bool) {

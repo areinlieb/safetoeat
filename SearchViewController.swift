@@ -133,7 +133,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             let clearButton = UIBarButtonItem(customView: button)
             
-            button.setImage(UIImage(named: "delete.png"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "delete white.png"), for: UIControlState.normal)
             button.addTarget(self, action: #selector(SearchViewController.deleteSearches), for: UIControlEvents.touchUpInside)
             
             self.navigationItem.rightBarButtonItem = clearButton
