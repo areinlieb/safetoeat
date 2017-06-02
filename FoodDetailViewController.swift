@@ -13,6 +13,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var babyIcon: UIImageView!
+    @IBOutlet var categoryImage: UIImageView!
     
     var food = String()
     var favorites = [String()]
@@ -33,6 +34,8 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         navigationItem.title = food
         
+        loadCategoryImage()
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 400
 
@@ -50,12 +53,17 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
         loadFavoriteList()
         loadFoodDescription()
+        
+        
 
         if favorites.contains(food) {
             setFavoriteButton(isFavorite: true)
         } else {
             setFavoriteButton(isFavorite: false)
         }
+        
+        
+        
         
         addToRecent(recentFood: food) //adds food item to to recent searches
         
@@ -111,15 +119,43 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                                 self.safeEat = safe
                                 
                                 if safe == "safe" {
-                                    babyIcon.image = UIImage(named: "traffic light green.png")
+                                    babyIcon.image = UIImage(named: "smile.png")
                                 } else if safe == "not safe" {
-                                    babyIcon.image = UIImage(named: "traffic light red.png")
+                                    babyIcon.image = UIImage(named: "frown.png")
                                 } else {
-                                    babyIcon.image = UIImage(named: "traffic light yellow.png")
+                                    babyIcon.image = UIImage(named: "question.png")
                                 }
                             }
                             
                             category = result.foodCategory!
+                        }
+                    }
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        
+    }
+    
+    func loadCategoryImage() {
+        
+        //categoryImage.image = UIImageView(image: foodCategoryImages[indexPath.row])
+        let fetchRequest:NSFetchRequest<Category> = Category.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Category] {
+                    if let categoryName = result.categoryName {
+                        if category == categoryName {
+                            if let categoryIcon = result.categoryIcon {
+                                categoryImage.image = UIImage(data: categoryIcon as Data)
+                                categoryImage.alpha = 0.5
+                                categoryImage.contentMode = .scaleAspectFill
+                            }
                         }
                     }
                 }
