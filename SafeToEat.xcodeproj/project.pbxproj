@@ -28,7 +28,7 @@
 		D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE89B1EDE3EBF0006A30E /* frame_7.png */; };
 		D33FE8A51EDE3EBF0006A30E /* frame_8.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE89C1EDE3EBF0006A30E /* frame_8.png */; };
 		D33FE8A71EDE3FBD0006A30E /* app icon green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */; };
-		D3DB42321EE0DCA90016E241 /* seafood.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB42311EE0DCA90016E241 /* seafood.png */; };
+		D3DB42341EE0F0A30016E241 /* pregnant food background.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB42331EE0F0A30016E241 /* pregnant food background.png */; };
 		D3EB37521E75FA59009894E8 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */; };
 		FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FA06B75E1E940CBB00CA3D7F /* delete.png */; };
 		FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0A6D441E8D76E100AB5B1D /* star background gray.png */; };
@@ -138,7 +138,7 @@
 		D33FE89B1EDE3EBF0006A30E /* frame_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_7.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_7.png"; sourceTree = "<group>"; };
 		D33FE89C1EDE3EBF0006A30E /* frame_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_8.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_8.png"; sourceTree = "<group>"; };
 		D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "app icon green.jpg"; path = "../../Assets/app icon green.jpg"; sourceTree = "<group>"; };
-		D3DB42311EE0DCA90016E241 /* seafood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seafood.png; path = "../../../Design Kits/Categories/Food/png/seafood.png"; sourceTree = "<group>"; };
+		D3DB42331EE0F0A30016E241 /* pregnant food background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pregnant food background.png"; path = "../../../../../../Downloads/pregnant food background.png"; sourceTree = "<group>"; };
 		D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		EF9A8B47185E7FD9C72DC6D4 /* Pods_SafeToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA06B75E1E940CBB00CA3D7F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
@@ -405,7 +405,7 @@
 				FAC8AC431EDCE19400DED29A /* question.png */,
 				FA467CE11EAE6DEA00F03AAD /* women outline.png */,
 				FA467CE31EAE93B500F03AAD /* continue button.png */,
-				D3DB42311EE0DCA90016E241 /* seafood.png */,
+				D3DB42331EE0F0A30016E241 /* pregnant food background.png */,
 				FA7B10111E83303A00378663 /* More Images */,
 				FADE73BB1E79C82000EB7B4D /* Animation */,
 			);
@@ -592,7 +592,6 @@
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 				FAC8AC451EDCE19400DED29A /* smile.png in Resources */,
-				D3DB42321EE0DCA90016E241 /* seafood.png in Resources */,
 				D33FE8A11EDE3EBF0006A30E /* frame_4.png in Resources */,
 				FA1DDEF01EDC9F0200066A20 /* meat.png in Resources */,
 				D33FE8A01EDE3EBF0006A30E /* frame_3.png in Resources */,
@@ -602,6 +601,7 @@
 				FAE01C5A1E943B2500F15CF8 /* baby question with text.png in Resources */,
 				FA4EC29D1EABF80A00B59F34 /* question yellow.png in Resources */,
 				FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */,
+				D3DB42341EE0F0A30016E241 /* pregnant food background.png in Resources */,
 				FA5A5A031E6F2F5700941C50 /* Launch Screen.storyboard in Resources */,
 				D33FE8A71EDE3FBD0006A30E /* app icon green.jpg in Resources */,
 				FA115E741EADB49C00E7A251 /* Glossary.rtf in Resources */,
