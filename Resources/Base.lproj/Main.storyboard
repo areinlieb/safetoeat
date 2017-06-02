@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4G-nA-dMs" id="ejg-iQ-EQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="109.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-ic-ZTd" userLabel="Food Label">
@@ -410,18 +410,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-OD-Fii">
-                                <rect key="frame" x="0.0" y="296" width="394" height="440"/>
+                                <rect key="frame" x="0.0" y="296" width="414" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="BP4-Ob-qPt" customClass="FoodDetailTableViewCell" customModule="SafeToEat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="394" height="140"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="BP4-Ob-qPt" id="x0C-Z6-o2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="140"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-Wv-t6Q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="132"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                     </accessibility>
@@ -431,10 +431,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5cm-Wv-t6Q" firstAttribute="top" secondItem="x0C-Z6-o2d" secondAttribute="top" id="4s5-Kj-Dks"/>
-                                                <constraint firstAttribute="trailing" secondItem="5cm-Wv-t6Q" secondAttribute="trailing" id="U0B-0X-uqU"/>
-                                                <constraint firstItem="5cm-Wv-t6Q" firstAttribute="leading" secondItem="x0C-Z6-o2d" secondAttribute="leading" id="pz6-ah-mZi"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5cm-Wv-t6Q" secondAttribute="bottom" constant="-0.33333333333334281" id="ykJ-yx-7vX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5cm-Wv-t6Q" secondAttribute="bottom" constant="-0.33333333333334281" id="5hp-nD-Biy"/>
+                                                <constraint firstItem="5cm-Wv-t6Q" firstAttribute="leading" secondItem="x0C-Z6-o2d" secondAttribute="leading" id="9My-bi-CRe"/>
+                                                <constraint firstAttribute="trailing" secondItem="5cm-Wv-t6Q" secondAttribute="trailing" id="kdD-YF-tyy"/>
+                                                <constraint firstItem="5cm-Wv-t6Q" firstAttribute="top" secondItem="x0C-Z6-o2d" secondAttribute="top" id="x2H-ZU-kj5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration">
@@ -473,17 +473,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="top" secondItem="wrj-Mz-Lqp" secondAttribute="bottom" constant="22" id="0KP-9K-F5D"/>
-                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="leading" secondItem="KcS-3S-3sA" secondAttribute="leading" id="3nC-Os-KFc"/>
+                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="trailing" secondItem="RTU-8A-TzS" secondAttribute="trailing" id="3Qb-6j-rOr"/>
                             <constraint firstAttribute="trailing" secondItem="KcS-3S-3sA" secondAttribute="trailing" id="6RP-ca-rDs"/>
+                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="top" secondItem="wrj-Mz-Lqp" secondAttribute="bottom" constant="22" id="7ll-UE-vRg"/>
                             <constraint firstItem="RTU-8A-TzS" firstAttribute="centerX" secondItem="wrj-Mz-Lqp" secondAttribute="centerX" id="8xO-1E-kCd"/>
                             <constraint firstItem="wrj-Mz-Lqp" firstAttribute="top" secondItem="qQs-E8-ReO" secondAttribute="bottom" constant="160" id="Ama-lM-Onp"/>
+                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="leading" secondItem="KcS-3S-3sA" secondAttribute="leading" id="BSB-hR-E9c"/>
                             <constraint firstItem="RTU-8A-TzS" firstAttribute="leading" secondItem="eAZ-I3-dE3" secondAttribute="leading" id="ECW-79-YAj"/>
-                            <constraint firstAttribute="bottom" secondItem="Bqh-OD-Fii" secondAttribute="bottom" id="G2e-pQ-Enw"/>
                             <constraint firstItem="KcS-3S-3sA" firstAttribute="top" secondItem="RTU-8A-TzS" secondAttribute="top" id="PXh-Vx-59O"/>
                             <constraint firstItem="KcS-3S-3sA" firstAttribute="trailing" secondItem="RTU-8A-TzS" secondAttribute="trailing" id="axZ-2Q-tf2"/>
                             <constraint firstItem="KcS-3S-3sA" firstAttribute="top" secondItem="qQs-E8-ReO" secondAttribute="bottom" id="bfI-qI-CkU"/>
-                            <constraint firstItem="Bqh-OD-Fii" firstAttribute="trailing" secondItem="eAZ-I3-dE3" secondAttribute="trailingMargin" id="f7P-1R-Sva"/>
+                            <constraint firstAttribute="bottom" secondItem="Bqh-OD-Fii" secondAttribute="bottom" id="g1f-bc-TCr"/>
                             <constraint firstItem="KcS-3S-3sA" firstAttribute="leading" secondItem="RTU-8A-TzS" secondAttribute="leading" id="vdY-2g-Tto"/>
                         </constraints>
                     </view>
