@@ -14,6 +14,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     @IBOutlet var babyIcon: UIImageView!
     @IBOutlet var categoryImage: UIImageView!
+    @IBOutlet var foodLabel: UILabel!
     
     var food = String()
     var favorites = [String()]
@@ -33,6 +34,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         navigationItem.title = food
+        foodLabel.text = food
         
         loadCategoryImage()
         
@@ -54,7 +56,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         loadFavoriteList()
         loadFoodDescription()
         
-        
+        foodLabel.text = food
 
         if favorites.contains(food) {
             setFavoriteButton(isFavorite: true)
@@ -308,6 +310,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FoodDetailTableViewCell
         
         cell.textLabel?.text = safetyDescription[indexPath.row]
+        //cell.textlabel?.text.textcolor = UIColor(red: 60.0/255.0, green: 67.0/255.0, blue: 80.0/255.0, alpha: 1.0)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.textLabel?.textAlignment = .center
