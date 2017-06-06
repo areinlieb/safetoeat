@@ -33,7 +33,8 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             setFavoriteButton(isFavorite: false)
         }
         
-        navigationItem.title = food
+        //navigationItem.title = food
+        
         foodLabel.text = food
         
         loadCategoryImage()
@@ -127,6 +128,8 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                                 } else {
                                     babyIcon.image = UIImage(named: "question.png")
                                 }
+                                
+                                babyIcon.layer.zPosition = 1
                             }
                             
                             category = result.foodCategory!
