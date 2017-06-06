@@ -22,7 +22,7 @@ extension UITextField {
     }
 }
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var usernameField: UITextField!
     @IBOutlet var loginButton: UIButton!
@@ -34,6 +34,10 @@ class WelcomeViewController: UIViewController {
         
        // usernameField.setBottomBorder()
         usernameField.becomeFirstResponder()
+        
+        self.usernameField.delegate = self
+        
+        loginButton.setImage(UIImage(named: "go blank.png"), for: .normal)
         
     }
     
@@ -52,6 +56,10 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func usernameFieldPrimaryActionTriggered(_ sender: Any) {        
         loginProcess()
+    }
+    
+    @IBAction func usernameFieldEditingChanged(_ sender: Any) {
+        loginButton.setImage(UIImage(named: "go filled.png"), for: .normal)
     }
     
     func loginProcess() {

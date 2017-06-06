@@ -100,6 +100,8 @@
 		FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */; };
 		FAD3A82B1EE75A22003B88EE /* pregnant food background.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A8291EE75A22003B88EE /* pregnant food background.png */; };
 		FAD3A82C1EE75A22003B88EE /* delete white.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82A1EE75A22003B88EE /* delete white.png */; };
+		FAD3A82F1EE76F31003B88EE /* go filled.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82D1EE76F31003B88EE /* go filled.png */; };
+		FAD3A8301EE76F31003B88EE /* go blank.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82E1EE76F31003B88EE /* go blank.png */; };
 		FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CC1E7A258200EB7B4D /* app icon.jpg */; };
 		FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */; };
 		FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE93151E78B593007254B0 /* CoreDataViewController.swift */; };
@@ -213,6 +215,8 @@
 		FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDetailTableViewCell.swift; path = ParseStarterProject/FoodDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FAD3A8291EE75A22003B88EE /* pregnant food background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pregnant food background.png"; sourceTree = "<group>"; };
 		FAD3A82A1EE75A22003B88EE /* delete white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete white.png"; sourceTree = "<group>"; };
+		FAD3A82D1EE76F31003B88EE /* go filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go filled.png"; sourceTree = "<group>"; };
+		FAD3A82E1EE76F31003B88EE /* go blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go blank.png"; sourceTree = "<group>"; };
 		FADE73CC1E7A258200EB7B4D /* app icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app icon.jpg"; sourceTree = "<group>"; };
 		FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon no bubble.png"; sourceTree = "<group>"; };
 		FADE93151E78B593007254B0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 		FA92E7BD1E6E18500069271D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3A82D1EE76F31003B88EE /* go filled.png */,
+				FAD3A82E1EE76F31003B88EE /* go blank.png */,
 				FA1DDED41EDC8A5800066A20 /* dairy.png */,
 				FA1DDEE71EDC9F0100066A20 /* fruit.png */,
 				FA1DDEE81EDC9F0200066A20 /* grains.png */,
@@ -582,6 +588,7 @@
 				FA7B100B1E83299C00378663 /* more-legal.png in Resources */,
 				FA1DDEEF1EDC9F0200066A20 /* grains.png in Resources */,
 				FA7B10091E83299C00378663 /* more-logout.png in Resources */,
+				FAD3A8301EE76F31003B88EE /* go blank.png in Resources */,
 				FA4EC2991EABF18C00B59F34 /* traffic light yellow.png in Resources */,
 				FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */,
 				FA5F05C21E96D1AC00A64406 /* LegalText.rtf in Resources */,
@@ -594,6 +601,7 @@
 				D33FE8A01EDE3EBF0006A30E /* frame_3.png in Resources */,
 				FA5A5A131E6F313B00941C50 /* app icon with bubble steak.png in Resources */,
 				FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */,
+				FAD3A82F1EE76F31003B88EE /* go filled.png in Resources */,
 				FAE01C571E94393800F15CF8 /* baby happy with text.png in Resources */,
 				FAE01C5A1E943B2500F15CF8 /* baby question with text.png in Resources */,
 				FA4EC29D1EABF80A00B59F34 /* question yellow.png in Resources */,
