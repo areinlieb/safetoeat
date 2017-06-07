@@ -33,7 +33,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             setFavoriteButton(isFavorite: false)
         }
         
-        //navigationItem.title = food
+        navigationItem.title = ""
         
         foodLabel.text = food
         
