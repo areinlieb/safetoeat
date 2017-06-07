@@ -102,6 +102,7 @@
 		FAD3A82C1EE75A22003B88EE /* delete white.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82A1EE75A22003B88EE /* delete white.png */; };
 		FAD3A82F1EE76F31003B88EE /* go filled.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82D1EE76F31003B88EE /* go filled.png */; };
 		FAD3A8301EE76F31003B88EE /* go blank.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82E1EE76F31003B88EE /* go blank.png */; };
+		FAD3A8321EE77AC2003B88EE /* launch background.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A8311EE77AC2003B88EE /* launch background.png */; };
 		FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CC1E7A258200EB7B4D /* app icon.jpg */; };
 		FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */; };
 		FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE93151E78B593007254B0 /* CoreDataViewController.swift */; };
@@ -217,6 +218,7 @@
 		FAD3A82A1EE75A22003B88EE /* delete white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete white.png"; sourceTree = "<group>"; };
 		FAD3A82D1EE76F31003B88EE /* go filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go filled.png"; sourceTree = "<group>"; };
 		FAD3A82E1EE76F31003B88EE /* go blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go blank.png"; sourceTree = "<group>"; };
+		FAD3A8311EE77AC2003B88EE /* launch background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch background.png"; sourceTree = "<group>"; };
 		FADE73CC1E7A258200EB7B4D /* app icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app icon.jpg"; sourceTree = "<group>"; };
 		FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon no bubble.png"; sourceTree = "<group>"; };
 		FADE93151E78B593007254B0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		FA5A5A161E6F314000941C50 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3A8311EE77AC2003B88EE /* launch background.png */,
 				D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */,
 				FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */,
 				FA5A5A041E6F313B00941C50 /* app icon with bubble.png */,
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33FE8A51EDE3EBF0006A30E /* frame_8.png in Resources */,
+				FAD3A8321EE77AC2003B88EE /* launch background.png in Resources */,
 				FA5A5A101E6F313B00941C50 /* app icon with bubble hamburger.png in Resources */,
 				FA5A5A0F1E6F313B00941C50 /* app icon with bubble eggplant.png in Resources */,
 				FAF8BE991E81F13D00D5BED8 /* addToFavorites.png in Resources */,
