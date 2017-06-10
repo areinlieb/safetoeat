@@ -103,6 +103,7 @@
 		FAD3A82F1EE76F31003B88EE /* go filled.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82D1EE76F31003B88EE /* go filled.png */; };
 		FAD3A8301EE76F31003B88EE /* go blank.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82E1EE76F31003B88EE /* go blank.png */; };
 		FAD3A8321EE77AC2003B88EE /* launch background.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A8311EE77AC2003B88EE /* launch background.png */; };
+		FAD3A8381EECA5C1003B88EE /* pregnant food background mask.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A8371EECA5C1003B88EE /* pregnant food background mask.png */; };
 		FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CC1E7A258200EB7B4D /* app icon.jpg */; };
 		FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */; };
 		FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE93151E78B593007254B0 /* CoreDataViewController.swift */; };
@@ -219,6 +220,7 @@
 		FAD3A82D1EE76F31003B88EE /* go filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go filled.png"; sourceTree = "<group>"; };
 		FAD3A82E1EE76F31003B88EE /* go blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go blank.png"; sourceTree = "<group>"; };
 		FAD3A8311EE77AC2003B88EE /* launch background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch background.png"; sourceTree = "<group>"; };
+		FAD3A8371EECA5C1003B88EE /* pregnant food background mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pregnant food background mask.png"; sourceTree = "<group>"; };
 		FADE73CC1E7A258200EB7B4D /* app icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app icon.jpg"; sourceTree = "<group>"; };
 		FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon no bubble.png"; sourceTree = "<group>"; };
 		FADE93151E78B593007254B0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				FA1DDEEC1EDC9F0200066A20 /* seafood.png */,
 				FA1DDEED1EDC9F0200066A20 /* vegetable.png */,
 				FA1DDED21EDB89D300066A20 /* dairy.jpg */,
+				FAD3A8371EECA5C1003B88EE /* pregnant food background mask.png */,
 				FAD3A8291EE75A22003B88EE /* pregnant food background.png */,
 				FAD3A82A1EE75A22003B88EE /* delete white.png */,
 				FA06B75E1E940CBB00CA3D7F /* delete.png */,
@@ -597,6 +600,7 @@
 				FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */,
 				FA5F05C21E96D1AC00A64406 /* LegalText.rtf in Resources */,
 				FA1DDEEE1EDC9F0200066A20 /* fruit.png in Resources */,
+				FAD3A8381EECA5C1003B88EE /* pregnant food background mask.png in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 				FAC8AC451EDCE19400DED29A /* smile.png in Resources */,
