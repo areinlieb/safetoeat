@@ -26,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4G-nA-dMs" id="ejg-iQ-EQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="702" height="109.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="702" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-ic-ZTd" userLabel="Food Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-ic-ZTd" userLabel="Food Label">
                                             <rect key="frame" x="8" y="3" width="719" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -49,7 +49,7 @@
                                                 <constraint firstAttribute="width" constant="25" id="ghG-oZ-ydG"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-LQ-zzo" userLabel="Safety Description">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-LQ-zzo" userLabel="Safety Description">
                                             <rect key="frame" x="8" y="70.5" width="719" height="31.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.61568627450980395" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,13 +182,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YKg-YJ-XEh">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="453.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="454"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pregnant food background mask.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-WX-ogb">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="392"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="392.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by continuing, you agree to our Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="DA8-Cy-U57">
-                                        <rect key="frame" x="0.0" y="392" width="768" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="392.5" width="768" height="61.5"/>
                                         <color key="backgroundColor" red="0.098037458956241608" green="0.12300530821084976" blue="0.15517511963844299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DA8-Cy-U57" secondAttribute="height" multiplier="200:16" id="lu2-34-eOB"/>
@@ -338,11 +338,11 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xOx-mB-7HS" id="e9d-5U-iGZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="135.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-o2-GEI">
-                                                    <rect key="frame" x="0.0" y="11" width="414" height="114"/>
+                                                    <rect key="frame" x="0.0" y="11" width="768" height="114"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -422,7 +422,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="BP4-Ob-qPt" id="x0C-Z6-o2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="139.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-Wv-t6Q">
@@ -544,11 +544,11 @@
                                         <rect key="frame" x="0.0" y="29" width="768" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9bU-Gq-KqC" id="QYY-aO-O14">
-                                            <rect key="frame" x="0.0" y="0.0" width="702" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="702" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-pQ-chp">
-                                                    <rect key="frame" x="8" y="3" width="365" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-pQ-chp">
+                                                    <rect key="frame" x="8" y="3" width="719" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.23529411764705882" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -567,8 +567,8 @@
                                                         <constraint firstAttribute="width" constant="25" id="P9Q-py-cCu"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-3q-vSg" userLabel="Safety Description">
-                                                    <rect key="frame" x="8" y="69.5" width="365" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-3q-vSg" userLabel="Safety Description">
+                                                    <rect key="frame" x="8" y="69.5" width="719" height="33"/>
                                                     <string key="text">There is not enough research to determine the safety of whey protein during pregnancy. Consult with your doctor about specific products before consumption.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.61568627450980395" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -644,7 +644,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qRU-Sa-27g" id="S0g-Lb-qao">
-                                    <rect key="frame" x="0.0" y="0.0" width="702" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="702" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4bN-5k-eVm" userLabel="moreIcon">
@@ -858,7 +858,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="702" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SCR-Hj-7FF" userLabel="Food Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="SCR-Hj-7FF" userLabel="Food Label">
                                             <rect key="frame" x="8" y="3" width="719" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -871,7 +871,7 @@
                                                 <constraint firstAttribute="width" constant="25" id="JOc-kN-Afu"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsl-8i-z53" userLabel="Safety Description">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="hsl-8i-z53" userLabel="Safety Description">
                                             <rect key="frame" x="8" y="71" width="727" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.61568627450000002" green="0.63137254899999995" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
