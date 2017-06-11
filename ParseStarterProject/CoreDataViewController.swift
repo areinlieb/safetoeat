@@ -69,10 +69,6 @@ class CoreDataViewController: UIViewController {
         deleteCoreDataEmail()
 */
         
-        //IMAGES WILL SHOW UP BLANK IF YOU DON'T HAVE THIS FOR PEOPLE WITH THE UPDATE SINCE THEY HAVE THEM SAVED IN CORE DATA. YOU NEED TO FIX!!!!
-        deleteCoreDataCategories()
-
-
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(CoreDataViewController.animate), userInfo: nil, repeats: true)
         animate()
         
