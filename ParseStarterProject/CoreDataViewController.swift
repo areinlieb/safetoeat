@@ -113,6 +113,22 @@ class CoreDataViewController: UIViewController {
                                                         
                                                         if foodCategory == category {
                                                             recordFound = true
+                                                            
+                                                            if let categoryUpdatedDate = result.value(forKey: "dateUpdated") as? String {
+                                                                
+                                                                if let updatedAt = object.updatedAt {
+                                                                    
+                                                                    let dateFormatter = DateFormatter()
+                                                                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                                                                    let dateUpdated = dateFormatter.string(from: updatedAt)
+                                                                    
+                                                                    if categoryUpdatedDate != dateUpdated {
+                                                                        DatabaseController.getContext().delete(result)
+                                                                        print("Deleted: \(String(describing: result.value(forKey: "categoryName")))")
+                                                                        recordFound = false
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -132,6 +148,16 @@ class CoreDataViewController: UIViewController {
                                             let categoryImage: NSData = UIImagePNGRepresentation(image)! as NSData
                                             food.categoryImage = categoryImage
                                             
+                                            if let updatedAt = object.updatedAt {
+                                                let dateFormatter = DateFormatter()
+                                                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                                                let dateUpdated = dateFormatter.string(from: updatedAt)
+                                                food.dateUpdated = dateUpdated
+                                                print("\(category): was updated at \(String(describing: food.dateUpdated))")
+                                            } else {
+                                                print("\(category): no update date")
+                                            }
+                                
                                             DatabaseController.saveContext()
                                             
                                         }
