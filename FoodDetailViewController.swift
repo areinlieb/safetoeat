@@ -156,7 +156,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 for result in results as [Category] {
                     if let categoryName = result.categoryName {
                         if category == categoryName {
-                            if let categoryIcon = result.categoryIcon {
+                            if let categoryIcon = result.categoryImage {
                                 categoryImage.image = UIImage(data: categoryIcon as Data)
                                 categoryImage.alpha = 0.5
                                 categoryImage.contentMode = .scaleAspectFill

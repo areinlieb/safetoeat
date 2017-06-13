@@ -130,7 +130,7 @@ class CoreDataViewController: UIViewController {
                                             
                                             let image = UIImage(data: imageData)!
                                             let categoryImage: NSData = UIImagePNGRepresentation(image)! as NSData
-                                            food.categoryIcon = categoryImage
+                                            food.categoryImage = categoryImage
                                             
                                             DatabaseController.saveContext()
                                             

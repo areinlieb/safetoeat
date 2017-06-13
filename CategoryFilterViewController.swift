@@ -70,7 +70,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
                             foodCategoryTypes.append(foodCategory)
                         }
                         
-                        if let categoryIcon = result.categoryIcon {
+                        if let categoryIcon = result.categoryImage {
                             foodCategoryImages.append(UIImage(data: categoryIcon as Data)!)
                         }
 

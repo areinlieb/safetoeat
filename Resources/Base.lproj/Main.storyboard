@@ -25,11 +25,11 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4G-nA-dMs" id="ejg-iQ-EQF">
-                                    <rect key="frame" x="0.0" y="0.0" width="702" height="109.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="702" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-ic-ZTd" userLabel="Food Label">
-                                            <rect key="frame" x="8" y="3" width="719" height="0.0"/>
+                                            <rect key="frame" x="8" y="3" width="686" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-LQ-zzo" userLabel="Safety Description">
-                                            <rect key="frame" x="8" y="70.5" width="719" height="31.5"/>
+                                            <rect key="frame" x="8" y="70.5" width="686" height="31.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.61568627450980395" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hello@food.com" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-r3-IXB">
-                                <rect key="frame" x="20" y="531" width="728" height="30"/>
+                                <rect key="frame" x="20" y="428.5" width="728" height="30"/>
                                 <color key="textColor" red="0.32156862749999998" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="go"/>
@@ -175,19 +175,19 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dq8-xY-yJ4">
-                                <rect key="frame" x="20" y="501.5" width="728" height="21.5"/>
+                                <rect key="frame" x="20" y="399" width="728" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YKg-YJ-XEh">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="454"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="361.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pregnant food background mask.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-WX-ogb">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="392.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="300"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by continuing, you agree to our Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="DA8-Cy-U57">
-                                        <rect key="frame" x="0.0" y="392.5" width="768" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="300" width="768" height="61.5"/>
                                         <color key="backgroundColor" red="0.098037458956241608" green="0.12300530821084976" blue="0.15517511963844299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DA8-Cy-U57" secondAttribute="height" multiplier="200:16" id="lu2-34-eOB"/>
@@ -203,7 +203,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" alpha="0.75" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91C-yK-QnY" userLabel="Login">
-                                <rect key="frame" x="364" y="569" width="40" height="40"/>
+                                <rect key="frame" x="364" y="466.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mI5-Pl-NX8"/>
                                     <constraint firstAttribute="width" constant="40" id="swH-N6-DbH"/>
@@ -214,7 +214,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXA-0o-nRA">
-                                <rect key="frame" x="301" y="617" width="166" height="25"/>
+                                <rect key="frame" x="301" y="514.5" width="166" height="25"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
                                 <state key="normal" title="Terms of Service &amp; Privacy Policy">
                                     <color key="titleColor" red="0.39919212460517883" green="0.61236971616744995" blue="0.80368262529373169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -230,7 +230,7 @@
                             <constraint firstItem="pNx-r3-IXB" firstAttribute="trailing" secondItem="aCb-Fg-6cM" secondAttribute="trailingMargin" id="6yi-zn-CQi"/>
                             <constraint firstItem="YKg-YJ-XEh" firstAttribute="leading" secondItem="aCb-Fg-6cM" secondAttribute="leading" id="C5S-J2-euK"/>
                             <constraint firstItem="pNx-r3-IXB" firstAttribute="top" secondItem="Dq8-xY-yJ4" secondAttribute="bottom" constant="8" id="HAh-0H-5bo"/>
-                            <constraint firstItem="Dq8-xY-yJ4" firstAttribute="centerY" secondItem="aCb-Fg-6cM" secondAttribute="centerY" id="LfG-vJ-yKR"/>
+                            <constraint firstItem="Dq8-xY-yJ4" firstAttribute="centerY" secondItem="aCb-Fg-6cM" secondAttribute="centerY" multiplier="0.8" id="LfG-vJ-yKR"/>
                             <constraint firstItem="91C-yK-QnY" firstAttribute="centerX" secondItem="aCb-Fg-6cM" secondAttribute="centerX" id="Qwf-Ec-6gL"/>
                             <constraint firstItem="Dq8-xY-yJ4" firstAttribute="trailing" secondItem="aCb-Fg-6cM" secondAttribute="trailingMargin" id="Rrq-3c-SZ6"/>
                             <constraint firstItem="DXA-0o-nRA" firstAttribute="centerX" secondItem="aCb-Fg-6cM" secondAttribute="centerX" id="Sry-vo-EtA"/>
@@ -421,7 +421,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="BP4-Ob-qPt" id="x0C-Z6-o2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="139.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-Wv-t6Q">
@@ -547,7 +547,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-pQ-chp">
-                                                    <rect key="frame" x="8" y="3" width="719" height="24"/>
+                                                    <rect key="frame" x="8" y="3" width="686" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.23529411764705882" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -567,7 +567,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-3q-vSg" userLabel="Safety Description">
-                                                    <rect key="frame" x="8" y="69.5" width="719" height="33"/>
+                                                    <rect key="frame" x="8" y="69.5" width="686" height="33"/>
                                                     <string key="text">There is not enough research to determine the safety of whey protein during pregnancy. Consult with your doctor about specific products before consumption.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.61568627450980395" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -945,7 +945,7 @@
         <image name="frame_3.png" width="626" height="626"/>
         <image name="go blank.png" width="50" height="50"/>
         <image name="pregnant food background mask.png" width="640" height="360"/>
-        <image name="smile.png" width="50" height="50"/>
+        <image name="smile.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Alf-U1-OSq"/>
