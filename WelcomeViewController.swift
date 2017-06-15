@@ -64,8 +64,13 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     func loginProcess() {
         
         let newUser = PFUser()
-        newUser.username = "username"
-        newUser.email = "username@email.com"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateUpdated = dateFormatter.string(from: NSDate() as Date)
+
+        newUser.username = dateUpdated
+        newUser.email = dateUpdated + "@email.com"
         newUser.password = "password"
         
         // Sign up the user asynchronously
