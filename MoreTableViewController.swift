@@ -30,7 +30,8 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     
     @IBAction func unwindToWelcome(segue: UIStoryboardSegue) {
     }
-    
+
+/*
     func logout() {
         
         let alert = UIAlertController(title: "Change email", message: "Are you sure you want to change your email?", preferredStyle: .actionSheet)
@@ -72,7 +73,8 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         present(alert, animated: true, completion: nil)
         
     }
-
+*/
+ 
     func appRating() {
         
         let alert = UIAlertController(title: "Rate SafetoEat", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
@@ -211,9 +213,6 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
                     return
                 }
                 self.navigationController?.pushViewController(vc, animated:true)
-                break
-            case (3,0):
-                logout()
                 break
             default: break
         
