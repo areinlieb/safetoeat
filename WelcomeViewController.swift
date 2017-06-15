@@ -36,7 +36,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
         //usernameField.becomeFirstResponder()
         //self.usernameField.delegate = self
         
-        loginButton.setImage(UIImage(named: "go blank.png"), for: .normal)
+        loginButton.setImage(UIImage(named: "go filled.png"), for: .normal)
         
     }
     
@@ -63,34 +63,84 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     
     func loginProcess() {
         
-        let newUser = PFUser()
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateUpdated = dateFormatter.string(from: NSDate() as Date)
-
-        newUser.username = dateUpdated
-        newUser.email = dateUpdated + "@email.com"
-        newUser.password = "password"
         
-        // Sign up the user asynchronously
-        newUser.signUpInBackground(block: { (success, error) -> Void in
+        //add to Core data
+        let newEmail = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
+        newEmail.email = dateUpdated + "@email.com"
+        DatabaseController.saveContext()
+        
+        if (PFUser.current() != nil) {
+            
+            let existingUser = PFUser.current()
+            
+            existingUser?.username = dateUpdated
+            existingUser?.email = dateUpdated + "@email.com"
+            existingUser?.password = "password"
+            
+            existingUser?.saveInBackground(block: { (success, error) in
+                
+                if success {
                     
-            if ((error) != nil) {
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                        self.present(viewController, animated: true, completion: nil)
+                    })
+                } else if error!.localizedDescription == "Account already exists for this username." {
+                    
+                    // Send a request to login
+                    PFUser.logInWithUsername(inBackground: (existingUser?.username!)!, password: (existingUser?.password!)!, block: { (user, error) -> Void in
+                        
+                        if ((user) != nil) {
+                            
+                            DispatchQueue.main.async(execute: {
+                                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                                self.present(viewController, animated: true, completion: nil)
+                            })
+                            
+                        } else {
+                            
+                            let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                            self.present(alert, animated: true){}
+                            
+                        }
+                    })
+                } else {
+                    let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                    self.present(alert, animated: true){}
+                }
                 
-                let alert = UIAlertController(title: "Ah, shitake mushrooms!", message: "Please make sure you're connected to a network and try again. This is only necessary the first time.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
-                self.present(alert, animated: true){}
-                                    
-            } else {
-                
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
-                    self.present(viewController, animated: true, completion: nil)
-                })
-            }
-        })
+            })
+        } else {
         
+            let newUser = PFUser()
+
+            newUser.username = dateUpdated
+            newUser.email = dateUpdated + "@email.com"
+            newUser.password = "password"
+        
+            // Sign up the user asynchronously
+            newUser.signUpInBackground(block: { (success, error) -> Void in
+                    
+                if ((error) != nil) {
+                
+                    let alert = UIAlertController(title: "Ah, shitake mushrooms!", message: "Please make sure you're connected to a network and try again. This is only necessary the first time.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                    self.present(alert, animated: true){}
+                                    
+                } else {
+                
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                        self.present(viewController, animated: true, completion: nil)
+                    })
+                }
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
