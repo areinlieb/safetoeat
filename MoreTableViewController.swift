@@ -184,12 +184,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         switch (indexPath.section, indexPath.row) {
             
             case (0,0):
-                
-                if #available(iOS 10.3, *) {
-                    SKStoreReviewController.requestReview()
-                } else {
-                    appRating()
-                }
+                appRating()
                 break
             case (0,1):
                 inviteFriends(sender: self.tableView)

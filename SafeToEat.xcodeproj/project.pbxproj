@@ -70,8 +70,6 @@
 		FA7B10091E83299C00378663 /* more-logout.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7B10031E83299C00378663 /* more-logout.png */; };
 		FA7B100B1E83299C00378663 /* more-legal.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7B10051E83299C00378663 /* more-legal.png */; };
 		FA7B100C1E83299C00378663 /* more-rate.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7B10061E83299C00378663 /* more-rate.png */; };
-		FA7B10161E83380200378663 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA7B10131E83380200378663 /* iRate.bundle */; };
-		FA7B10171E83380200378663 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7B10151E83380200378663 /* iRate.m */; };
 		FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7BAA321E843186001D9355 /* MoreTableViewCell.swift */; };
 		FA7BAA361E843A2D001D9355 /* more-requestAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7BAA341E843A2D001D9355 /* more-requestAdd.png */; };
 		FA7BAA371E843A2D001D9355 /* more-inviteFriends.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7BAA351E843A2D001D9355 /* more-inviteFriends.png */; };
@@ -97,6 +95,8 @@
 		FAC8AC441EDCE19400DED29A /* frown.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC411EDCE19400DED29A /* frown.png */; };
 		FAC8AC451EDCE19400DED29A /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC421EDCE19400DED29A /* smile.png */; };
 		FAC8AC461EDCE19400DED29A /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC431EDCE19400DED29A /* question.png */; };
+		FACB263E1EFD8F8D0005266D /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB263D1EFD8F8D0005266D /* iRate.m */; };
+		FACB26401EFD8FCE0005266D /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FACB263F1EFD8FCE0005266D /* iRate.bundle */; };
 		FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */; };
 		FAD3A82B1EE75A22003B88EE /* pregnant food background.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A8291EE75A22003B88EE /* pregnant food background.png */; };
 		FAD3A82C1EE75A22003B88EE /* delete white.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A82A1EE75A22003B88EE /* delete white.png */; };
@@ -186,9 +186,6 @@
 		FA7B10051E83299C00378663 /* more-legal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-legal.png"; sourceTree = "<group>"; };
 		FA7B10061E83299C00378663 /* more-rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-rate.png"; sourceTree = "<group>"; };
 		FA7B10121E83380100378663 /* SafeToEat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SafeToEat-Bridging-Header.h"; sourceTree = "<group>"; };
-		FA7B10131E83380200378663 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = ../iRate.bundle; sourceTree = "<group>"; };
-		FA7B10141E83380200378663 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = ../iRate.h; sourceTree = "<group>"; };
-		FA7B10151E83380200378663 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = ../iRate.m; sourceTree = "<group>"; };
 		FA7BAA321E843186001D9355 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreTableViewCell.swift; path = ParseStarterProject/MoreTableViewCell.swift; sourceTree = "<group>"; };
 		FA7BAA341E843A2D001D9355 /* more-requestAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-requestAdd.png"; sourceTree = "<group>"; };
 		FA7BAA351E843A2D001D9355 /* more-inviteFriends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-inviteFriends.png"; sourceTree = "<group>"; };
@@ -214,6 +211,9 @@
 		FAC8AC411EDCE19400DED29A /* frown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frown.png; sourceTree = "<group>"; };
 		FAC8AC421EDCE19400DED29A /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
 		FAC8AC431EDCE19400DED29A /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		FACB263C1EFD8F8D0005266D /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = ../iRate.h; sourceTree = "<group>"; };
+		FACB263D1EFD8F8D0005266D /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = ../iRate.m; sourceTree = "<group>"; };
+		FACB263F1EFD8FCE0005266D /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = ../iRate.bundle; sourceTree = "<group>"; };
 		FACED41E1E8A317F007AAEEB /* FoodDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDetailTableViewCell.swift; path = ParseStarterProject/FoodDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FAD3A8291EE75A22003B88EE /* pregnant food background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pregnant food background.png"; sourceTree = "<group>"; };
 		FAD3A82A1EE75A22003B88EE /* delete white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete white.png"; sourceTree = "<group>"; };
@@ -254,9 +254,9 @@
 			children = (
 				814C3AC81B69877600E307BB /* Images.xcassets */,
 				814C3AC91B69877600E307BB /* Info.plist */,
-				FA7B10131E83380200378663 /* iRate.bundle */,
-				FA7B10141E83380200378663 /* iRate.h */,
-				FA7B10151E83380200378663 /* iRate.m */,
+				FACB263F1EFD8FCE0005266D /* iRate.bundle */,
+				FACB263C1EFD8F8D0005266D /* iRate.h */,
+				FACB263D1EFD8F8D0005266D /* iRate.m */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -632,13 +632,13 @@
 				FA1DDEF41EDC9F0200066A20 /* vegetable.png in Resources */,
 				D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */,
 				FA1DDED31EDB89D300066A20 /* dairy.jpg in Resources */,
-				FA7B10161E83380200378663 /* iRate.bundle in Resources */,
 				FA4EC29F1EABF82E00B59F34 /* frown red.png in Resources */,
 				FA1DDEF21EDC9F0200066A20 /* Other.png in Resources */,
 				FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */,
 				D33FE89E1EDE3EBF0006A30E /* frame_1.png in Resources */,
 				FA4EC29B1EABF44100B59F34 /* smile green.png in Resources */,
 				FA5A5A121E6F313B00941C50 /* app icon with bubble spinach.png in Resources */,
+				FACB26401EFD8FCE0005266D /* iRate.bundle in Resources */,
 				FA467CE21EAE6DEA00F03AAD /* women outline.png in Resources */,
 				FA9B4C8F1E77B7BC00EEA05D /* search food icon.png in Resources */,
 				FA467CE01EAE6A4400F03AAD /* star background.png in Resources */,
@@ -665,7 +665,6 @@
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
 				FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */,
 				FAC8AC401EDCD21500DED29A /* FavoriteTableViewCell.swift in Sources */,
-				FA7B10171E83380200378663 /* iRate.m in Sources */,
 				FA9D06971E771ABD00E76026 /* ExtendedNavBarView.swift in Sources */,
 				FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */,
 				FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */,
@@ -675,6 +674,7 @@
 				FAC8AC3E1EDCD20000DED29A /* FavoriteViewController.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
+				FACB263E1EFD8F8D0005266D /* iRate.m in Sources */,
 				FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */,
 				FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */,
 				FA115E761EADB4AE00E7A251 /* GlossaryViewController.swift in Sources */,
