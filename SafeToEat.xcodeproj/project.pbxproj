@@ -47,6 +47,7 @@
 		FA467CE01EAE6A4400F03AAD /* star background.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CDF1EAE6A4400F03AAD /* star background.png */; };
 		FA467CE21EAE6DEA00F03AAD /* women outline.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CE11EAE6DEA00F03AAD /* women outline.png */; };
 		FA467CE41EAE93B500F03AAD /* continue button.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CE31EAE93B500F03AAD /* continue button.png */; };
+		FA4A584B1F0221CE00977D13 /* nutrients.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4A584A1F0221CE00977D13 /* nutrients.png */; };
 		FA4EC2971EABF18C00B59F34 /* traffic light green.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2941EABF18C00B59F34 /* traffic light green.png */; };
 		FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2951EABF18C00B59F34 /* traffic light red.png */; };
 		FA4EC2991EABF18C00B59F34 /* traffic light yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */; };
@@ -162,6 +163,7 @@
 		FA467CE11EAE6DEA00F03AAD /* women outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "women outline.png"; sourceTree = "<group>"; };
 		FA467CE31EAE93B500F03AAD /* continue button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue button.png"; sourceTree = "<group>"; };
 		FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeToEat.entitlements; sourceTree = SOURCE_ROOT; };
+		FA4A584A1F0221CE00977D13 /* nutrients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nutrients.png; sourceTree = "<group>"; };
 		FA4EC2941EABF18C00B59F34 /* traffic light green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light green.png"; sourceTree = "<group>"; };
 		FA4EC2951EABF18C00B59F34 /* traffic light red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light red.png"; sourceTree = "<group>"; };
 		FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light yellow.png"; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				FA1DDEE81EDC9F0200066A20 /* grains.png */,
 				FA1DDEE91EDC9F0200066A20 /* meat.png */,
 				FA1DDEEA1EDC9F0200066A20 /* nuts.png */,
+				FA4A584A1F0221CE00977D13 /* nutrients.png */,
 				FA1DDEEB1EDC9F0200066A20 /* Other.png */,
 				FA1DDEEC1EDC9F0200066A20 /* seafood.png */,
 				FA1DDEED1EDC9F0200066A20 /* vegetable.png */,
@@ -627,6 +630,7 @@
 				FA92E7B81E6CE99A0069271D /* category icon.png in Resources */,
 				D33FE8A21EDE3EBF0006A30E /* frame_5.png in Resources */,
 				FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */,
+				FA4A584B1F0221CE00977D13 /* nutrients.png in Resources */,
 				FA1DDEF11EDC9F0200066A20 /* nuts.png in Resources */,
 				FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */,
 				FA1DDEF41EDC9F0200066A20 /* vegetable.png in Resources */,

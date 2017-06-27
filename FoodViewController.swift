@@ -257,6 +257,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             categoryIcon = UIImage(named: "grains.png")!
         case "Meat":
             categoryIcon = UIImage(named: "meat.png")!
+        case "Nutrients":
+            categoryIcon = UIImage(named: "nutrients.png")!
         case "Nuts, Seeds, & Legumes":
             categoryIcon = UIImage(named: "nuts.png")!
         case "Other":
