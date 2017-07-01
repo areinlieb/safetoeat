@@ -48,6 +48,12 @@
 		FA467CE21EAE6DEA00F03AAD /* women outline.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CE11EAE6DEA00F03AAD /* women outline.png */; };
 		FA467CE41EAE93B500F03AAD /* continue button.png in Resources */ = {isa = PBXBuildFile; fileRef = FA467CE31EAE93B500F03AAD /* continue button.png */; };
 		FA4A584B1F0221CE00977D13 /* nutrients.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4A584A1F0221CE00977D13 /* nutrients.png */; };
+		FA4A584D1F02D8F000977D13 /* recipes icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4A584C1F02D8F000977D13 /* recipes icon.png */; };
+		FA4A58501F02D99F00977D13 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A584F1F02D99F00977D13 /* RecipesViewController.swift */; };
+		FA4A58521F02D9B300977D13 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A58511F02D9B300977D13 /* RecipesTableViewCell.swift */; };
+		FA4A58541F02DCF900977D13 /* recipe icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4A58531F02DCF900977D13 /* recipe icon.png */; };
+		FA4A58561F02E08400977D13 /* cookbook icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = FA4A58551F02E08400977D13 /* cookbook icon.svg */; };
+		FA4A58581F03234100977D13 /* RecipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A58571F03234100977D13 /* RecipePageViewController.swift */; };
 		FA4EC2971EABF18C00B59F34 /* traffic light green.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2941EABF18C00B59F34 /* traffic light green.png */; };
 		FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2951EABF18C00B59F34 /* traffic light red.png */; };
 		FA4EC2991EABF18C00B59F34 /* traffic light yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */; };
@@ -111,6 +117,7 @@
 		FAE01C571E94393800F15CF8 /* baby happy with text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE01C561E94393800F15CF8 /* baby happy with text.png */; };
 		FAE01C5A1E943B2500F15CF8 /* baby question with text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE01C581E943B2500F15CF8 /* baby question with text.png */; };
 		FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE01C591E943B2500F15CF8 /* baby upset with text.png */; };
+		FAE1320E1F03740E00B436C0 /* default recipe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAE1320D1F03740E00B436C0 /* default recipe.jpg */; };
 		FAE42A291E7BB09F00487AB2 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */; };
 		FAF8BE991E81F13D00D5BED8 /* addToFavorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */; };
 		FAF8BE9A1E81F13D00D5BED8 /* removeFromFavorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */; };
@@ -164,6 +171,12 @@
 		FA467CE31EAE93B500F03AAD /* continue button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue button.png"; sourceTree = "<group>"; };
 		FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeToEat.entitlements; sourceTree = SOURCE_ROOT; };
 		FA4A584A1F0221CE00977D13 /* nutrients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nutrients.png; sourceTree = "<group>"; };
+		FA4A584C1F02D8F000977D13 /* recipes icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipes icon.png"; sourceTree = "<group>"; };
+		FA4A584F1F02D99F00977D13 /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		FA4A58511F02D9B300977D13 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
+		FA4A58531F02DCF900977D13 /* recipe icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipe icon.png"; sourceTree = "<group>"; };
+		FA4A58551F02E08400977D13 /* cookbook icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "cookbook icon.svg"; sourceTree = "<group>"; };
+		FA4A58571F03234100977D13 /* RecipePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipePageViewController.swift; sourceTree = "<group>"; };
 		FA4EC2941EABF18C00B59F34 /* traffic light green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light green.png"; sourceTree = "<group>"; };
 		FA4EC2951EABF18C00B59F34 /* traffic light red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light red.png"; sourceTree = "<group>"; };
 		FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light yellow.png"; sourceTree = "<group>"; };
@@ -229,6 +242,7 @@
 		FAE01C561E94393800F15CF8 /* baby happy with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby happy with text.png"; sourceTree = "<group>"; };
 		FAE01C581E943B2500F15CF8 /* baby question with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby question with text.png"; sourceTree = "<group>"; };
 		FAE01C591E943B2500F15CF8 /* baby upset with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby upset with text.png"; sourceTree = "<group>"; };
+		FAE1320D1F03740E00B436C0 /* default recipe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default recipe.jpg"; sourceTree = "<group>"; };
 		FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addToFavorites.png; sourceTree = "<group>"; };
 		FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = removeFromFavorites.png; sourceTree = "<group>"; };
@@ -273,6 +287,7 @@
 				FA9D06A81E77475A00E76026 /* More */,
 				FA5A5A191E6F329400941C50 /* Launch Screen */,
 				FAB5F0721E721BD70017FE01 /* Login */,
+				FA4A584E1F02D97B00977D13 /* Recipes */,
 				FA9D06AB1E7747A600E76026 /* Search */,
 				81BA81471A49DA1800E65899 /* SafeToEat */,
 				FA92E7BD1E6E18500069271D /* Assets */,
@@ -327,6 +342,16 @@
 				81BA81761A49E0D500E65899 /* libsqlite3.dylib */,
 			);
 			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+		FA4A584E1F02D97B00977D13 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				FA4A584F1F02D99F00977D13 /* RecipesViewController.swift */,
+				FA4A58511F02D9B300977D13 /* RecipesTableViewCell.swift */,
+				FA4A58571F03234100977D13 /* RecipePageViewController.swift */,
+			);
+			name = Recipes;
 			sourceTree = "<group>";
 		};
 		FA5A5A161E6F314000941C50 /* Assets */ = {
@@ -391,6 +416,7 @@
 				FAD3A8291EE75A22003B88EE /* pregnant food background.png */,
 				FAD3A82A1EE75A22003B88EE /* delete white.png */,
 				FA06B75E1E940CBB00CA3D7F /* delete.png */,
+				FAE1320D1F03740E00B436C0 /* default recipe.jpg */,
 				FA5F05C11E96D1AC00A64406 /* LegalText.rtf */,
 				FA115E731EADB49C00E7A251 /* Glossary.rtf */,
 				FA86EB851E85B05A00B66A91 /* login.png */,
@@ -401,6 +427,9 @@
 				FADE73CC1E7A258200EB7B4D /* app icon.jpg */,
 				FA6255311E86192600194140 /* app icon with bubble sushi small.png */,
 				FA92E7B71E6CE99A0069271D /* category icon.png */,
+				FA4A58531F02DCF900977D13 /* recipe icon.png */,
+				FA4A584C1F02D8F000977D13 /* recipes icon.png */,
+				FA4A58551F02E08400977D13 /* cookbook icon.svg */,
 				FA92E7BB1E6DE29E0069271D /* default category icon.png */,
 				FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */,
 				FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */,
@@ -584,6 +613,7 @@
 				FA6255321E86192600194140 /* app icon with bubble sushi small.png in Resources */,
 				FA1DDED51EDC8A5800066A20 /* dairy.png in Resources */,
 				D33FE89D1EDE3EBF0006A30E /* frame_0.png in Resources */,
+				FAE1320E1F03740E00B436C0 /* default recipe.jpg in Resources */,
 				FA92E7BC1E6DE29E0069271D /* default category icon.png in Resources */,
 				FA7B10071E83299C00378663 /* more-feedback.png in Resources */,
 				FA5A5A141E6F313B00941C50 /* app icon with bubble sushi.png in Resources */,
@@ -594,6 +624,7 @@
 				FA1DDEF31EDC9F0200066A20 /* seafood.png in Resources */,
 				FA5A5A0E1E6F313B00941C50 /* app icon with bubble cheese.png in Resources */,
 				FAC8AC441EDCE19400DED29A /* frown.png in Resources */,
+				FA4A58541F02DCF900977D13 /* recipe icon.png in Resources */,
 				FA5A5A111E6F313B00941C50 /* app icon with bubble nut.png in Resources */,
 				FA7B100B1E83299C00378663 /* more-legal.png in Resources */,
 				FA1DDEEF1EDC9F0200066A20 /* grains.png in Resources */,
@@ -631,12 +662,14 @@
 				D33FE8A21EDE3EBF0006A30E /* frame_5.png in Resources */,
 				FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */,
 				FA4A584B1F0221CE00977D13 /* nutrients.png in Resources */,
+				FA4A584D1F02D8F000977D13 /* recipes icon.png in Resources */,
 				FA1DDEF11EDC9F0200066A20 /* nuts.png in Resources */,
 				FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */,
 				FA1DDEF41EDC9F0200066A20 /* vegetable.png in Resources */,
 				D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */,
 				FA1DDED31EDB89D300066A20 /* dairy.jpg in Resources */,
 				FA4EC29F1EABF82E00B59F34 /* frown red.png in Resources */,
+				FA4A58561F02E08400977D13 /* cookbook icon.svg in Resources */,
 				FA1DDEF21EDC9F0200066A20 /* Other.png in Resources */,
 				FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */,
 				D33FE89E1EDE3EBF0006A30E /* frame_1.png in Resources */,
@@ -662,9 +695,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA86EB881E85B45B00B66A91 /* WelcomeViewController.swift in Sources */,
+				FA4A58501F02D99F00977D13 /* RecipesViewController.swift in Sources */,
 				FAB5F0761E7235E90017FE01 /* FavoritesTableViewCell.swift in Sources */,
 				FA8CD6FD1E7085EB00E7CB97 /* FoodTableViewCell.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+				FA4A58581F03234100977D13 /* RecipePageViewController.swift in Sources */,
 				FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */,
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
 				FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */,
@@ -683,6 +718,7 @@
 				FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */,
 				FA115E761EADB4AE00E7A251 /* GlossaryViewController.swift in Sources */,
 				FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */,
+				FA4A58521F02D9B300977D13 /* RecipesTableViewCell.swift in Sources */,
 				FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */,
 				FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */,
 				D3EB37521E75FA59009894E8 /* FavoritesTableViewController.swift in Sources */,

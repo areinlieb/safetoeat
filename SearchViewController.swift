@@ -94,34 +94,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "enter food here"
+        self.searchController.searchBar.placeholder = "what food are you curious about?"
         definesPresentationContext = true
-        
-    }
-    
-    
-    func saveEmailtoParse() {
-        
-        var savedEmail = ""
-        let fetchRequest:NSFetchRequest<User> = User.fetchRequest()
-        
-        do {
-            
-            let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
-            if results.count > 0 {
-                for result in results as [User] {
-                    savedEmail = result.email!
-                }
-            }
-        } catch {
-            print("Couldn't fetch results")
-        }
-        
-        let user = PFUser.current()
-        user?.username = savedEmail
-        user?.email = savedEmail
-        user?.saveEventually()
         
     }
     
@@ -254,7 +228,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             print("No internet connection on first launch")
         }
         
-    
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -262,6 +235,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         self.foodListFiltered = self.foodList.filter { (foodList: String) -> Bool in
    
             return foodList.lowercased().contains(self.searchController.searchBar.text!.lowercased())
+    
         }
 
         self.tableView.reloadData()

@@ -62,19 +62,22 @@ class CoreDataViewController: UIViewController {
 
 /*
         deleteCoreDataFood()
+        deleteCoreDataRecipes()
         deleteCoreDataCategories()
         deleteCoreDataFavorites()
         deleteCoreDataSearches()
         deleteCoreDataRecent()
         deleteCoreDataEmail()
 */
-        
+        deleteCoreDataRecipes()
+
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(CoreDataViewController.animate), userInfo: nil, repeats: true)
         animate()
         
         //load data from parse into core data
         loadCategories()
         loadFood()
+        loadRecipes()
         
     }
     
@@ -273,6 +276,106 @@ class CoreDataViewController: UIViewController {
 
     }
     
+    func loadRecipes() {
+    
+        let foodQuery = PFQuery(className: "Recipes")
+        foodQuery.limit = 1000
+        foodQuery.findObjectsInBackground { (objects, error) in
+            
+            if error == nil {
+                
+                if let recipes = objects {
+                    
+                    for object in recipes {
+                        
+                        if let recipeItem = object["recipeTitle"] as? String {
+                            
+                            var recordFound = false
+                            let requestRecipe: NSFetchRequest<Recipes> = Recipes.fetchRequest()
+                            requestRecipe.returnsObjectsAsFaults = false
+                            
+                            do {
+                                
+                                let recipeResults = try DatabaseController.getContext().fetch(requestRecipe)
+                                
+                                if recipeResults.count > 0 {
+                                    
+                                    for result in recipeResults as [Recipes] {
+                                        
+                                        if let recipeType = result.value(forKey: "recipeTitle") as? String {
+                                            
+                                            if recipeType == recipeItem {
+                                                
+                                                recordFound = true
+                                                
+                                                if let recipeUpdatedDate = result.value(forKey: "dateUpdated") as? String {
+                                                    
+                                                    if let updatedAt = object.updatedAt {
+                                                        
+                                                        let dateFormatter = DateFormatter()
+                                                        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                                                        let dateUpdated = dateFormatter.string(from: updatedAt)
+                                                        
+                                                        if recipeUpdatedDate != dateUpdated {
+                                                            DatabaseController.getContext().delete(result)
+                                                            print("Deleted: \(String(describing: result.value(forKey: "recipeTitle")))")
+                                                            recordFound = false
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                } else {
+                                    print("No recipe results in Core Data fetch")
+                                }
+                            } catch {
+                                print("Couldn't fetch results")
+                            }
+                            
+                            if !recordFound {
+                                
+                                let newRecipe = NSEntityDescription.insertNewObject(forEntityName: "Recipes", into: DatabaseController.getContext()) as! Recipes
+                                newRecipe.recipeTitle = recipeItem
+                                
+                                if let url = object["recipeURL"] as? String {
+                                    newRecipe.recipeURL = url
+                                }
+                                
+                                if let urlImage = object["recipeImageURL"] as? String {
+                                    newRecipe.recipeImageURL = urlImage
+                                }
+                                
+                                if let updatedAt = object.updatedAt {
+                                    let dateFormatter = DateFormatter()
+                                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                                    let dateUpdated = dateFormatter.string(from: updatedAt)
+                                    newRecipe.dateUpdated = dateUpdated
+                                    print("\(recipeItem): was updated at \(String(describing: newRecipe.dateUpdated))")
+                                } else {
+                                    print("\(recipeItem): no update date")
+                                }
+                                
+                                //ADD OTHER FOOD FIELDS TO CORE DATA HERE
+                                
+                                if let ingredients = object["ingredients"] as? NSObject {
+                                    newRecipe.ingredients = ingredients
+                                }
+                                
+                                DatabaseController.saveContext()
+                                
+                            }
+                        }
+                    }
+                }
+            } else {
+                print("Could not retrieve recipe list")
+            }
+        }
+
+    }
+    
     func deleteCoreDataFood() {
         
         let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
@@ -336,6 +439,41 @@ class CoreDataViewController: UIViewController {
                 }
             } else {
                 print("Category: Core data is empty")
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+    }
+    
+    func deleteCoreDataRecipes() {
+        
+        let fetchRequest:NSFetchRequest<Recipes> = Recipes.fetchRequest()
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Recipes] {
+                    DatabaseController.getContext().delete(result)
+                }
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+        //checks if core data is empty
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Recipes] {
+                    print("result are \(result)")
+                }
+            } else {
+                print("Recipes: Core data is empty")
             }
         } catch {
             print("Couldn't fetch results")
