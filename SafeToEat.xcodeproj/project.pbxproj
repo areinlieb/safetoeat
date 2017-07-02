@@ -26,7 +26,6 @@
 		D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE89B1EDE3EBF0006A30E /* frame_7.png */; };
 		D33FE8A51EDE3EBF0006A30E /* frame_8.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE89C1EDE3EBF0006A30E /* frame_8.png */; };
 		D33FE8A71EDE3FBD0006A30E /* app icon green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */; };
-		D3EB37521E75FA59009894E8 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */; };
 		D3EFD69F1F08676000CE1BAB /* favorite star icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EFD69E1F08676000CE1BAB /* favorite star icon.png */; };
 		FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FA06B75E1E940CBB00CA3D7F /* delete.png */; };
 		FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0A6D441E8D76E100AB5B1D /* star background gray.png */; };
@@ -97,9 +96,6 @@
 		FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06A31E773F1100E76026 /* MoreTableViewController.swift */; };
 		FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06A41E773F1100E76026 /* MoreSections.swift */; };
 		FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA06AB31EAC05C00083BF52 /* star background blue.png */; };
-		FAB5F0761E7235E90017FE01 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */; };
-		FAC8AC3E1EDCD20000DED29A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */; };
-		FAC8AC401EDCD21500DED29A /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */; };
 		FAC8AC441EDCE19400DED29A /* frown.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC411EDCE19400DED29A /* frown.png */; };
 		FAC8AC451EDCE19400DED29A /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC421EDCE19400DED29A /* smile.png */; };
 		FAC8AC461EDCE19400DED29A /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC431EDCE19400DED29A /* question.png */; };
@@ -148,7 +144,6 @@
 		D33FE89B1EDE3EBF0006A30E /* frame_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_7.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_7.png"; sourceTree = "<group>"; };
 		D33FE89C1EDE3EBF0006A30E /* frame_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_8.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_8.png"; sourceTree = "<group>"; };
 		D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "app icon green.jpg"; path = "../../Assets/app icon green.jpg"; sourceTree = "<group>"; };
-		D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		D3EFD69E1F08676000CE1BAB /* favorite star icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favorite star icon.png"; path = "../../../../../../Downloads/favorite star icon.png"; sourceTree = "<group>"; };
 		EF9A8B47185E7FD9C72DC6D4 /* Pods_SafeToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA06B75E1E940CBB00CA3D7F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
@@ -222,9 +217,6 @@
 		FA9D06A31E773F1100E76026 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		FA9D06A41E773F1100E76026 /* MoreSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSections.swift; sourceTree = "<group>"; };
 		FAA06AB31EAC05C00083BF52 /* star background blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background blue.png"; sourceTree = "<group>"; };
-		FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
-		FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		FAC8AC411EDCE19400DED29A /* frown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frown.png; sourceTree = "<group>"; };
 		FAC8AC421EDCE19400DED29A /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
 		FAC8AC431EDCE19400DED29A /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
@@ -282,8 +274,6 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
-				FAC8AC3C1EDCD1EC00DED29A /* Favorite */,
-				FA9D06A91E77476500E76026 /* Favorites */,
 				FA9D06AA1E77478100E76026 /* Food */,
 				FACED41D1E8A2EF8007AAEEB /* Food Detail */,
 				FA9D06A81E77475A00E76026 /* More */,
@@ -470,15 +460,6 @@
 			name = More;
 			sourceTree = "<group>";
 		};
-		FA9D06A91E77476500E76026 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-				D3EB37511E75FA58009894E8 /* FavoritesTableViewController.swift */,
-				FAB5F0751E7235E90017FE01 /* FavoritesTableViewCell.swift */,
-			);
-			name = Favorites;
-			sourceTree = "<group>";
-		};
 		FA9D06AA1E77478100E76026 /* Food */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,15 +488,6 @@
 				FA86EB891E85BFDB00B66A91 /* LegalWelcomeViewController.swift */,
 			);
 			name = Login;
-			sourceTree = "<group>";
-		};
-		FAC8AC3C1EDCD1EC00DED29A /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				FAC8AC3D1EDCD20000DED29A /* FavoriteViewController.swift */,
-				FAC8AC3F1EDCD21500DED29A /* FavoriteTableViewCell.swift */,
-			);
-			name = Favorite;
 			sourceTree = "<group>";
 		};
 		FACED41D1E8A2EF8007AAEEB /* Food Detail */ = {
@@ -700,21 +672,18 @@
 			files = (
 				FA86EB881E85B45B00B66A91 /* WelcomeViewController.swift in Sources */,
 				FA4A58501F02D99F00977D13 /* RecipesViewController.swift in Sources */,
-				FAB5F0761E7235E90017FE01 /* FavoritesTableViewCell.swift in Sources */,
 				FA8CD6FD1E7085EB00E7CB97 /* FoodTableViewCell.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				FA4A58581F03234100977D13 /* RecipePageViewController.swift in Sources */,
 				FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */,
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
 				FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */,
-				FAC8AC401EDCD21500DED29A /* FavoriteTableViewCell.swift in Sources */,
 				FA9D06971E771ABD00E76026 /* ExtendedNavBarView.swift in Sources */,
 				FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */,
 				FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */,
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
 				FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */,
-				FAC8AC3E1EDCD20000DED29A /* FavoriteViewController.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
 				FACB263E1EFD8F8D0005266D /* iRate.m in Sources */,
@@ -725,7 +694,6 @@
 				FA4A58521F02D9B300977D13 /* RecipesTableViewCell.swift in Sources */,
 				FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */,
 				FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */,
-				D3EB37521E75FA59009894E8 /* FavoritesTableViewController.swift in Sources */,
 				FAE42A291E7BB09F00487AB2 /* DatabaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
