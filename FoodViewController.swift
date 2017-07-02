@@ -15,8 +15,13 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     var foodList = [String()]
     var foodListFiltered = [String()]
     var recentFoodList = [String()]
+    var favorites = [String()]
     var safety = [String: String]()
     var safetyDescription = [String: String]()
+    
+    var backgroundView = UIImageView(image: UIImage(named: "star background.png"))
+    var backgroundText = UILabel()
+
 
     @IBOutlet var tableView: UITableView!
     
@@ -43,27 +48,43 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         loadRecentList()
+        loadFavoriteList()
 
         tableView.reloadData()
         
+        self.tableView.sendSubview(toBack: backgroundView)
+        self.tableView.sendSubview(toBack: backgroundText)
+
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-/*
-//Inserts bar button image
-        let button = UIButton.init(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        let filterButton = UIBarButtonItem(customView: button)
+
+        backgroundView.contentMode = .scaleAspectFit
+        backgroundView.frame.size.width = 100
+        backgroundView.frame.size.height = 100
+        backgroundView.center = self.view.center
+        backgroundView.frame.origin.y = self.view.center.y * 0.5
         
-        button.setImage(UIImage(named: "filter.png"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(categoryFilterButton), for: UIControlEvents.touchUpInside)
+        self.tableView.sendSubview(toBack: backgroundView)
         
-        self.navigationItem.leftBarButtonItem = filterButton
-*/
+        backgroundText.text = "No favorite items"
+        backgroundText.textColor = UIColor(red: 66.0/255.0, green: 68.0/255.0, blue: 73.0/255.0, alpha: 1.0)
+        backgroundText.contentMode = .scaleAspectFit
+        
+        //SIZE OF IMAGE AND TEXT SHOULD SCALE BASED ON SCREEN SIZE
+        backgroundText.frame.size.width = 130
+        backgroundText.frame.size.height = 20
+        
+        backgroundText.center = self.view.center
+        backgroundText.frame.origin.y = self.view.center.y * 0.90
+        
+        self.tableView.sendSubview(toBack: backgroundText)
+
         loadFoodList()
         loadRecentList()
+        loadFavoriteList()
     
         tableView.reloadData()
         
@@ -73,9 +94,9 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegue(withIdentifier: "goToCategoryFilter", sender: self)
     }
     
-    func setClearButton(isRecent: Bool) {
+    func setNavButton(segmentedTab: String) {
         
-        if isRecent {
+        if segmentedTab == "Recent" {
         
             let button = UIButton.init(type: .custom)
             button.frame = CGRect(x: 0, y: 0, width: 30, height: 30 )
@@ -85,9 +106,28 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             button.addTarget(self, action: #selector(FoodViewController.deleteRecent), for: UIControlEvents.touchUpInside)
         
             self.navigationItem.rightBarButtonItem = clearButton
+            setBackgroundImage(show: false)
+
             
-        } else {
+        } else if segmentedTab == "Favorites" {
+            
             self.navigationItem.rightBarButtonItem = nil
+            if favorites.count > 0 {
+                
+                //self.navigationItem.rightBarButtonItem = self.editButtonItem
+                setBackgroundImage(show: false)
+                
+            } else {
+                
+                //self.navigationItem.rightBarButtonItem = nil
+                setBackgroundImage(show: true)
+            }
+            
+        } else if segmentedTab == "All" {
+            
+            self.navigationItem.rightBarButtonItem = nil
+            setBackgroundImage(show: false)
+
         }
         
     }
@@ -189,6 +229,32 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    func loadFavoriteList() {
+        
+        favorites.removeAll()
+        
+        let fetchRequest:NSFetchRequest<Favorites> = Favorites.fetchRequest()
+        let foodSortFavorites = NSSortDescriptor(key: "foodName", ascending: true)
+        
+        fetchRequest.sortDescriptors = [foodSortFavorites]
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Favorites] {
+                    if let foodItem = result.foodName {
+                        self.favorites.append(foodItem)
+                    }
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        
+    }
+
     func deleteRecent() {
         
         let alert = UIAlertController(title: "Clear Recent", message: "Are you sure you want to clear recent items?", preferredStyle: .actionSheet)
@@ -275,6 +341,28 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     }
 
+    func setBackgroundImage(show: Bool) {
+        
+        if show {
+            
+            self.tableView.addSubview(backgroundView)
+            self.tableView.addSubview(backgroundText)
+            
+            self.tableView.backgroundColor = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
+            
+            self.tableView.separatorStyle = .none
+            
+        } else {
+            
+            backgroundView.removeFromSuperview()
+            backgroundText.removeFromSuperview()
+            
+            self.tableView.separatorStyle = .singleLine
+            self.tableView.backgroundColor = UIColor.white
+            
+        }
+        
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -304,6 +392,10 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 DestViewController.food = recentFoodList[(tableView.indexPathForSelectedRow?.row)!]
                 navigationItem.title = "Food"
                 break
+            case 2:
+                DestViewController.food = favorites[(tableView.indexPathForSelectedRow?.row)!]
+                navigationItem.title = "Food"
+                break
             default:
                 break
             }
@@ -327,10 +419,17 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 rows = self.foodListFiltered.count
             }
+            setNavButton(segmentedTab: "All")
             break
         case 1:
             navigationItem.title = "Food"
             rows = self.recentFoodList.count
+            setNavButton(segmentedTab: "Recent")
+            break
+        case 2:
+            navigationItem.title = "Food"
+            rows = self.favorites.count
+            setNavButton(segmentedTab: "Favorites")
             break
         default:
             break
@@ -381,7 +480,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     cell.safetyIcon.image = UIImage(named: "question.png")
                 }
             }
-            setClearButton(isRecent: false)
             break
         case 1:
             cell.foodLabel.text = self.recentFoodList[indexPath.row]
@@ -400,7 +498,24 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 cell.safetyIcon.image = UIImage(named: "question.png")
             }
-            setClearButton(isRecent: true)
+            break
+        case 2:
+            cell.foodLabel.text = self.favorites[indexPath.row]
+            
+            let description = safetyDescription[self.favorites[indexPath.row]]
+            cell.safetyDescription.text = description
+            
+            cell.categoryIcon.image = getCategory(food: self.favorites[indexPath.row])
+            
+            let safetyResult = safety[self.favorites[indexPath.row]]
+            
+            if safetyResult == "safe" {
+                cell.safetyIcon.image = UIImage(named: "smile.png")
+            } else if safetyResult == "not safe" {
+                cell.safetyIcon.image = UIImage(named: "frown.png")
+            } else {
+                cell.safetyIcon.image = UIImage(named: "question.png")
+            }
             break
         default:
             break
@@ -408,6 +523,54 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
         
+    }
+    
+    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let foodToDelete = favorites[indexPath.row]
+            
+            favorites.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            let requestFood: NSFetchRequest<Favorites> = Favorites.fetchRequest()
+            requestFood.returnsObjectsAsFaults = false
+            
+            do {
+                
+                let foodResults = try DatabaseController.getContext().fetch(requestFood)
+                
+                if foodResults.count > 0 {
+                    
+                    for result in foodResults as [Favorites] {
+                        
+                        if let foodType = result.value(forKey: "foodName") as? String {
+                            
+                            if foodType == foodToDelete {
+                                DatabaseController.getContext().delete(result)
+                            }
+                        }
+                    }
+                }
+            } catch {
+                print("Couldn't fetch results")
+            }
+        }
+    }
+    
+    internal func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            return false
+        case 1:
+            return false
+        case 2:
+            return true
+        default:
+            return false
+        }
     }
  
     internal func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
