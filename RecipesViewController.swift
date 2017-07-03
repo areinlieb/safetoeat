@@ -14,6 +14,8 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
     
     @IBOutlet var tableView: UITableView!
     
+    var category = "All"
+
     var indexPaths = [NSIndexPath]()
     var recipeList = [String()]
     var recipeListFiltered = [String]()
@@ -28,8 +30,22 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
     var backgroundView = UIImageView(image: UIImage(named: "search food icon.png"))
     var backgroundText = UILabel()
     
+    @IBAction func unwindToRecipesCancel(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func unwindToRecipesWithFilter(segue: UIStoryboardSegue) {
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        if segue.identifier == "goToRecipeCategoryFilter" {
+            
+            let DestViewController : RecipeCategoryFilterViewController = segue.destination as! RecipeCategoryFilterViewController
+            
+            DestViewController.selectedCategory = category
+            
+        }
+        
         if segue.identifier == "showRecipePage" {
             
             //let nav = segue.destination as! UINavigationController
@@ -38,8 +54,10 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         
             if searchController.isActive && searchController.searchBar.text != "" {
                 DestViewController.selectedURL = recipeURL[recipeListFiltered[(tableView.indexPathForSelectedRow?.row)!]]!
-            } else {
+            } else if category == "All" {
                 DestViewController.selectedURL = recipeURL[recipeList[(tableView.indexPathForSelectedRow?.row)!]]!
+            } else {
+                DestViewController.selectedURL = recipeURL[recipeListFiltered[(tableView.indexPathForSelectedRow?.row)!]]!
             }
         }
 
@@ -47,12 +65,27 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
     
     override func viewDidAppear(_ animated: Bool) {
         
-        navigationItem.title = "Recipes"
+        if Reachability.isConnectedToNetwork() {
         
-        loadRecipes()
+            if category == "All" {
+                navigationItem.title = "Recipes"
+            } else {
+                navigationItem.title = category
+                loadFilteredList()
+            }
         
-        self.tableView.reloadData()
-        self.tableView.sendSubview(toBack: backgroundView)
+            loadRecipes()
+        
+            self.tableView.reloadData()
+            self.tableView.sendSubview(toBack: backgroundView)
+            
+        } else {
+            
+            let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Recipes requires an internet connection. Please make sure you're connected to a network and try again.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+            self.present(alert, animated: true){}
+            
+        }
         
     }
     
@@ -96,6 +129,10 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         self.searchController.searchBar.placeholder = "what are you craving?"
         definesPresentationContext = true
         
+    }
+    
+    func categoryFilterButton() {
+        self.performSegue(withIdentifier: "goToRecipeCategoryFilter", sender: self)
     }
     
     func setClearButton(searchResults: Bool) {
@@ -167,6 +204,36 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         }
         
     }
+    
+    func loadFilteredList() {
+        
+        self.recipeListFiltered.removeAll()
+        
+        let fetchRequest:NSFetchRequest<Recipes> = Recipes.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "recipeCategory == %@", category)
+        
+        let recipeSort = NSSortDescriptor(key: "recipeTitle", ascending: true)
+        fetchRequest.sortDescriptors = [recipeSort]
+        
+        do {
+            
+            let results = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results as [Recipes] {
+                    if let recipeItem = result.recipeTitle {
+                        self.recipeListFiltered.append(recipeItem)
+                    }  else {
+                        print("Couldn't add foodItem \(String(describing: result.recipeTitle))")
+                    }
+                }
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        
+    }
+    
     
     func loadSearches() {
         
@@ -273,8 +340,10 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         
         if searchController.isActive && searchController.searchBar.text != "" {
             return self.recipeListFiltered.count
-        } else {
+        } else if category == "All" {
             return self.recipeList.count
+        } else {
+            return self.recipeListFiltered.count
         }
         
     }
@@ -307,8 +376,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                     }
                 }
             }
-            
-        } else {
+        } else if category == "All" {
 
             cell.recipeTitle.text = self.recipeList[indexPath.row]
             
@@ -316,6 +384,30 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
             cell.ingredients.text = foodIngredients
             
             let url = URL(string: recipeImageURL[recipeList[indexPath.row]]!)
+            if url != nil {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: url!)
+                    DispatchQueue.main.async {
+                        if data != nil {
+                            cell.backgroundView = UIImageView(image: UIImage(data:data!))
+                            cell.backgroundView?.contentMode = UIViewContentMode.scaleAspectFill
+                            
+                        } else{
+                            cell.backgroundView = UIImageView(image: UIImage(named: "default recipe.jpg"))
+                            cell.backgroundView?.contentMode = UIViewContentMode.scaleAspectFill
+                        }
+                    }
+                }
+            }
+            
+        } else {
+
+            cell.recipeTitle.text = self.recipeListFiltered[indexPath.row]
+            
+            let foodIngredients = recipeIngredients[self.recipeListFiltered[indexPath.row]]
+            cell.ingredients.text = foodIngredients
+            
+            let url = URL(string: recipeImageURL[recipeListFiltered[indexPath.row]]!)
             if url != nil {
                 DispatchQueue.global().async {
                     let data = try? Data(contentsOf: url!)

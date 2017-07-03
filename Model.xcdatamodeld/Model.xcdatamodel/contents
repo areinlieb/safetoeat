@@ -24,9 +24,15 @@
         <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeAdded" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="RecipeCategory" representedClassName="RecipeCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Recipes" representedClassName="Recipes" syncable="YES" codeGenerationType="class">
         <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ingredients" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="recipeCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="recipeImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="recipeTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="recipeURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -49,9 +55,10 @@
         <element name="Favorites" positionX="-135" positionY="-39" width="128" height="120"/>
         <element name="Food" positionX="-315" positionY="-45" width="128" height="120"/>
         <element name="Recent" positionX="-137" positionY="54" width="128" height="75"/>
-        <element name="Recipes" positionX="-315" positionY="-27" width="128" height="120"/>
+        <element name="Recipes" positionX="-315" positionY="-27" width="128" height="135"/>
         <element name="Searches" positionX="-137" positionY="-135" width="128" height="75"/>
         <element name="SearchesRecipes" positionX="-306" positionY="-18" width="128" height="105"/>
         <element name="User" positionX="-315" positionY="-27" width="128" height="58"/>
+        <element name="RecipeCategory" positionX="-315" positionY="-27" width="128" height="90"/>
     </elements>
 </model>

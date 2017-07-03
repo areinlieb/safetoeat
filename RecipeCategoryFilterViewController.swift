@@ -1,58 +1,58 @@
 //
-//  CategoryFilterViewController.swift
+//  RecipeCategoryFilterViewController.swift
 //  SafeToEat
 //
-//  Created by Alex Reinlieb on 3/8/17.
+//  Created by Alex Reinlieb on 7/3/17.
 //  Copyright © 2017 Parse. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RecipeCategoryFilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
     
     var allFoodTypes = [String()]
-
+    
     var foodCategoryTypes = [String]()
     var foodCategoryImages = [UIImage]()
-
+    
     var selectedCategory = ""
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- 
-        if let DestViewController = segue.destination as? FoodViewController {
+        
+        if let DestViewController = segue.destination as? RecipesViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 DestViewController.category = foodCategoryTypes[row]
-             }
+            }
         }
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        
         //load category list
         loadCategories()
         
         tableView.reloadData()
         
     }
-
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         //load category list
         loadCategories()
         
         tableView.reloadData()
         
     }
-
+    
     func loadCategories() {
         
-        let fetchRequest:NSFetchRequest<Category> = Category.fetchRequest()
+        let fetchRequest:NSFetchRequest<RecipeCategory> = RecipeCategory.fetchRequest()
         let categorySort = NSSortDescriptor(key: "categoryName", ascending: true)
         fetchRequest.sortDescriptors = [categorySort]
         
@@ -64,7 +64,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
                 
                 if results.count > 0 {
                     
-                    for result in results as [Category] {
+                    for result in results as [RecipeCategory] {
                         
                         if let foodCategory = result.categoryName {
                             foodCategoryTypes.append(foodCategory)
@@ -73,7 +73,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
                         if let categoryIcon = result.categoryImage {
                             foodCategoryImages.append(UIImage(data: categoryIcon as Data)!)
                         }
-
+                        
                     }
                 }
             } catch {
@@ -91,8 +91,8 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryFilterTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipeCategoryFilterTableViewCell
         
         //cell.categoryIcon.image = foodCategoryImages[indexPath.row]
         cell.categoryLabel.text = foodCategoryTypes[indexPath.row]
@@ -103,15 +103,15 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
         
         if foodCategoryTypes[indexPath.row] == selectedCategory {
             cell.categoryLabel.font = UIFont.boldSystemFont(ofSize: 30)
-//            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+            //            cell.accessoryType = UITableViewCellAccessoryType.checkmark
         } else {
-//            cell.accessoryType = UITableViewCellAccessoryType.none
+            //            cell.accessoryType = UITableViewCellAccessoryType.none
         }
         
         let view = UIView()
         view.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = view
-
+        
         return cell
         
     }
@@ -124,5 +124,6 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+
 }

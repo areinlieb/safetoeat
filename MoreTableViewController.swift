@@ -77,7 +77,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
  
     func appRating() {
         
-        let alert = UIAlertController(title: "Rate SafetoEat", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Spread the love", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true, completion: nil) }))

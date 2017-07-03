@@ -79,6 +79,9 @@
 		FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7BAA321E843186001D9355 /* MoreTableViewCell.swift */; };
 		FA7BAA361E843A2D001D9355 /* more-requestAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7BAA341E843A2D001D9355 /* more-requestAdd.png */; };
 		FA7BAA371E843A2D001D9355 /* more-inviteFriends.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7BAA351E843A2D001D9355 /* more-inviteFriends.png */; };
+		FA84E2521F0AB686006F6453 /* RecipeCategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84E2511F0AB686006F6453 /* RecipeCategoryFilterViewController.swift */; };
+		FA84E2541F0AB69B006F6453 /* RecipeCategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84E2531F0AB69B006F6453 /* RecipeCategoryFilterTableViewCell.swift */; };
+		FA84E2561F0AD221006F6453 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84E2551F0AD221006F6453 /* Reachability.swift */; };
 		FA86EB861E85B05A00B66A91 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = FA86EB851E85B05A00B66A91 /* login.png */; };
 		FA86EB881E85B45B00B66A91 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86EB871E85B45B00B66A91 /* WelcomeViewController.swift */; };
 		FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86EB891E85BFDB00B66A91 /* LegalWelcomeViewController.swift */; };
@@ -199,6 +202,9 @@
 		FA7BAA321E843186001D9355 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreTableViewCell.swift; path = ParseStarterProject/MoreTableViewCell.swift; sourceTree = "<group>"; };
 		FA7BAA341E843A2D001D9355 /* more-requestAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-requestAdd.png"; sourceTree = "<group>"; };
 		FA7BAA351E843A2D001D9355 /* more-inviteFriends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-inviteFriends.png"; sourceTree = "<group>"; };
+		FA84E2511F0AB686006F6453 /* RecipeCategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCategoryFilterViewController.swift; sourceTree = "<group>"; };
+		FA84E2531F0AB69B006F6453 /* RecipeCategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
+		FA84E2551F0AD221006F6453 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FA86EB851E85B05A00B66A91 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		FA86EB871E85B45B00B66A91 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FA86EB891E85BFDB00B66A91 /* LegalWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalWelcomeViewController.swift; sourceTree = "<group>"; };
@@ -340,6 +346,9 @@
 				FA4A584F1F02D99F00977D13 /* RecipesViewController.swift */,
 				FA4A58511F02D9B300977D13 /* RecipesTableViewCell.swift */,
 				FA4A58571F03234100977D13 /* RecipePageViewController.swift */,
+				FA84E2511F0AB686006F6453 /* RecipeCategoryFilterViewController.swift */,
+				FA84E2531F0AB69B006F6453 /* RecipeCategoryFilterTableViewCell.swift */,
+				FA84E2551F0AD221006F6453 /* Reachability.swift */,
 			);
 			name = Recipes;
 			sourceTree = "<group>";
@@ -669,7 +678,9 @@
 				FA86EB881E85B45B00B66A91 /* WelcomeViewController.swift in Sources */,
 				FA4A58501F02D99F00977D13 /* RecipesViewController.swift in Sources */,
 				FA8CD6FD1E7085EB00E7CB97 /* FoodTableViewCell.swift in Sources */,
+				FA84E2541F0AB69B006F6453 /* RecipeCategoryFilterTableViewCell.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+				FA84E2521F0AB686006F6453 /* RecipeCategoryFilterViewController.swift in Sources */,
 				FA4A58581F03234100977D13 /* RecipePageViewController.swift in Sources */,
 				FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */,
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
@@ -678,6 +689,7 @@
 				FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */,
 				FA8CD7031E70D10800E7CB97 /* CategoryFilterTableViewCell.swift in Sources */,
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
+				FA84E2561F0AD221006F6453 /* Reachability.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
 				FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
