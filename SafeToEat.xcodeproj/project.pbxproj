@@ -26,7 +26,6 @@
 		D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE89B1EDE3EBF0006A30E /* frame_7.png */; };
 		D33FE8A51EDE3EBF0006A30E /* frame_8.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE89C1EDE3EBF0006A30E /* frame_8.png */; };
 		D33FE8A71EDE3FBD0006A30E /* app icon green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */; };
-		D3EFD69F1F08676000CE1BAB /* favorite star icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EFD69E1F08676000CE1BAB /* favorite star icon.png */; };
 		FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FA06B75E1E940CBB00CA3D7F /* delete.png */; };
 		FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0A6D441E8D76E100AB5B1D /* star background gray.png */; };
 		FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */ = {isa = PBXBuildFile; fileRef = FA115E711EADB24F00E7A251 /* more-glossary.png */; };
@@ -144,7 +143,6 @@
 		D33FE89B1EDE3EBF0006A30E /* frame_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_7.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_7.png"; sourceTree = "<group>"; };
 		D33FE89C1EDE3EBF0006A30E /* frame_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_8.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_8.png"; sourceTree = "<group>"; };
 		D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "app icon green.jpg"; path = "../../Assets/app icon green.jpg"; sourceTree = "<group>"; };
-		D3EFD69E1F08676000CE1BAB /* favorite star icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favorite star icon.png"; path = "../../../../../../Downloads/favorite star icon.png"; sourceTree = "<group>"; };
 		EF9A8B47185E7FD9C72DC6D4 /* Pods_SafeToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA06B75E1E940CBB00CA3D7F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		FA0A6D441E8D76E100AB5B1D /* star background gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background gray.png"; sourceTree = "<group>"; };
@@ -416,7 +414,6 @@
 				FAA06AB31EAC05C00083BF52 /* star background blue.png */,
 				FA0A6D441E8D76E100AB5B1D /* star background gray.png */,
 				FA467CDF1EAE6A4400F03AAD /* star background.png */,
-				D3EFD69E1F08676000CE1BAB /* favorite star icon.png */,
 				FADE73CC1E7A258200EB7B4D /* app icon.jpg */,
 				FA6255311E86192600194140 /* app icon with bubble sushi small.png */,
 				FA92E7B71E6CE99A0069271D /* category icon.png */,
@@ -624,7 +621,6 @@
 				FA4EC29D1EABF80A00B59F34 /* question yellow.png in Resources */,
 				FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */,
 				FAD3A82B1EE75A22003B88EE /* pregnant food background.png in Resources */,
-				D3EFD69F1F08676000CE1BAB /* favorite star icon.png in Resources */,
 				FA5A5A031E6F2F5700941C50 /* Launch Screen.storyboard in Resources */,
 				D33FE8A71EDE3FBD0006A30E /* app icon green.jpg in Resources */,
 				FA115E741EADB49C00E7A251 /* Glossary.rtf in Resources */,

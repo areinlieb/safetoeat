@@ -50,10 +50,11 @@ class RecipePageViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+/*    override func viewDidAppear(_ animated: Bool) {
         navigationController?.hidesBarsOnSwipe = true;
     }
-
+*/
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
