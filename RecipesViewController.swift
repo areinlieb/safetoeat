@@ -81,10 +81,16 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
             
         } else {
             
-            let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Recipes requires an internet connection. Please make sure you're connected to a network and try again.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
-            self.present(alert, animated: true){}
+            let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"An internet connection is required to access Recipes. Please make sure you're connected to a network and then hit the Refresh button.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Refresh", style: .default, handler: { action in
             
+                self.tableView.reloadData()
+                
+            }))
+            
+            self.present(alert, animated: true){}
+
         }
         
     }
@@ -131,27 +137,12 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         
     }
     
-    func categoryFilterButton() {
-        self.performSegue(withIdentifier: "goToRecipeCategoryFilter", sender: self)
+    @IBAction func refreshButton(_ sender: Any) {
+        self.tableView.reloadData()        
     }
     
-    func setClearButton(searchResults: Bool) {
-        
-        if searchResults {
-            
-            let button = UIButton.init(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            let clearButton = UIBarButtonItem(customView: button)
-            
-            button.setImage(UIImage(named: "delete white.png"), for: UIControlState.normal)
-            button.addTarget(self, action: #selector(SearchViewController.deleteSearches), for: UIControlEvents.touchUpInside)
-            
-            self.navigationItem.rightBarButtonItem = clearButton
-            
-        } else {
-            self.navigationItem.rightBarButtonItem = nil
-        }
-        
+    func categoryFilterButton() {
+        self.performSegue(withIdentifier: "goToRecipeCategoryFilter", sender: self)
     }
     
     func loadRecipes() {
@@ -259,28 +250,6 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         }
     }
     
-    func reloadData() {
-        
-        let fetchRequest:NSFetchRequest<Recipes> = Recipes.fetchRequest()
-        
-        do {
-            
-            let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
-            if results.count == 0 {
-                
-                let alert = UIAlertController(title: "Internet connection required during first launch", message: "Please force quit this app, connect to the internet, and restart. An internet connection isn't required after the initial launch", preferredStyle: UIAlertControllerStyle.alert)
-                
-                present(alert, animated: true, completion: nil)
-                
-            }
-        } catch {
-            print("No internet connection on first launch")
-        }
-        
-        
-    }
-    
     func updateSearchResults(for searchController: UISearchController) {
  
         recipeListFiltered.removeAll()
@@ -321,6 +290,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
             
             self.tableView.reloadData()
             
+            
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
@@ -351,9 +321,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipesTableViewCell
-        
         if searchController.isActive && searchController.searchBar.text != "" {
-            setClearButton(searchResults: false)
             
             cell.recipeTitle.text = self.recipeListFiltered[indexPath.row]
             
@@ -366,6 +334,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                     let data = try? Data(contentsOf: url!)
                     DispatchQueue.main.async {
                         if data != nil {
+                            print("loading")
                             cell.backgroundView = UIImageView(image: UIImage(data:data!))
                             cell.backgroundView?.contentMode = UIViewContentMode.scaleAspectFill
                        } else{
@@ -492,7 +461,6 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
             }
 
         }
-        
         
     }
     

@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         //Gray UINavigationBar.appearance().barTintColor = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().barTintColor = UIColor(red: 82.0/255.0, green: 196.0/255.0, blue: 196.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().tintColor = UIColor(red: 60.0/255.0, green: 67.0/255.0, blue: 80.0/255.0, alpha: 1.0)
         
         //customize segmented control
         UISegmentedControl.appearance().tintColor = UIColor(red: 82.0/255.0, green: 196.0/255.0, blue: 196.0/255.0, alpha: 1.0)

@@ -103,14 +103,16 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         
         if searchResults {
             
-            let button = UIButton.init(type: .custom)
+/*            let button = UIButton.init(type: .custom)
             button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             let clearButton = UIBarButtonItem(customView: button)
             
-            button.setImage(UIImage(named: "delete white.png"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "trash can 25"), for: UIControlState.normal)
             button.addTarget(self, action: #selector(SearchViewController.deleteSearches), for: UIControlEvents.touchUpInside)
+  */
             
-            self.navigationItem.rightBarButtonItem = clearButton
+            let trashCan = UIBarButtonItem(image: UIImage(named: "trash can 25"), style: .done, target: self, action: #selector(SearchViewController.deleteSearches))
+            self.navigationItem.rightBarButtonItem = trashCan
             
         } else {
             self.navigationItem.rightBarButtonItem = nil
@@ -207,27 +209,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         } catch {
             print("Error: \(error)")
         }
-    }
-        
-    func reloadData() {
-     
-        let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
-        
-        do {
-            
-            let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
-            if results.count == 0 {
-
-                let alert = UIAlertController(title: "Internet connection required during first launch", message: "Please force quit this app, connect to the internet, and restart. An internet connection isn't required after the initial launch", preferredStyle: UIAlertControllerStyle.alert)
-                
-                present(alert, animated: true, completion: nil)
-
-            }
-        } catch {
-            print("No internet connection on first launch")
-        }
-        
     }
     
     func updateSearchResults(for searchController: UISearchController) {

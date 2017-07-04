@@ -31,50 +31,6 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     @IBAction func unwindToWelcome(segue: UIStoryboardSegue) {
     }
 
-/*
-    func logout() {
-        
-        let alert = UIAlertController(title: "Change email", message: "Are you sure you want to change your email?", preferredStyle: .actionSheet)
-        
-        alert.addAction(UIAlertAction(title: "Change", style: .default, handler: { (action: UIAlertAction!) in
-            
-            //PFUser.logOut()
-            
-            //delete saved email in core data
-            let fetchRequest:NSFetchRequest<User> = User.fetchRequest()
-            
-            do {
-                
-                let results = try DatabaseController.getContext().fetch(fetchRequest)
-                
-                if results.count > 0 {
-                    for result in results as [User] {
-                        DatabaseController.getContext().delete(result)
-                    }
-                }
-            } catch {
-                print("Couldn't fetch results")
-            }
-            
-            DispatchQueue.main.async(execute: { () -> Void in
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Welcome")
-                self.present(viewController, animated: true, completion: nil)
-            })
-            
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        
-        //added for iPad crash
-        alert.popoverPresentationController?.sourceView = self.view
-        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: 1.0, height: 1.0)
-        present(alert, animated: true, completion: nil)
-        
-    }
-*/
- 
     func appRating() {
         
         let alert = UIAlertController(title: "Spread the love", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
@@ -172,8 +128,12 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MoreTableViewCell
-    
+        
+        
+        cell.textLabel?.textColor = UIColor(red: 60.0/255.0, green: 67.0/255.0, blue: 80.0/255.0, alpha: 1.0)
         cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
+        
+        cell.imageView?.tintColor = UIColor(red: 60.0/255.0, green: 67.0/255.0, blue: 80.0/255.0, alpha: 1.0)
         cell.imageView?.image = sections[indexPath.section].icon[indexPath.row]
         
         return cell

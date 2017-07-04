@@ -98,14 +98,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if segmentedTab == "Recent" {
         
-            let button = UIButton.init(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 30, height: 30 )
-            let clearButton = UIBarButtonItem(customView: button)
-    
-            button.setImage(UIImage(named: "delete.png"), for: UIControlState.normal)
-            button.addTarget(self, action: #selector(FoodViewController.deleteRecent), for: UIControlEvents.touchUpInside)
-        
-            self.navigationItem.rightBarButtonItem = clearButton
+            let trashCan = UIBarButtonItem(image: UIImage(named: "trash can 25"), style: .done, target: self, action: #selector(FoodViewController.deleteRecent))
+            self.navigationItem.rightBarButtonItem = trashCan
             setBackgroundImage(show: false)
 
             
