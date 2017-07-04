@@ -26,9 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
         //print("Core data is stored here: \(getDocumentsDirectory())")
-        
-        //PINK COLOR UIColor(red: 248.0/255.0, green: 191.0/255.0, blue: 222.0/255.0, alpha: 1.0)
-        
+                
         //customize navigation bar
         //Gray UINavigationBar.appearance().barTintColor = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().barTintColor = UIColor(red: 82.0/255.0, green: 196.0/255.0, blue: 196.0/255.0, alpha: 1.0)

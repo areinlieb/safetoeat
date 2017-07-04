@@ -56,6 +56,7 @@ class RecipePageViewController: UIViewController, UIWebViewDelegate {
     }
  
     @IBAction func refreshButton(_ sender: Any) {
+        webView.stopLoading()
         webView.reload()
     }
     
