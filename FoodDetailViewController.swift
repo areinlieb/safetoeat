@@ -93,7 +93,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -138,7 +138,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -166,7 +166,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -221,7 +221,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             DatabaseController.saveContext()
             
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
     }
     
@@ -269,7 +269,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             }
                 
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
                 
     }
@@ -293,7 +293,7 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }

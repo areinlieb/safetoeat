@@ -10,6 +10,8 @@
 import UIKit
 import Parse
 import CoreData
+import Firebase
+import GoogleMobileAds
 
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
@@ -18,12 +20,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-        
-    //--------------------------------------
-    // MARK: - UIApplicationDelegate
-    //--------------------------------------
-   
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+                
+        FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-6303297723397278~2681373445")
         
         //print("Core data is stored here: \(getDocumentsDirectory())")
                 
@@ -158,18 +159,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         PFPush.subscribeToChannel(inBackground: "") { (succeeded, error) in // (succeeded: Bool, error: NSError?) is now (succeeded, error)
 
             if succeeded {
-                print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.\n");
+                //print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.\n");
             } else {
-                print("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.\n")
+                //print("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.\n")
             }
         }
     }
 
     @nonobjc func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         if error.code == 3010 {
-            print("Push notifications are not supported in the iOS Simulator.\n")
+            //print("Push notifications are not supported in the iOS Simulator.\n")
         } else {
-            print("application:didFailToRegisterForRemoteNotificationsWithError: %@\n", error)
+            //print("application:didFailToRegisterForRemoteNotificationsWithError: %@\n", error)
         }
     }
 

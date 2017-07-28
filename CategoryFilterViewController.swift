@@ -77,7 +77,7 @@ class CategoryFilterViewController: UIViewController, UITableViewDelegate, UITab
                     }
                 }
             } catch {
-                print("Error: \(error)")
+                //print("Error: \(error)")
             }
         }
     }

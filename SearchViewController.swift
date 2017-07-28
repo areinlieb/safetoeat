@@ -9,10 +9,21 @@
 import UIKit
 import CoreData
 import Parse
+import GoogleMobileAds
+import Firebase
 
-class SearchViewController: UIViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource, GADBannerViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-6303297723397278/4158106644"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        
+        return adBannerView
+    }()
     
     var foodList = [String()]
     var foodListFiltered = [String]()
@@ -25,6 +36,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
     
     var backgroundView = UIImageView(image: UIImage(named: "search food icon.png"))
     var backgroundText = UILabel()
+    
+    let defaults = UserDefaults.standard
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -41,6 +54,10 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        if !defaults.bool(forKey: "removeAds") {
+            adBannerView.load(GADRequest())
+        }
         
         navigationItem.title = "Search"
         
@@ -98,19 +115,35 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         definesPresentationContext = true
         
     }
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        
+        //print("Banner loaded successfully")
+        
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        
+        bannerView.frame = CGRect(x:0.0, y: screenHeight - bannerView.frame.size.height - (self.tabBarController?.tabBar.frame.height)!, width: bannerView.frame.size.width, height: bannerView.frame.size.height)
+        
+        if !defaults.bool(forKey: "removeAds") {
+            view.superview?.addSubview(bannerView)
+        }
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+
+        //print("Fail to receive ads")
+        //print(error)
+    }
     
     func setClearButton(searchResults: Bool) {
         
         if searchResults {
-            
-/*            let button = UIButton.init(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            let clearButton = UIBarButtonItem(customView: button)
-            
-            button.setImage(UIImage(named: "trash can 25"), for: UIControlState.normal)
-            button.addTarget(self, action: #selector(SearchViewController.deleteSearches), for: UIControlEvents.touchUpInside)
-  */
-            
+                 
             let trashCan = UIBarButtonItem(image: UIImage(named: "trash can 25"), style: .done, target: self, action: #selector(SearchViewController.deleteSearches))
             self.navigationItem.rightBarButtonItem = trashCan
             
@@ -167,22 +200,22 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                         if let safe = result.isSafe {
                             self.safety[foodItem] = safe
                         } else {
-                            print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                            //print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
                         }
 
                         if let foodDescription = result.safetyDescription as? NSArray {
                             self.safetyDescription[foodItem] = foodDescription[0] as? String
                         } else {
-                            print("Couldn't get safety description for foodItem \(String(describing: result.foodName))")
+                            //print("Couldn't get safety description for foodItem \(String(describing: result.foodName))")
                         }
 
                     }  else {
-                        print("Couldn't add foodItem \(String(describing: result.foodName))")
+                        //print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -207,7 +240,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
     }
     
@@ -242,7 +275,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                     }
                 }
             } catch {
-                print("Couldn't fetch results")
+                //print("Couldn't fetch results")
             }
             
             self.recentSearches.removeAll()
@@ -281,7 +314,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
         switch category {
@@ -424,7 +457,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
             DatabaseController.saveContext()
             
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }

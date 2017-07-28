@@ -446,7 +446,7 @@
                                 </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RTU-8A-TzS" userLabel="Category Image">
-                                <rect key="frame" x="0.0" y="64" width="768" height="351"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="395"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile.png" translatesAutoresizingMaskIntoConstraints="NO" id="wrj-Mz-Lqp" userLabel="baby image">
                                 <rect key="frame" x="326.5" y="357.5" width="115" height="115"/>
@@ -455,11 +455,11 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2r-Pi-4qY" userLabel="Background">
-                                <rect key="frame" x="0.0" y="64" width="768" height="351"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="395"/>
                                 <color key="backgroundColor" red="0.039451859891414642" green="0.0063369916751980782" blue="0.0091705899685621262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="td1-1v-aDq" userLabel="Food Label">
-                                <rect key="frame" x="115.5" y="221.5" width="538" height="36"/>
+                                <rect key="frame" x="115.5" y="199.5" width="538" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1101,6 +1101,6 @@
         <image name="smile.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fJQ-ff-ybb"/>
+        <segue reference="Xfy-3u-E3y"/>
     </inferredMetricsTieBreakers>
 </document>

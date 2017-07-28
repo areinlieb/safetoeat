@@ -14,13 +14,20 @@ class SectionsData {
     
         var sectionsArray = [Section]()
         
-        let first = Section(title: " ", objects: ["Spread the love", "Invite friends"], imageIcon: [UIImage(named: "more-rate.png")!, UIImage(named: "more-inviteFriends.png")!])
+        let first = Section(title: " ", objects: ["Rate this app", "Invite friends"], imageIcon: [UIImage(named: "more-rate.png")!, UIImage(named: "more-inviteFriends.png")!])
         let second = Section(title: " ", objects: ["Glossary"], imageIcon: [UIImage(named: "more-glossary.png")!])
-        let third = Section(title: " ", objects: ["Request to add food","Send us feedback", "Legal"], imageIcon: [UIImage(named: "more-requestAdd.png")!, UIImage(named: "more-feedback.png")!, UIImage(named: "more-legal.png")!])
+        let third = Section(title: " ", objects: ["Send us feedback", "Legal"], imageIcon: [UIImage(named: "more-feedback.png")!, UIImage(named: "more-legal.png")!])
+        let fourth = Section(title: " ", objects: ["Remove Ads"], imageIcon: [UIImage(named: "more-ads.png")!])
         
         sectionsArray.append(first)
         sectionsArray.append(second)
         sectionsArray.append(third)
+        
+        let defaults = UserDefaults.standard
+
+        if !defaults.bool(forKey: "removeAds") {
+            sectionsArray.append(fourth)
+        }
         
         return sectionsArray
         

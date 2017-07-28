@@ -50,7 +50,7 @@ class CoreDataViewController: UIViewController {
                     })
                 }
             } catch {
-                print("Couldn't fetch results")
+                ////print("Couldn't fetch results")
             }
        }
         
@@ -128,7 +128,7 @@ class CoreDataViewController: UIViewController {
                                                                     
                                                                     if categoryUpdatedDate != dateUpdated {
                                                                         DatabaseController.getContext().delete(result)
-                                                                        print("Deleted: \(String(describing: result.value(forKey: "categoryName")))")
+                                                                        //print("Deleted: \(String(describing: result.value(forKey: "categoryName")))")
                                                                         recordFound = false
                                                                     }
                                                                 }
@@ -137,10 +137,10 @@ class CoreDataViewController: UIViewController {
                                                     }
                                                 }
                                             } else {
-                                                print("No Category results in Core Data fetch")
+                                                //print("No Category results in Core Data fetch")
                                             }
                                         } catch {
-                                            print("Couldn't fetch results")
+                                            //print("Couldn't fetch results")
                                         }
                                         
                                         if !recordFound {
@@ -157,9 +157,9 @@ class CoreDataViewController: UIViewController {
                                                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                                 let dateUpdated = dateFormatter.string(from: updatedAt)
                                                 food.dateUpdated = dateUpdated
-                                                print("\(category): was updated at \(String(describing: food.dateUpdated))")
+                                                //print("\(category): was updated at \(String(describing: food.dateUpdated))")
                                             } else {
-                                                print("\(category): no update date")
+                                                //print("\(category): no update date")
                                             }
                                 
                                             DatabaseController.saveContext()
@@ -172,7 +172,7 @@ class CoreDataViewController: UIViewController {
                     }
                 }
             } else {
-                print("Could not retrieve food list")
+                //print("Could not retrieve food list")
             }
         })
     }
@@ -219,7 +219,7 @@ class CoreDataViewController: UIViewController {
                                                         
                                                         if foodUpdatedDate != dateUpdated {
                                                             DatabaseController.getContext().delete(result)
-                                                            print("Deleted: \(String(describing: result.value(forKey: "foodName")))")
+                                                            //print("Deleted: \(String(describing: result.value(forKey: "foodName")))")
                                                             recordFound = false
                                                         }
                                                     }
@@ -229,10 +229,10 @@ class CoreDataViewController: UIViewController {
                                         
                                     }
                                 } else {
-                                    print("No food results in Core Data fetch")
+                                    //print("No food results in Core Data fetch")
                                 }
                             } catch {
-                                print("Couldn't fetch results")
+                                //print("Couldn't fetch results")
                             }
                             
                             if !recordFound {
@@ -249,9 +249,9 @@ class CoreDataViewController: UIViewController {
                                     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                     let dateUpdated = dateFormatter.string(from: updatedAt)
                                     newFood.dateUpdated = dateUpdated
-                                    print("\(foodItem): was updated at \(String(describing: newFood.dateUpdated))")
+                                    //print("\(foodItem): was updated at \(String(describing: newFood.dateUpdated))")
                                 } else {
-                                    print("\(foodItem): no update date")
+                                    //print("\(foodItem): no update date")
                                 }
                                 
                                 //ADD OTHER FOOD FIELDS TO CORE DATA HERE
@@ -271,7 +271,7 @@ class CoreDataViewController: UIViewController {
                     }
                 }
             } else {
-                print("Could not retrieve food list")
+                //print("Could not retrieve food list")
             }
         }
 
@@ -319,7 +319,7 @@ class CoreDataViewController: UIViewController {
                                                         
                                                         if recipeUpdatedDate != dateUpdated {
                                                             DatabaseController.getContext().delete(result)
-                                                            print("Deleted: \(String(describing: result.value(forKey: "recipeTitle")))")
+                                                            //print("Deleted: \(String(describing: result.value(forKey: "recipeTitle")))")
                                                             recordFound = false
                                                         }
                                                     }
@@ -329,10 +329,10 @@ class CoreDataViewController: UIViewController {
                                         
                                     }
                                 } else {
-                                    print("No recipe results in Core Data fetch")
+                                    //print("No recipe results in Core Data fetch")
                                 }
                             } catch {
-                                print("Couldn't fetch results")
+                                //print("Couldn't fetch results")
                             }
                             
                             if !recordFound {
@@ -357,9 +357,9 @@ class CoreDataViewController: UIViewController {
                                     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                     let dateUpdated = dateFormatter.string(from: updatedAt)
                                     newRecipe.dateUpdated = dateUpdated
-                                    print("\(recipeItem): was updated at \(String(describing: newRecipe.dateUpdated))")
+                                    //print("\(recipeItem): was updated at \(String(describing: newRecipe.dateUpdated))")
                                 } else {
-                                    print("\(recipeItem): no update date")
+                                    //print("\(recipeItem): no update date")
                                 }
                                 
                                 //ADD OTHER FOOD FIELDS TO CORE DATA HERE
@@ -375,7 +375,7 @@ class CoreDataViewController: UIViewController {
                     }
                 }
             } else {
-                print("Could not retrieve recipe list")
+                //print("Could not retrieve recipe list")
             }
         }
 
@@ -427,7 +427,7 @@ class CoreDataViewController: UIViewController {
                                                                     
                                                                     if categoryUpdatedDate != dateUpdated {
                                                                         DatabaseController.getContext().delete(result)
-                                                                        print("Deleted: \(String(describing: result.value(forKey: "categoryName")))")
+                                                                        //print("Deleted: \(String(describing: result.value(forKey: "categoryName")))")
                                                                         recordFound = false
                                                                     }
                                                                 }
@@ -436,10 +436,10 @@ class CoreDataViewController: UIViewController {
                                                     }
                                                 }
                                             } else {
-                                                print("No Category results in Core Data fetch")
+                                                //print("No Category results in Core Data fetch")
                                             }
                                         } catch {
-                                            print("Couldn't fetch results")
+                                            //print("Couldn't fetch results")
                                         }
                                         
                                         if !recordFound {
@@ -456,9 +456,9 @@ class CoreDataViewController: UIViewController {
                                                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                                 let dateUpdated = dateFormatter.string(from: updatedAt)
                                                 food.dateUpdated = dateUpdated
-                                                print("\(category): was updated at \(String(describing: food.dateUpdated))")
+                                                //print("\(category): was updated at \(String(describing: food.dateUpdated))")
                                             } else {
-                                                print("\(category): no update date")
+                                                //print("\(category): no update date")
                                             }
                                             
                                             DatabaseController.saveContext()
@@ -471,12 +471,13 @@ class CoreDataViewController: UIViewController {
                     }
                 }
             } else {
-                print("Could not retrieve food list")
+                //print("Could not retrieve food list")
             }
         })
         
     }
-    
+
+    /*
     func deleteCoreDataFood() {
         
         let fetchRequest:NSFetchRequest<Food> = Food.fetchRequest()
@@ -491,23 +492,23 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
  
         //checks if core data is empty
         do {
             
             let results = try DatabaseController.getContext().fetch(fetchRequest)
-            
+
             if results.count > 0 {
                 for result in results as [Food] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("Food: Core data is empty")
+                //print("Food: Core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -526,7 +527,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -536,13 +537,13 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [Category] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("Category: Core data is empty")
+                //print("Category: Core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -561,7 +562,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -571,13 +572,13 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [Recipes] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("Recipes: Core data is empty")
+                //print("Recipes: Core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -596,7 +597,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -606,13 +607,13 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [RecipeCategory] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("RecipeCategory: Core data is empty")
+                //print("RecipeCategory: Core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -631,7 +632,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -641,13 +642,13 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [Favorites] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("Favorites: core data is empty")
+                //print("Favorites: core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -666,7 +667,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -676,13 +677,13 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [Searches] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("Searches: core data is empty")
+                //print("Searches: core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -701,7 +702,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -711,13 +712,13 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [Recent] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("Recent: core data is empty")
+                //print("Recent: core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
@@ -736,7 +737,7 @@ class CoreDataViewController: UIViewController {
                 }
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
         //checks if core data is empty
@@ -746,17 +747,17 @@ class CoreDataViewController: UIViewController {
             
             if results.count > 0 {
                 for result in results as [User] {
-                    print("result are \(result)")
+                    //print("result are \(result)")
                 }
             } else {
-                print("User Email: core data is empty")
+                //print("User Email: core data is empty")
             }
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }
-    
+ */   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

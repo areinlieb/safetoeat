@@ -8,8 +8,10 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
+import Firebase
 
-class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, GADBannerViewDelegate  {
 
     var category = "All"
     var foodList = [String()]
@@ -21,7 +23,17 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var backgroundView = UIImageView(image: UIImage(named: "star background.png"))
     var backgroundText = UILabel()
-
+    
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-6303297723397278/4158106644"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        
+        return adBannerView
+    }()
+    
+    let defaults = UserDefaults.standard
 
     @IBOutlet var tableView: UITableView!
     
@@ -39,6 +51,10 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        if !defaults.bool(forKey: "removeAds") {
+            adBannerView.load(GADRequest())
+        }
         
         if category == "All" {
             navigationItem.title = "Food"
@@ -88,6 +104,30 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
         tableView.reloadData()
         
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        
+        //print("Banner loaded successfully")
+        
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        
+        bannerView.frame = CGRect(x:0.0, y: screenHeight - bannerView.frame.size.height - (self.tabBarController?.tabBar.frame.height)!, width: bannerView.frame.size.width, height: bannerView.frame.size.height)
+       
+        if !defaults.bool(forKey: "removeAds") {
+            view.superview?.addSubview(bannerView)
+        }
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        
+        //print("Fail to receive ads")
+        //print(error)
     }
     
     func categoryFilterButton() {
@@ -150,22 +190,22 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                         if let safe = result.isSafe {
                             self.safety[foodItem] = safe
                         } else {
-                            print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
+                            //print("Couldn't get safety result for foodItem \(String(describing: result.foodName))")
                         }
                         
                         if let foodDescription = result.safetyDescription as? NSArray {
                             self.safetyDescription[foodItem] = foodDescription[0] as? String
                         } else {
-                            print("Couldn't get safety description for foodItem \(String(describing: result.foodName))")
+                            //print("Couldn't get safety description for foodItem \(String(describing: result.foodName))")
                         }
                         
                     }  else {
-                        print("Couldn't add foodItem \(String(describing: result.foodName))")
+                        //print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
     }
     
@@ -188,12 +228,12 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if let foodItem = result.foodName {
                         self.foodListFiltered.append(foodItem)
                     }  else {
-                        print("Couldn't add foodItem \(String(describing: result.foodName))")
+                        //print("Couldn't add foodItem \(String(describing: result.foodName))")
                     }
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -218,7 +258,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -244,7 +284,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -267,7 +307,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             } catch {
-                print("Couldn't fetch results")
+                //print("Couldn't fetch results")
             }
             
             self.recentFoodList.removeAll()
@@ -305,7 +345,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
         switch category {
@@ -548,7 +588,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             } catch {
-                print("Couldn't fetch results")
+                //print("Couldn't fetch results")
             }
         }
     }

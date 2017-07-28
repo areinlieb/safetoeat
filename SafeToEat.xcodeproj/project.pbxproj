@@ -41,6 +41,8 @@
 		FA1DDEF21EDC9F0200066A20 /* Other.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1DDEEB1EDC9F0200066A20 /* Other.png */; };
 		FA1DDEF31EDC9F0200066A20 /* seafood.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1DDEEC1EDC9F0200066A20 /* seafood.png */; };
 		FA1DDEF41EDC9F0200066A20 /* vegetable.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1DDEED1EDC9F0200066A20 /* vegetable.png */; };
+		FA2F3B8A1F2BAC2E0065C947 /* more-ads.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2F3B891F2BAC2E0065C947 /* more-ads.png */; };
+		FA2F3B8C1F2BB98F0065C947 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2F3B8B1F2BB98F0065C947 /* StoreKit.framework */; };
 		FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA35E7A21E663DEE007C094E /* Model.xcdatamodeld */; };
 		FA35FFF91E7760E200EF2413 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */; };
 		FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35FFF81E7760E200EF2413 /* SearchViewController.swift */; };
@@ -129,7 +131,7 @@
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BA81451A49DA1800E65899 /* SafeToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		81BA816B1A49DB6800E65899 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		81BA816C1A49DB6800E65899 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -165,16 +167,18 @@
 		FA1DDEEB1EDC9F0200066A20 /* Other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Other.png; sourceTree = "<group>"; };
 		FA1DDEEC1EDC9F0200066A20 /* seafood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seafood.png; sourceTree = "<group>"; };
 		FA1DDEED1EDC9F0200066A20 /* vegetable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegetable.png; sourceTree = "<group>"; };
+		FA2F3B891F2BAC2E0065C947 /* more-ads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-ads.png"; sourceTree = "<group>"; };
+		FA2F3B8B1F2BB98F0065C947 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FA35E7A31E663DEE007C094E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FA35FFF71E7760E200EF2413 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA35FFF81E7760E200EF2413 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SearchViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA467CDF1EAE6A4400F03AAD /* star background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background.png"; sourceTree = "<group>"; };
 		FA467CE11EAE6DEA00F03AAD /* women outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "women outline.png"; sourceTree = "<group>"; };
 		FA467CE31EAE93B500F03AAD /* continue button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue button.png"; sourceTree = "<group>"; };
 		FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SafeToEat.entitlements; sourceTree = SOURCE_ROOT; };
 		FA4A584A1F0221CE00977D13 /* nutrients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nutrients.png; sourceTree = "<group>"; };
 		FA4A584C1F02D8F000977D13 /* recipes icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipes icon.png"; sourceTree = "<group>"; };
-		FA4A584F1F02D99F00977D13 /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		FA4A584F1F02D99F00977D13 /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RecipesViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA4A58511F02D9B300977D13 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		FA4A58531F02DCF900977D13 /* recipe icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipe icon.png"; sourceTree = "<group>"; };
 		FA4A58551F02E08400977D13 /* cookbook icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "cookbook icon.svg"; sourceTree = "<group>"; };
@@ -206,23 +210,23 @@
 		FA7BAA321E843186001D9355 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreTableViewCell.swift; path = ParseStarterProject/MoreTableViewCell.swift; sourceTree = "<group>"; };
 		FA7BAA341E843A2D001D9355 /* more-requestAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-requestAdd.png"; sourceTree = "<group>"; };
 		FA7BAA351E843A2D001D9355 /* more-inviteFriends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-inviteFriends.png"; sourceTree = "<group>"; };
-		FA84E2511F0AB686006F6453 /* RecipeCategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCategoryFilterViewController.swift; sourceTree = "<group>"; };
+		FA84E2511F0AB686006F6453 /* RecipeCategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RecipeCategoryFilterViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA84E2531F0AB69B006F6453 /* RecipeCategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
 		FA84E2551F0AD221006F6453 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FA86EB851E85B05A00B66A91 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		FA86EB871E85B45B00B66A91 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FA86EB891E85BFDB00B66A91 /* LegalWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalWelcomeViewController.swift; sourceTree = "<group>"; };
 		FA8CD6FC1E7085EB00E7CB97 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
-		FA8CD6FE1E70861F00E7CB97 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
-		FA8CD7001E70D0EB00E7CB97 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
+		FA8CD6FE1E70861F00E7CB97 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FoodViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FA8CD7001E70D0EB00E7CB97 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CategoryFilterViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA8CD7021E70D10800E7CB97 /* CategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
-		FA8CD7091E72114600E7CB97 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		FA8CD7091E72114600E7CB97 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FoodDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA92E7B71E6CE99A0069271D /* category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category icon.png"; sourceTree = "<group>"; };
 		FA92E7BB1E6DE29E0069271D /* default category icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default category icon.png"; sourceTree = "<group>"; };
 		FA9B4C8E1E77B7BC00EEA05D /* search food icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search food icon.png"; sourceTree = "<group>"; };
 		FA9D06961E771ABD00E76026 /* ExtendedNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedNavBarView.swift; sourceTree = "<group>"; };
 		FA9D06A21E773F1100E76026 /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
-		FA9D06A31E773F1100E76026 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		FA9D06A31E773F1100E76026 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MoreTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA9D06A41E773F1100E76026 /* MoreSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSections.swift; sourceTree = "<group>"; };
 		FAA06AB31EAC05C00083BF52 /* star background blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background blue.png"; sourceTree = "<group>"; };
 		FAAC84311F1698950009A09C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -241,7 +245,7 @@
 		FAD3A8371EECA5C1003B88EE /* pregnant food background mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pregnant food background mask.png"; sourceTree = "<group>"; };
 		FADE73CC1E7A258200EB7B4D /* app icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app icon.jpg"; sourceTree = "<group>"; };
 		FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon no bubble.png"; sourceTree = "<group>"; };
-		FADE93151E78B593007254B0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		FADE93151E78B593007254B0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CoreDataViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FAE01C561E94393800F15CF8 /* baby happy with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby happy with text.png"; sourceTree = "<group>"; };
 		FAE01C581E943B2500F15CF8 /* baby question with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby question with text.png"; sourceTree = "<group>"; };
 		FAE01C591E943B2500F15CF8 /* baby upset with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby upset with text.png"; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
 				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
 				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
+				FA2F3B8C1F2BB98F0065C947 /* StoreKit.framework in Frameworks */,
 				81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */,
 				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
 				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
@@ -327,6 +332,7 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F3B8B1F2BB98F0065C947 /* StoreKit.framework */,
 				81BA816B1A49DB6800E65899 /* Bolts.framework */,
 				81BA816C1A49DB6800E65899 /* Parse.framework */,
 				81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */,
@@ -402,6 +408,7 @@
 		FA7B10111E83303A00378663 /* More Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F3B891F2BAC2E0065C947 /* more-ads.png */,
 				FA7B10011E83299C00378663 /* more-feedback.png */,
 				FA115E711EADB24F00E7A251 /* more-glossary.png */,
 				FA7B10031E83299C00378663 /* more-logout.png */,
@@ -576,6 +583,9 @@
 						DevelopmentTeam = ALEL3ANBM5;
 						LastSwiftMigration = 0820;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -667,6 +677,7 @@
 				FA4A584D1F02D8F000977D13 /* recipes icon.png in Resources */,
 				FA1DDEF11EDC9F0200066A20 /* nuts.png in Resources */,
 				FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */,
+				FA2F3B8A1F2BAC2E0065C947 /* more-ads.png in Resources */,
 				FA1DDEF41EDC9F0200066A20 /* vegetable.png in Resources */,
 				D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */,
 				FA1DDED31EDB89D300066A20 /* dairy.jpg in Resources */,

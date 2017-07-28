@@ -170,28 +170,28 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                         if let url = result.recipeURL {
                             self.recipeURL[recipeItem] = url
                         } else {
-                            print("Couldn't get recipe URL for recipe \(String(describing: result.recipeTitle))")
+                            //print("Couldn't get recipe URL for recipe \(String(describing: result.recipeTitle))")
                         }
                         
                         if let imageURL = result.recipeImageURL {
                             self.recipeImageURL[recipeItem] = imageURL
                         } else {
-                            print("Couldn't get recipe Image URL for recipe \(String(describing: result.recipeTitle))")
+                            //print("Couldn't get recipe Image URL for recipe \(String(describing: result.recipeTitle))")
                         }
                         
                         if let ingredientList = result.ingredients as? NSArray {
                             self.recipeIngredients[recipeItem] = ingredientList.componentsJoined(by: ", ")
                         } else {
-                            print("Couldn't get ingredients for recipe \(String(describing: result.recipeTitle))")
+                            //print("Couldn't get ingredients for recipe \(String(describing: result.recipeTitle))")
                         }
                         
                     }  else {
-                        print("Couldn't add recipe \(String(describing: result.recipeTitle))")
+                        //print("Couldn't add recipe \(String(describing: result.recipeTitle))")
                     }
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -215,12 +215,12 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                     if let recipeItem = result.recipeTitle {
                         self.recipeListFiltered.append(recipeItem)
                     }  else {
-                        print("Couldn't add foodItem \(String(describing: result.recipeTitle))")
+                        //print("Couldn't add foodItem \(String(describing: result.recipeTitle))")
                     }
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
         
     }
@@ -246,7 +246,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                 }
             }
         } catch {
-            print("Error: \(error)")
+            //print("Error: \(error)")
         }
     }
     
@@ -282,7 +282,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                     }
                 }
             } catch {
-                print("Couldn't fetch results")
+                //print("Couldn't fetch results")
             }
             
             self.recentSearches.removeAll()
@@ -334,7 +334,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                     let data = try? Data(contentsOf: url!)
                     DispatchQueue.main.async {
                         if data != nil {
-                            print("loading")
+                            //print("loading")
                             cell.backgroundView = UIImageView(image: UIImage(data:data!))
                             cell.backgroundView?.contentMode = UIViewContentMode.scaleAspectFill
                        } else{
@@ -440,7 +440,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
             DatabaseController.saveContext()
             
         } catch {
-            print("Couldn't fetch results")
+            //print("Couldn't fetch results")
         }
         
     }

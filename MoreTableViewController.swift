@@ -11,17 +11,47 @@ import CoreData
 import Parse
 import MessageUI
 import StoreKit
+import GoogleMobileAds
+import Firebase
 
-class MoreTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+class MoreTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, GADBannerViewDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver {
         
     var sections: [Section] = SectionsData().getSectionsFromData()
     
     let appStoreAppID = "1229895485"
+
+    let defaults = UserDefaults.standard
+    
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-6303297723397278/4158106644"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        
+        return adBannerView
+    }()
+    
+    var activeProduct: SKProduct?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView(frame: .zero)
+        
+        let productIdentifiers: Set<String> = ["removeads"]
+        let productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
+        productsRequest.delegate = self
+        productsRequest.start()
+        
+        SKPaymentQueue.default().add(self)
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        if !defaults.bool(forKey: "removeAds") {
+            adBannerView.load(GADRequest())
+        }
 
     }
     
@@ -30,10 +60,73 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     
     @IBAction func unwindToWelcome(segue: UIStoryboardSegue) {
     }
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        
+        //print ("Loaded products")
+        for product in response.products {
+            activeProduct = product
+        }
+        
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        
+        for transaction in transactions {
+            
+            switch (transaction.transactionState) {
+            case .purchased:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                //print("Purchased")
+
+                defaults.set(true, forKey: "removeAds")
+                
+                let alert = UIAlertController(title: "Thank you", message: "Please restart the app to remove ads.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {
+                    (alertAction: UIAlertAction!) in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                present(alert, animated: true, completion: nil)
+            
+                break
+            case .failed:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                break
+            default:
+                break
+            }
+            
+        }
+        
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        
+        //print("Banner loaded successfully")
+        
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        
+        bannerView.frame = CGRect(x:0.0, y: screenHeight - bannerView.frame.size.height - (self.tabBarController?.tabBar.frame.height)!, width: bannerView.frame.size.width, height: bannerView.frame.size.height)
+        
+        if !defaults.bool(forKey: "removeAds") {
+            view.superview?.addSubview(bannerView)
+        }
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        
+        //print("Fail to receive ads")
+        //print(error)
+    }
 
     func appRating() {
         
-        let alert = UIAlertController(title: "Spread the love", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Rate this app", message:"If you like our app, please help other pregnant families to eat safer.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true, completion: nil) }))
@@ -93,19 +186,18 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         }
     }
     
-    func sendEmailRequestFood() {
+    func removeAds() {
         
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["support@safetoeatfood.com"])
-            mail.setSubject("SafeToEat: Food Request")
-            mail.setMessageBody("<p>We're sorry you couldn't find what you were looking for. Please tell us the food you'd like us to add.</p>", isHTML: true)
+        if let activeProduct = activeProduct {
             
-            present(mail, animated: true)
-        } else {
-            // show failure alert
+            //print("buying \(activeProduct.productIdentifier)")
+            
+            let payment = SKPayment(product: activeProduct)
+            SKPaymentQueue.default().add(payment)
+            
+            
         }
+        
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -126,9 +218,8 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MoreTableViewCell
-        
         
         cell.textLabel?.textColor = UIColor(red: 60.0/255.0, green: 67.0/255.0, blue: 80.0/255.0, alpha: 1.0)
         cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
@@ -151,23 +242,23 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
                 break
             case (1,0):
                 guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "Glossary") as? GlossaryViewController else {
-                    print("Could not instantiate view controller with identifier of type SecondViewController")
+                    //print("Could not instantiate view controller with identifier of type SecondViewController")
                     return
                 }
                 self.navigationController?.pushViewController(vc, animated:true)
                 break
             case (2,0):
-                sendEmailRequestFood()
-                break
-            case (2,1):
                 sendEmailFeedback()
                 break
-            case (2,2):
+            case (2,1):
                 guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "Legal") as? LegalViewController else {
-                    print("Could not instantiate view controller with identifier of type SecondViewController")
+                    //print("Could not instantiate view controller with identifier of type SecondViewController")
                     return
                 }
                 self.navigationController?.pushViewController(vc, animated:true)
+                break
+            case (3,0):
+                removeAds()
                 break
             default: break
         

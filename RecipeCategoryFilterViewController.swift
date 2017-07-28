@@ -77,7 +77,7 @@ class RecipeCategoryFilterViewController: UIViewController, UITableViewDelegate,
                     }
                 }
             } catch {
-                print("Error: \(error)")
+                //print("Error: \(error)")
             }
         }
     }
