@@ -8,8 +8,10 @@
 
 import UIKit
 
-class RecipePageViewController: UIViewController, UIWebViewDelegate {
-
+class RecipePageViewController: UIViewController, UIWebViewDelegate{
+    
+    let defaults = UserDefaults.standard
+    
     @IBOutlet var webView: UIWebView!
     
     var selectedURL = String()
@@ -59,12 +61,6 @@ class RecipePageViewController: UIViewController, UIWebViewDelegate {
         webView.stopLoading()
         webView.reload()
     }
-    
-    
-/*    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.hidesBarsOnSwipe = true;
-    }
-*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -35,6 +35,9 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let restoreButton = UIBarButtonItem(title: "Restore", style: .plain, target: self, action: #selector(MoreTableViewController.restorePurchases))
+        navigationItem.rightBarButtonItem = restoreButton
 
         tableView.tableFooterView = UIView(frame: .zero)
         
@@ -82,12 +85,26 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
                 defaults.set(true, forKey: "removeAds")
                 
                 let alert = UIAlertController(title: "Thank you", message: "Please restart the app to remove ads.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: {
                     (alertAction: UIAlertAction!) in
                     alert.dismiss(animated: true, completion: nil)
                 }))
                 present(alert, animated: true, completion: nil)
             
+                break
+            case .restored:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                //print("Purchased")
+                
+                defaults.set(true, forKey: "removeAds")
+    
+                let alert = UIAlertController(title: "Thank you", message: "You're purchases have been restored. Please restart the app to remove ads.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: {
+                    (alertAction: UIAlertAction!) in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                present(alert, animated: true, completion: nil)
+                
                 break
             case .failed:
                 SKPaymentQueue.default().finishTransaction(transaction)
@@ -98,6 +115,10 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
             
         }
         
+    }
+    
+    func restorePurchases () {
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {

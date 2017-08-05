@@ -17,6 +17,7 @@
 		81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81781A49E0DB00E65899 /* AudioToolbox.framework */; };
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
+		D306D83C1F338FFA007313B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D306D83B1F338FFA007313B8 /* GoogleService-Info.plist */; };
 		D33FE89D1EDE3EBF0006A30E /* frame_0.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8941EDE3EBF0006A30E /* frame_0.png */; };
 		D33FE89E1EDE3EBF0006A30E /* frame_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8951EDE3EBF0006A30E /* frame_1.png */; };
 		D33FE89F1EDE3EBF0006A30E /* frame_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8961EDE3EBF0006A30E /* frame_2.png */; };
@@ -101,7 +102,6 @@
 		FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06A31E773F1100E76026 /* MoreTableViewController.swift */; };
 		FA9D06A71E773F1100E76026 /* MoreSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06A41E773F1100E76026 /* MoreSections.swift */; };
 		FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA06AB31EAC05C00083BF52 /* star background blue.png */; };
-		FAAC84321F1698950009A09C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAAC84311F1698950009A09C /* GoogleService-Info.plist */; };
 		FAC8AC441EDCE19400DED29A /* frown.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC411EDCE19400DED29A /* frown.png */; };
 		FAC8AC451EDCE19400DED29A /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC421EDCE19400DED29A /* smile.png */; };
 		FAC8AC461EDCE19400DED29A /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8AC431EDCE19400DED29A /* question.png */; };
@@ -142,6 +142,7 @@
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		9FE033CE3D12B0D66B039CDC /* Pods-SafeToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeToEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafeToEat/Pods-SafeToEat.debug.xcconfig"; sourceTree = "<group>"; };
 		CF6BC1431694E6430C3637B5 /* Pods-SafeToEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeToEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafeToEat/Pods-SafeToEat.release.xcconfig"; sourceTree = "<group>"; };
+		D306D83B1F338FFA007313B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Assets/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D33FE8941EDE3EBF0006A30E /* frame_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_0.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_0.png"; sourceTree = "<group>"; };
 		D33FE8951EDE3EBF0006A30E /* frame_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_1.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_1.png"; sourceTree = "<group>"; };
 		D33FE8961EDE3EBF0006A30E /* frame_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame_2.png; path = "../../../Assets/Launch Screen/Animation (green)/frame_2.png"; sourceTree = "<group>"; };
@@ -229,7 +230,6 @@
 		FA9D06A31E773F1100E76026 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MoreTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA9D06A41E773F1100E76026 /* MoreSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreSections.swift; sourceTree = "<group>"; };
 		FAA06AB31EAC05C00083BF52 /* star background blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background blue.png"; sourceTree = "<group>"; };
-		FAAC84311F1698950009A09C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAC8AC411EDCE19400DED29A /* frown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frown.png; sourceTree = "<group>"; };
 		FAC8AC421EDCE19400DED29A /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
 		FAC8AC431EDCE19400DED29A /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
@@ -279,7 +279,6 @@
 			children = (
 				814C3AC81B69877600E307BB /* Images.xcassets */,
 				814C3AC91B69877600E307BB /* Info.plist */,
-				FAAC84311F1698950009A09C /* GoogleService-Info.plist */,
 				FACB263F1EFD8FCE0005266D /* iRate.bundle */,
 				FACB263C1EFD8F8D0005266D /* iRate.h */,
 				FACB263D1EFD8F8D0005266D /* iRate.m */,
@@ -321,6 +320,7 @@
 				FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				FADE93151E78B593007254B0 /* CoreDataViewController.swift */,
+				D306D83B1F338FFA007313B8 /* GoogleService-Info.plist */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */,
 				FA35E7A21E663DEE007C094E /* Model.xcdatamodeld */,
@@ -673,7 +673,6 @@
 				D33FE8A21EDE3EBF0006A30E /* frame_5.png in Resources */,
 				FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */,
 				FA4A584B1F0221CE00977D13 /* nutrients.png in Resources */,
-				FAAC84321F1698950009A09C /* GoogleService-Info.plist in Resources */,
 				FA4A584D1F02D8F000977D13 /* recipes icon.png in Resources */,
 				FA1DDEF11EDC9F0200066A20 /* nuts.png in Resources */,
 				FA5A5A151E6F313B00941C50 /* app icon with bubble wine.png in Resources */,
@@ -682,6 +681,7 @@
 				D33FE8A41EDE3EBF0006A30E /* frame_7.png in Resources */,
 				FA1DDED31EDB89D300066A20 /* dairy.jpg in Resources */,
 				FA4EC29F1EABF82E00B59F34 /* frown red.png in Resources */,
+				D306D83C1F338FFA007313B8 /* GoogleService-Info.plist in Resources */,
 				FA4A58561F02E08400977D13 /* cookbook icon.svg in Resources */,
 				FA1DDEF21EDC9F0200066A20 /* Other.png in Resources */,
 				FAA06AB41EAC05C00083BF52 /* star background blue.png in Resources */,

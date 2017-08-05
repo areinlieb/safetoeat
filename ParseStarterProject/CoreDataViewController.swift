@@ -13,7 +13,7 @@ import CoreData
 class CoreDataViewController: UIViewController {
 
     @IBOutlet var backgroundImage: UIImageView!
-    
+        
     var counter = 0
     var timer = Timer()
     
@@ -59,7 +59,7 @@ class CoreDataViewController: UIViewController {
     override func viewDidLoad() {
  
         super.viewDidLoad()
-
+        
 /*
         deleteCoreDataFood()
         deleteCoreDataRecipes()

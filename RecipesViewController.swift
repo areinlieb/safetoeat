@@ -9,11 +9,18 @@
 import UIKit
 import CoreData
 import Parse
+import GoogleMobileAds
 
-class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource {
+class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource, GADInterstitialDelegate {
     
     @IBOutlet var tableView: UITableView!
     
+    let defaults = UserDefaults.standard
+    
+    var interstitial: GADInterstitial!
+    
+    var counter = 0
+
     var category = "All"
 
     var indexPaths = [NSIndexPath]()
@@ -65,7 +72,20 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
     
     override func viewDidAppear(_ animated: Bool) {
         
+        counter += 1
+        
         if Reachability.isConnectedToNetwork() {
+            
+            if !defaults.bool(forKey: "removeAds") {
+                interstitial.load(GADRequest())
+            }
+            
+            if !defaults.bool(forKey: "removeAds") && interstitial.isReady && counter > 3 {
+                interstitial.present(fromRootViewController: self)
+                counter = 0
+            } else {
+                print ("Ad wasn't ready")
+            }
         
             if category == "All" {
                 navigationItem.title = "Recipes"
@@ -99,6 +119,12 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         
         super.viewDidLoad()
         
+        counter = 0
+        
+        if !defaults.bool(forKey: "removeAds") {
+            interstitial = createAndLoadInterstitial()
+        }
+
         loadRecipes()
         loadSearches()
         
@@ -135,6 +161,17 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
         self.searchController.searchBar.placeholder = "what are you craving?"
         definesPresentationContext = true
         
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-6303297723397278/4356755404")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
     }
     
     @IBAction func refreshButton(_ sender: Any) {
