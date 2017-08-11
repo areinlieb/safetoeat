@@ -42,6 +42,7 @@ class LoadData {
                             
                             let requestFood: NSFetchRequest<Food> = Food.fetchRequest()
                             requestFood.returnsObjectsAsFaults = false
+                            requestFood.predicate = NSPredicate(format: "foodName = %@", foodItem)
                             
                             do {
                                 
@@ -50,17 +51,10 @@ class LoadData {
                                 if foodResults.count > 0 {
                                     
                                     for result in foodResults as [Food] {
-                                        
-                                        if let foodType = result.value(forKey: "foodName") as? String {
-                                            
-                                            if foodType == foodItem {
-                                                
-                                                DatabaseController.getContext().delete(result)
-                                                //print("Deleted: \(String(describing: result.value(forKey: "foodName")))")
-                                            }
-                                            
-                                        }
+                                        DatabaseController.getContext().delete(result)
+                                        //print("Deleted: \(String(describing: result.value(forKey: "foodName")))")
                                     }
+                                    
                                 }
                             } catch {
                                 print("Couldn't fetch results")
