@@ -28,15 +28,55 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var termsofServiceButton: UIButton!
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        //usernameField.setBottomBorder()
-        //usernameField.becomeFirstResponder()
-        //self.usernameField.delegate = self
+        let queueFruit = DispatchQueue(label: "fruitQueue", qos: DispatchQoS.default)
+        let queueGrains = DispatchQueue(label: "grainsQueue", qos: DispatchQoS.default)
+        let queueMeat = DispatchQueue(label: "meatQueue", qos: DispatchQoS.default)
+        let queueNutrients = DispatchQueue(label: "nutrientsQueue", qos: DispatchQoS.default)
+        let queueNuts = DispatchQueue(label: "nutsQueue", qos: DispatchQoS.default)
+        let queueSeafood = DispatchQueue(label: "seafoodQueue", qos: DispatchQoS.default)
         
-        loginButton.setImage(UIImage(named: "go filled.png"), for: .normal)
+        let queueRecipes = DispatchQueue(label: "recipesQueue", qos: DispatchQoS.default)
+        let queueRecipeCategories = DispatchQueue(label: "recipeCategoryQueue", qos: DispatchQoS.default)
+        
+        queueFruit.async {
+            LoadData.loadFood(category: "Fruit")
+        }
+        
+        queueGrains.async {
+            LoadData.loadFood(category: "Grains")
+        }
+        
+        queueMeat.async {
+            LoadData.loadFood(category: "Meat")
+        }
+        
+        queueNutrients.async {
+            LoadData.loadFood(category: "Nutrients")
+        }
+        
+        queueNuts.async {
+            LoadData.loadFood(category: "Nuts, Seeds, & Legumes")
+        }
+        
+        queueSeafood.async {
+            LoadData.loadFood(category: "Seafood")
+        }
+        
+        queueRecipes.async {
+            LoadData.loadRecipes()
+        }
+        
+        queueRecipeCategories.async {
+            LoadData.loadRecipeCategories()
+        }
+        
+        loginButton.setImage(UIImage(named: "go.png"), for: .normal)
         
     }
     
@@ -58,7 +98,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func usernameFieldEditingChanged(_ sender: Any) {
-        loginButton.setImage(UIImage(named: "go filled.png"), for: .normal)
+        loginButton.setImage(UIImage(named: "go green.png"), for: .normal)
     }
     
     func loginProcess() {
@@ -67,10 +107,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateUpdated = dateFormatter.string(from: NSDate() as Date)
         
-        //add to Core data
-        let newEmail = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
-        newEmail.email = dateUpdated + "@email.com"
-        DatabaseController.saveContext()
+        defaults.set(dateUpdated + "@email.com", forKey: "email")
         
         if (PFUser.current() != nil) {
             

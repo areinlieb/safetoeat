@@ -140,23 +140,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <color key="backgroundColor" red="0.32156862745098036" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DVS-Wv-NhB">
+                                <rect key="frame" x="20" y="1002" width="728" height="2"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Food..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-U1-sYw" userLabel="Loading Label">
+                                <rect key="frame" x="20" y="953" width="728" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gR8-rA-Pnq" firstAttribute="top" secondItem="DVS-Wv-NhB" secondAttribute="bottom" constant="20" id="24o-rc-IAg"/>
+                            <constraint firstItem="DVS-Wv-NhB" firstAttribute="trailing" secondItem="tcz-yR-CuU" secondAttribute="trailingMargin" id="Eec-Of-RiO"/>
+                            <constraint firstItem="DVS-Wv-NhB" firstAttribute="leading" secondItem="tcz-yR-CuU" secondAttribute="leadingMargin" id="Gob-uD-oH1"/>
                             <constraint firstItem="KAz-Ad-tHf" firstAttribute="bottom" secondItem="gR8-rA-Pnq" secondAttribute="top" id="Hj7-8C-Iba"/>
+                            <constraint firstItem="DVS-Wv-NhB" firstAttribute="top" secondItem="2ov-U1-sYw" secondAttribute="bottom" constant="25" id="XIu-DB-ia7"/>
+                            <constraint firstItem="2ov-U1-sYw" firstAttribute="trailing" secondItem="tcz-yR-CuU" secondAttribute="trailingMargin" id="Xqe-Lj-JTV"/>
                             <constraint firstItem="KAz-Ad-tHf" firstAttribute="leading" secondItem="tcz-yR-CuU" secondAttribute="leading" id="fQe-xM-ScN"/>
                             <constraint firstItem="KAz-Ad-tHf" firstAttribute="top" secondItem="tcz-yR-CuU" secondAttribute="top" id="wCh-TZ-Mov"/>
+                            <constraint firstItem="2ov-U1-sYw" firstAttribute="leading" secondItem="tcz-yR-CuU" secondAttribute="leadingMargin" id="whk-qV-zwe"/>
                             <constraint firstAttribute="trailing" secondItem="KAz-Ad-tHf" secondAttribute="trailing" id="y58-Uo-lQf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oo0-wh-pgq"/>
                     <connections>
                         <outlet property="backgroundImage" destination="KAz-Ad-tHf" id="1y0-jq-t4I"/>
+                        <outlet property="loadingLabel" destination="2ov-U1-sYw" id="hoe-c6-lVC"/>
+                        <outlet property="progressView" destination="DVS-Wv-NhB" id="Ydj-aq-kvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ni9-Cg-yTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1477" y="2258"/>
+            <point key="canvasLocation" x="-1477.34375" y="2257.6171875"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="kEQ-OD-uU8">
@@ -198,7 +216,7 @@
                                     <constraint firstAttribute="height" constant="50" id="mI5-Pl-NX8"/>
                                     <constraint firstAttribute="width" constant="50" id="swH-N6-DbH"/>
                                 </constraints>
-                                <state key="normal" image="go blank.png"/>
+                                <state key="normal" image="go"/>
                                 <connections>
                                     <action selector="loginAction:" destination="bRh-md-ef9" eventType="touchUpInside" id="tAl-FU-Vsf"/>
                                 </connections>
@@ -1094,7 +1112,7 @@
     </scenes>
     <resources>
         <image name="frame_3.png" width="626" height="626"/>
-        <image name="go blank.png" width="50" height="50"/>
+        <image name="go" width="37" height="37"/>
         <image name="icons8-Ingredients_25" width="25" height="25"/>
         <image name="pregnant food background mask.png" width="640" height="360"/>
         <image name="recipe icon 25" width="25" height="25"/>

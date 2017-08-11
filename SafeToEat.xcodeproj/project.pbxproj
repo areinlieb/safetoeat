@@ -30,6 +30,8 @@
 		D33FE8A71EDE3FBD0006A30E /* app icon green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D33FE8A61EDE3FBD0006A30E /* app icon green.jpg */; };
 		FA06B75F1E940CBB00CA3D7F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FA06B75E1E940CBB00CA3D7F /* delete.png */; };
 		FA0A6D451E8D76E100AB5B1D /* star background gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0A6D441E8D76E100AB5B1D /* star background gray.png */; };
+		FA0C30111F3E3C950006643D /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C30101F3E3C950006643D /* CoreDataViewController.swift */; };
+		FA0C30131F3E3CB00006643D /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C30121F3E3CB00006643D /* DatabaseController.swift */; };
 		FA115E721EADB24F00E7A251 /* more-glossary.png in Resources */ = {isa = PBXBuildFile; fileRef = FA115E711EADB24F00E7A251 /* more-glossary.png */; };
 		FA115E741EADB49C00E7A251 /* Glossary.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA115E731EADB49C00E7A251 /* Glossary.rtf */; };
 		FA115E761EADB4AE00E7A251 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */; };
@@ -57,6 +59,7 @@
 		FA4A58541F02DCF900977D13 /* recipe icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4A58531F02DCF900977D13 /* recipe icon.png */; };
 		FA4A58561F02E08400977D13 /* cookbook icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = FA4A58551F02E08400977D13 /* cookbook icon.svg */; };
 		FA4A58581F03234100977D13 /* RecipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A58571F03234100977D13 /* RecipePageViewController.swift */; };
+		FA4C0AF51F3E10B100E65E26 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C0AF41F3E10B100E65E26 /* LoadData.swift */; };
 		FA4EC2971EABF18C00B59F34 /* traffic light green.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2941EABF18C00B59F34 /* traffic light green.png */; };
 		FA4EC2981EABF18C00B59F34 /* traffic light red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2951EABF18C00B59F34 /* traffic light red.png */; };
 		FA4EC2991EABF18C00B59F34 /* traffic light yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */; };
@@ -116,12 +119,10 @@
 		FAD3A8381EECA5C1003B88EE /* pregnant food background mask.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3A8371EECA5C1003B88EE /* pregnant food background mask.png */; };
 		FADE73CD1E7A258200EB7B4D /* app icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CC1E7A258200EB7B4D /* app icon.jpg */; };
 		FADE73CF1E7A25F300EB7B4D /* app icon no bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */; };
-		FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE93151E78B593007254B0 /* CoreDataViewController.swift */; };
 		FAE01C571E94393800F15CF8 /* baby happy with text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE01C561E94393800F15CF8 /* baby happy with text.png */; };
 		FAE01C5A1E943B2500F15CF8 /* baby question with text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE01C581E943B2500F15CF8 /* baby question with text.png */; };
 		FAE01C5B1E943B2500F15CF8 /* baby upset with text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE01C591E943B2500F15CF8 /* baby upset with text.png */; };
 		FAE1320E1F03740E00B436C0 /* default recipe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAE1320D1F03740E00B436C0 /* default recipe.jpg */; };
-		FAE42A291E7BB09F00487AB2 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */; };
 		FAF8BE991E81F13D00D5BED8 /* addToFavorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */; };
 		FAF8BE9A1E81F13D00D5BED8 /* removeFromFavorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */; };
 /* End PBXBuildFile section */
@@ -156,6 +157,8 @@
 		EF9A8B47185E7FD9C72DC6D4 /* Pods_SafeToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA06B75E1E940CBB00CA3D7F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		FA0A6D441E8D76E100AB5B1D /* star background gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star background gray.png"; sourceTree = "<group>"; };
+		FA0C30101F3E3C950006643D /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		FA0C30121F3E3CB00006643D /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		FA115E711EADB24F00E7A251 /* more-glossary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-glossary.png"; sourceTree = "<group>"; };
 		FA115E731EADB49C00E7A251 /* Glossary.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Glossary.rtf; sourceTree = "<group>"; };
 		FA115E751EADB4AE00E7A251 /* GlossaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		FA4A58531F02DCF900977D13 /* recipe icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipe icon.png"; sourceTree = "<group>"; };
 		FA4A58551F02E08400977D13 /* cookbook icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "cookbook icon.svg"; sourceTree = "<group>"; };
 		FA4A58571F03234100977D13 /* RecipePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipePageViewController.swift; sourceTree = "<group>"; };
+		FA4C0AF41F3E10B100E65E26 /* LoadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		FA4EC2941EABF18C00B59F34 /* traffic light green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light green.png"; sourceTree = "<group>"; };
 		FA4EC2951EABF18C00B59F34 /* traffic light red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light red.png"; sourceTree = "<group>"; };
 		FA4EC2961EABF18C00B59F34 /* traffic light yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light yellow.png"; sourceTree = "<group>"; };
@@ -245,12 +249,10 @@
 		FAD3A8371EECA5C1003B88EE /* pregnant food background mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pregnant food background mask.png"; sourceTree = "<group>"; };
 		FADE73CC1E7A258200EB7B4D /* app icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app icon.jpg"; sourceTree = "<group>"; };
 		FADE73CE1E7A25F300EB7B4D /* app icon no bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon no bubble.png"; sourceTree = "<group>"; };
-		FADE93151E78B593007254B0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CoreDataViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FAE01C561E94393800F15CF8 /* baby happy with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby happy with text.png"; sourceTree = "<group>"; };
 		FAE01C581E943B2500F15CF8 /* baby question with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby question with text.png"; sourceTree = "<group>"; };
 		FAE01C591E943B2500F15CF8 /* baby upset with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby upset with text.png"; sourceTree = "<group>"; };
 		FAE1320D1F03740E00B436C0 /* default recipe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default recipe.jpg"; sourceTree = "<group>"; };
-		FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		FAF8BE971E81F13D00D5BED8 /* addToFavorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addToFavorites.png; sourceTree = "<group>"; };
 		FAF8BE981E81F13D00D5BED8 /* removeFromFavorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = removeFromFavorites.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,11 +321,12 @@
 			children = (
 				FA4A16AC1E974DAB008C32AF /* SafeToEat.entitlements */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
-				FADE93151E78B593007254B0 /* CoreDataViewController.swift */,
 				D306D83B1F338FFA007313B8 /* GoogleService-Info.plist */,
+				FA0C30101F3E3C950006643D /* CoreDataViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
-				FAE42A281E7BB09F00487AB2 /* DatabaseController.swift */,
+				FA0C30121F3E3CB00006643D /* DatabaseController.swift */,
 				FA35E7A21E663DEE007C094E /* Model.xcdatamodeld */,
+				FA4C0AF41F3E10B100E65E26 /* LoadData.swift */,
 			);
 			name = SafeToEat;
 			path = ParseStarterProject;
@@ -763,6 +766,7 @@
 				FA84E2521F0AB686006F6453 /* RecipeCategoryFilterViewController.swift in Sources */,
 				FA4A58581F03234100977D13 /* RecipePageViewController.swift in Sources */,
 				FA8CD70A1E72114600E7CB97 /* FoodDetailViewController.swift in Sources */,
+				FA0C30111F3E3C950006643D /* CoreDataViewController.swift in Sources */,
 				FA86EB8A1E85BFDB00B66A91 /* LegalWelcomeViewController.swift in Sources */,
 				FA8CD6FF1E70861F00E7CB97 /* FoodViewController.swift in Sources */,
 				FA9D06971E771ABD00E76026 /* ExtendedNavBarView.swift in Sources */,
@@ -771,9 +775,10 @@
 				FA35FFFA1E7760E200EF2413 /* SearchViewController.swift in Sources */,
 				FA84E2561F0AD221006F6453 /* Reachability.swift in Sources */,
 				FA9D06A51E773F1100E76026 /* SectionsData.swift in Sources */,
-				FADE93161E78B593007254B0 /* CoreDataViewController.swift in Sources */,
+				FA4C0AF51F3E10B100E65E26 /* LoadData.swift in Sources */,
 				FA7B10001E830DBC00378663 /* LegalViewController.swift in Sources */,
 				FA7BAA331E843186001D9355 /* MoreTableViewCell.swift in Sources */,
+				FA0C30131F3E3CB00006643D /* DatabaseController.swift in Sources */,
 				FACB263E1EFD8F8D0005266D /* iRate.m in Sources */,
 				FA9D06A61E773F1100E76026 /* MoreTableViewController.swift in Sources */,
 				FA8CD7011E70D0EB00E7CB97 /* CategoryFilterViewController.swift in Sources */,
@@ -782,7 +787,6 @@
 				FA4A58521F02D9B300977D13 /* RecipesTableViewCell.swift in Sources */,
 				FA35E7A41E663DEE007C094E /* Model.xcdatamodeld in Sources */,
 				FACED41F1E8A317F007AAEEB /* FoodDetailTableViewCell.swift in Sources */,
-				FAE42A291E7BB09F00487AB2 /* DatabaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
