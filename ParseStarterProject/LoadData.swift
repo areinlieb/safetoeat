@@ -12,22 +12,16 @@ import Parse
 
 class LoadData {
     
-    class func loadFood(category: String) {
+    class func loadFood() {
         
         let defaults = UserDefaults.standard
         
-        var lastUpdateDate = defaults.object(forKey: "lastUpdated2") as! Date
+        let lastUpdateDate = defaults.object(forKey: "lastUpdated") as! Date
         
-        if category == "Veggies" || category == "Other" || category == "Dairy" {
-            lastUpdateDate = defaults.object(forKey: "lastUpdated") as! Date
-        }
-    
-        let predCategory = NSPredicate(format: "foodCategory = %@", category)
         let predDate = NSPredicate(format: "updatedAt > %@", lastUpdateDate as Date as CVarArg)
         
-        let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [predCategory,predDate])
-        let foodQuery = PFQuery(className: "FoodData", predicate: compound)
-        
+        let foodQuery = PFQuery(className: "FoodData", predicate: predDate)
+        foodQuery.limit = 1000
         foodQuery.findObjectsInBackground { (objects, error) in
             
             if error == nil {
@@ -92,7 +86,7 @@ class LoadData {
                         
                         if let updatedAt = object.updatedAt {
                             if updatedAt > defaults.object(forKey: "lastUpdated") as! Date {
-                                
+/*
                                 switch category {
                                     case "Veggies", "Other", "Dairy":
                                         defaults.set(updatedAt, forKey: "lastUpdated")
@@ -101,7 +95,7 @@ class LoadData {
                                         defaults.set(updatedAt, forKey: "lastUpdated2")
                                     default: break
                                 }
-                                
+  */
                                 defaults.set(updatedAt, forKey: "lastUpdated")
                                 //let dateTemp = self.defaults.object(forKey: "lastUpdated") as! Date
                                 //print("lastUpdated is now \(dateTemp)")

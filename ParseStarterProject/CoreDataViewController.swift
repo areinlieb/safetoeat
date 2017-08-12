@@ -69,21 +69,10 @@ class CoreDataViewController: UIViewController {
         loadingTimer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(progressDisplay), userInfo: nil, repeats: true)
 
         //load data from parse into core data
-        LoadData.loadCategories()
         
-        let queueDairy = DispatchQueue(label: "dairyQueue", qos: DispatchQoS.default)
-        let queueOther = DispatchQueue(label: "otherQueue", qos: DispatchQoS.default)
-        let queueVeggies = DispatchQueue(label: "veggieQueue", qos: DispatchQoS.default)
-        
-        queueDairy.async {
-            LoadData.loadFood(category: "Dairy")
-        }
-        queueVeggies.async {
-            LoadData.loadFood(category: "Veggies")
-        }
-        
-        queueOther.async {
-            LoadData.loadFood(category: "Other")
+        let queueLoadFood = DispatchQueue(label: "loadFoodQueue")
+        queueLoadFood.async {
+            LoadData.loadFood()
         }
         
     }

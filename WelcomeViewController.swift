@@ -24,48 +24,23 @@ extension UITextField {
 
 class WelcomeViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var usernameField: UITextField!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var termsofServiceButton: UIButton!
     
     let defaults = UserDefaults.standard
     
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        let queueFruit = DispatchQueue(label: "fruitQueue", qos: DispatchQoS.default)
-        let queueGrains = DispatchQueue(label: "grainsQueue", qos: DispatchQoS.default)
-        let queueMeat = DispatchQueue(label: "meatQueue", qos: DispatchQoS.default)
-        let queueNutrients = DispatchQueue(label: "nutrientsQueue", qos: DispatchQoS.default)
-        let queueNuts = DispatchQueue(label: "nutsQueue", qos: DispatchQoS.default)
-        let queueSeafood = DispatchQueue(label: "seafoodQueue", qos: DispatchQoS.default)
-        
+         
+        let queueLoadCategories = DispatchQueue(label: "loadCategoriesQueue")
         let queueRecipes = DispatchQueue(label: "recipesQueue", qos: DispatchQoS.default)
         let queueRecipeCategories = DispatchQueue(label: "recipeCategoryQueue", qos: DispatchQoS.default)
-        
-        queueFruit.async {
-            LoadData.loadFood(category: "Fruit")
-        }
-        
-        queueGrains.async {
-            LoadData.loadFood(category: "Grains")
-        }
-        
-        queueMeat.async {
-            LoadData.loadFood(category: "Meat")
-        }
-        
-        queueNutrients.async {
-            LoadData.loadFood(category: "Nutrients")
-        }
-        
-        queueNuts.async {
-            LoadData.loadFood(category: "Nuts, Seeds, & Legumes")
-        }
-        
-        queueSeafood.async {
-            LoadData.loadFood(category: "Seafood")
+
+        queueLoadCategories.async {
+            LoadData.loadCategories()
         }
         
         queueRecipes.async {
@@ -77,7 +52,8 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
         }
         
         loginButton.setImage(UIImage(named: "go.png"), for: .normal)
-        
+        loginButton.setImage(UIImage(named: "go green.png"), for: .highlighted)
+
     }
     
     @IBAction func termsOfServiceAction(_ sender: Any) {
@@ -90,15 +66,14 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        self.activityView.color = UIColor.black
+        self.activityView.isHidden = false
+        self.activityView.center = self.view.center
+        self.activityView.startAnimating()
+        self.view.addSubview(activityView)
+        
+        
         loginProcess()
-    }
-    
-    @IBAction func usernameFieldPrimaryActionTriggered(_ sender: Any) {        
-        loginProcess()
-    }
-    
-    @IBAction func usernameFieldEditingChanged(_ sender: Any) {
-        loginButton.setImage(UIImage(named: "go green.png"), for: .normal)
     }
     
     func loginProcess() {
@@ -124,6 +99,10 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async(execute: { () -> Void in
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
                         self.present(viewController, animated: true, completion: nil)
+                        
+                        self.activityView.isHidden = true
+                        self.activityView.stopAnimating()
+                        
                     })
                 } else if error!.localizedDescription == "Account already exists for this username." {
                     
@@ -135,6 +114,10 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
                             DispatchQueue.main.async(execute: {
                                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
                                 self.present(viewController, animated: true, completion: nil)
+                                
+                                self.activityView.isHidden = true
+                                self.activityView.stopAnimating()
+                                
                             })
                             
                         } else {
@@ -143,12 +126,20 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
                             alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
                             self.present(alert, animated: true){}
                             
+                            self.activityView.isHidden = true
+                            self.activityView.stopAnimating()
+                            
+                            
                         }
                     })
                 } else {
                     let alert = UIAlertController(title: "Ah, shitake mushrooms!", message:"Please make sure you're connected to a network and try again. This is only required the first time.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
                     self.present(alert, animated: true){}
+                    
+                    self.activityView.isHidden = true
+                    self.activityView.stopAnimating()
+                    
                 }
                 
             })
@@ -168,12 +159,19 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
                     let alert = UIAlertController(title: "Ah, shitake mushrooms!", message: "Please make sure you're connected to a network and try again. This is only necessary the first time.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
                     self.present(alert, animated: true){}
+                    
+                    self.activityView.isHidden = true
+                    self.activityView.stopAnimating()
                                     
                 } else {
                 
                     DispatchQueue.main.async(execute: { () -> Void in
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
                         self.present(viewController, animated: true, completion: nil)
+                        
+                        self.activityView.isHidden = true
+                        self.activityView.stopAnimating()
+                        
                     })
                 }
             })

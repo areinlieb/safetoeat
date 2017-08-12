@@ -84,7 +84,7 @@ class RecipesViewController: UIViewController, UISearchResultsUpdating, UITableV
                 interstitial.present(fromRootViewController: self)
                 counter = 0
             } else {
-                print ("Ad wasn't ready")
+                //print ("Ad wasn't ready")
             }
         
             if category == "All" {
