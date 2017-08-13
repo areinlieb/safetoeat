@@ -98,7 +98,7 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
                 
                 defaults.set(true, forKey: "removeAds")
     
-                let alert = UIAlertController(title: "Thank you", message: "You're purchases have been restored. Please restart the app to remove ads.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Thank you", message: "Your purchases have been restored. Please restart the app to remove ads.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: {
                     (alertAction: UIAlertAction!) in
                     alert.dismiss(animated: true, completion: nil)
@@ -168,12 +168,12 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
         
         UIGraphicsBeginImageContext(view.frame.size)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIImage(named: "app icon with bubble sushi.png")
+        let image = UIImage(named: "frame_3.png")
         
         UIGraphicsEndImageContext()
         
-        let subject = "SafeToEat for iPhone"
-        let textToShare = "The best way to check pregnancy safe foods"
+        let subject = "Pregnancy Food: Guide & Recipes for iPhone"
+        let textToShare = "The best way to check pregnancy safe foods and find delicious recipes:"
         
         if let myWebsite = URL(string: "itms-apps://itunes.apple.com/app/id" + self.appStoreAppID) {
             

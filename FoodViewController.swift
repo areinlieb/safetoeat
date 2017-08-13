@@ -77,24 +77,26 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         super.viewDidLoad()
 
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+
         backgroundView.contentMode = .scaleAspectFit
-        backgroundView.frame.size.width = 100
-        backgroundView.frame.size.height = 100
+        backgroundView.frame.size.width = screenWidth / 3
+        backgroundView.frame.size.height = screenWidth / 3
         backgroundView.center = self.view.center
-        backgroundView.frame.origin.y = self.view.center.y * 0.5
+        backgroundView.frame.origin.y = (self.view.center.y * 0.80) - backgroundView.frame.size.height
         
         self.tableView.sendSubview(toBack: backgroundView)
         
         backgroundText.text = "No favorite items"
         backgroundText.textColor = UIColor(red: 66.0/255.0, green: 68.0/255.0, blue: 73.0/255.0, alpha: 1.0)
         backgroundText.contentMode = .scaleAspectFit
-        
-        //SIZE OF IMAGE AND TEXT SHOULD SCALE BASED ON SCREEN SIZE
-        backgroundText.frame.size.width = 130
-        backgroundText.frame.size.height = 20
+        backgroundText.textAlignment = .center
+        backgroundText.frame.size.width = screenWidth / 2
+        backgroundText.frame.size.height = screenWidth / 10
         
         backgroundText.center = self.view.center
-        backgroundText.frame.origin.y = self.view.center.y * 0.90
+        backgroundText.frame.origin.y = self.view.center.y * 0.80
         
         self.tableView.sendSubview(toBack: backgroundText)
 

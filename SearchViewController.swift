@@ -83,24 +83,31 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         
         navigationItem.title = "Search"
         
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        //let screenHeight = screenSize.height
+        
         backgroundView.contentMode = .scaleAspectFit
-        backgroundView.frame.size.width = 100
-        backgroundView.frame.size.height = 100
+        backgroundView.frame.size.width = screenWidth / 3
+        backgroundView.frame.size.height = screenWidth / 3
+        
         backgroundView.center = self.view.center
-        backgroundView.frame.origin.y = self.view.center.y * 0.5
+        backgroundView.frame.origin.y = (self.view.center.y * 0.90) - backgroundView.frame.size.height
         
         self.tableView.sendSubview(toBack: backgroundView)
 
-        backgroundText.text = "Search SafeToEat by food"
+        
+        backgroundText.text = "Search by food"
         backgroundText.textColor = UIColor(red: 66.0/255.0, green: 68.0/255.0, blue: 73.0/255.0, alpha: 1.0)
         backgroundText.contentMode = .scaleAspectFit
-        
-        //SIZE OF IMAGE AND TEXT SHOULD SCALE BASED ON SCREEN SIZE
-        backgroundText.frame.size.width = 200
-        backgroundText.frame.size.height = 20
+        backgroundText.textAlignment = .center
+        backgroundText.frame.size.width = screenWidth / 2
+        backgroundText.frame.size.height = screenWidth / 10
         
         backgroundText.center = self.view.center
         backgroundText.frame.origin.y = self.view.center.y * 0.90
+        //backgroundText.center.x = self.view.center.x
+        //backgroundText.center.y = self.view.center.y
         
         self.tableView.sendSubview(toBack: backgroundText)
 
